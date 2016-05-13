@@ -1,0 +1,23 @@
+{
+  "author": "David Monson",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-sass": "^2.1.0",
+    "gulp-server-livereload": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "run-sequence": "^1.1.5",
+    "gulp-concat": "^2.6.0",
+    "bootstrap-sass": "^3.3.6"
+  },
+  "homepage": "",
+  "license": {
+    "type": "MIT"
+  },
+  "name": "sass_js_html",
+  "private": true,
+  "scripts": {
+    "build": "gulp build",
+    "test": "gulp build --reporter spec --timeout 5000"
+  },
+  "version": "1.1.0"
+}
