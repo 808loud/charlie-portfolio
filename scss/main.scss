@@ -1,8 +1,12 @@
 .outline-heading {
 
-  h2::after, h3::after {
-    content: "\A \2013";
-    white-space: pre;
+  h1, h2 {
+    font-size: 16px;
+
+    &::after {
+      content: "\A \2013";
+      white-space: pre;
+    }
   }
 }
 
