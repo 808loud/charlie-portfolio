@@ -1,13 +1,27 @@
+body {
+  font-size: 16px;
+}
+
 .outline-heading {
 
   h1, h2 {
     font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0;
 
     &::after {
       content: "\A \2013";
       white-space: pre;
     }
   }
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .modal-fullscreen {
