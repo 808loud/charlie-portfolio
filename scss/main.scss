@@ -2,6 +2,53 @@ body {
   font-size: 16px;
 }
 
+#bootstrap_nav1 {
+  .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  #main_navigation {
+    text-align: center;
+  }
+  .navbar-header {
+    text-align: center;
+
+    .navbar-toggle {
+      float: none;
+      background-color: #333;
+      .icon-bar {
+        color: yellow;
+      }
+    }
+  }
+}
+
+#w3_navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  .nav>li {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  #main_navigation {
+    text-align: center;
+  }
+}
+
 .outline-heading {
 
   h1, h2 {
