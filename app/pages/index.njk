@@ -1,6 +1,150 @@
 <!-- index.nunjucks -->
-{% extends "layout.njk" %}
+{% extends "base.njk" %}
 
 {% block content %}
-<h1>This is the index page</h1>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1 class="hidden">Charlie</h1>
+    <h2 class="font-size-xl">Consultant for hire</h2>
+    <h3>UI, UX, Print, Outdoor Enthusiast</h3>
+  </div>
+</div>
+
+<div class="container">
+	{% import 'macros/bootstrap.njk' as col %}
+	{{ col.left('Intro') }}
+	{{ col.right('Welcome to my portfolio', 'I am an independent consultant/freelancer that works with start ups, agencies, and corporate in-house teams. I have experience in pretty much all sectors, most recently in B2B/C Ecommerce, Engagement Programs, and Entertainment. Below are select examples that best represent my approach & capabilities. Thanks for stopping by!') }}
+</div>
+<!--  -->
+
+<div class="container-fluid">
+  <section id="work" class="text-center">
+  <h1 class="sr-only">Work</h1>
+    <article>
+      <img src="#" alt="">
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#recognition_app">Recognition App</button>
+    </article>
+    <article>
+      <img src="#" alt="">
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#uber_finder">Uber Finder</button>
+    </article>
+    <article>
+      <img src="#" alt="">
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#scout_loyal">Rewards Program</button>
+    </article>
+    <article>
+      <img src="#" alt="">
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#countrywide">B2B Ecommerce</button>
+    </article>
+    <article>
+      <img src="#" alt="">
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#print">Print Projects</button>
+    </article>
+  </section>
+</div>
+
+<div class="container">
+  <section id="process">
+    <div class="row">
+ 			{{ col.left('Process', 'h1' ) }}
+  		{{ col.right('Initiate a project', 'Working on-site generally requires advanced notice while off-site work provides more flexibility. By carefully managing my schedule I can accommodate most requests. If I am not available to take on your project I would be happy to refer you to someone who can.') }}
+    </div>
+  </section>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 text-center bg-primary font-size-xl">
+      <span>Your place or mine</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <section>  
+    <div class="row">
+      {{ col.left('On-site') }}
+      {{ col.right("Collaboration is where it's at", "The work is just as important as the people behind it. I'll take the time to get to know your team and the unique set of challenges they face. For larger projects I'll inquire about internal processes, review business requirements, and go through a discovery & planning phase. For smaller projects and support roles, general direction is all that's needed. I've gone from managing small teams to working under some incredible leaders. What's important are the relationships that get forged and making great work that everyone can be proud of. I'll maintain regular check-ins with team members so projects stay on track. A huge fan of open collaboration & dialogue; a happy team is a productive one, every time.") }}
+    </div>
+    <div class="row">
+ 			{{ col.left('Off-site') }}
+ 			{{ col.right('Fast, transparent, reliable', "Working remote keeps overhead low by only utilizing the services you need, when you need it. Every project starts with a discovery &amp; planning phase where I'll take the time to get to know your business and the challenges it faces. I'll ask for your feedback early and often, this saves time by only investing in solutions that are going to work. On the occasion extra help is needed, I have a pretty good network of talent from varying backgrounds to collaborate with. I'm also open to working with members of your team or preferred partners. With advance notice on-site meetings and work sessions can be accommodated.") }}
+    </div>
+  </section>
+</div>
+
+<div class="container-fluid">
+  <div id="quote_carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#quote_carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#quote_carousel" data-slide-to="1"></li>
+    </ol>
+
+    <div class="carousel-inner text-center bg-primary" role="listbox">
+      <div class="item active">
+        <blockquote>
+          <div class="row">
+            <div class="col-xs-12">
+              <p>&ldquo;I've worked with teams of designers that cannot produce what Charlie has by himself.&rdquo;</p>
+              <footer>Josh Ranta, Web Development Manager</footer>
+            </div>
+          </div>
+        </blockquote>
+      </div>
+      <div class="item">
+        <blockquote>
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <p>&ldquo;Charlie is awesome&rdquo;<br>Yep</p>
+              <footer>David</footer>
+            </div>
+          </div>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <script>
+    $('.carousel').carousel()
+  </script>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 outline-heading">
+      <h2>Experience</h2>
+    </div>
+    <div class="col-sm-9">
+      <img src="#" alt="Target, Coleman, Kmart, Warner Bros., mj, Best Buy, Geometry Global, General Mills, Preston Kelly, GAP, BI Worldwide, Cartoon Network" />
+    </div>
+  </div>
+
+
+  <section id="booking">
+    <div class="row">
+      <div class="col-sm-3 outline-heading">
+        <h1>Booking</h1>
+      </div>
+      <div class="col-sm-9">
+        <h4>This is how the magic begins</h4>
+        <p>Please fill out the form below and let me know how I can help.</p>
+        <p>You will get a response within 24 of inquiry.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <form>
+          <input id="name" placeholder="Name" type="text" class="form-control">
+          <input id="email" placeholder="Email" type="email" class="form-control">
+          <input id="company" placeholder="Company name" type="text" class="form-control">
+          <textarea id="message" placeholder="How can I help you?" class="form-control" rows="6"></textarea>
+          <div class="text-center">
+            <button type="submit" class="btn btn-default">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
 {% endblock %}

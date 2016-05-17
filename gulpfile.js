@@ -59,6 +59,10 @@ gulp.task('webserver', function() {
 })
 
 // watchers
+gulp.task('nunjucks:watch', function () {
+  gulp.watch(['./app/templates/**/*.+(html|nunjucks|njk)', './app/pages/**/*.+(html|nunjucks|njk)'], ['nunjucks']);
+});
+
 gulp.task('sass:watch', function () {
   gulp.watch('./app/scss/**/*.scss', ['sass']);
 });
@@ -72,6 +76,7 @@ gulp.task('default', function(done) {
         'nunjucks',
         'sass',
         'scripts',
+        'nunjucks:watch',
         'sass:watch',
         'scripts:watch',
         'webserver',
