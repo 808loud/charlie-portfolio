@@ -1,4 +1,4 @@
 node_modules/
 #css/
 *.map
-js/scripts.js
+#js/scripts.js
