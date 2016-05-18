@@ -2,21 +2,30 @@
 
 var gulp =           require('gulp'),
     sequence =       require('run-sequence'), // won't be necessary if gulp -v > 4.0
-    nunjucksRender = require('gulp-nunjucks-render'),
+    //nunjucksRender = require('gulp-nunjucks-render'),
+    nunjucks =       require('gulp-nunjucks-html'),
     sass =           require('gulp-sass'),
     //server =         require('gulp-server-livereload'),
     webserver =      require('gulp-webserver'),
     maps =           require('gulp-sourcemaps'),
     concat =         require('gulp-concat');
 
+function catchError (error) {
+    console.log(error.toString());
+    this.emit('end');
+}
+
 // tasks
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
   return gulp.src('app/pages/**/*.+(html|nunjucks|njk)')
   // Renders template with nunjucks
-  .pipe(nunjucksRender({
-      path: ['app/templates']
+  .pipe(nunjucks({
+      searchPaths: ['app/templates'],
+      autoescape: ['true'],
+      ext: ['.html']
     }))
+  .on('error', catchError)
   // output files in public folder
   .pipe(gulp.dest('public'))
 });

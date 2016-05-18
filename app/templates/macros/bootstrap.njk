@@ -1,0 +1,12 @@
+{% macro left(header, tag='h2') %}
+<div class="col-sm-3 outline-heading">
+  <{{ tag }}>{{ header }}</{{ tag }}>
+</div>
+{% endmacro %}
+
+{% macro right(header, paragraph) %}
+<div class="col-sm-9">
+  <h4>{{ header }}</h4>
+  <p>{{ paragraph }}</p>
+</div>
+{% endmacro %}
