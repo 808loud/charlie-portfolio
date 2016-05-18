@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp =         require('gulp');
-var gutil =         require('gulp-util');
+var gutil =        require('gulp-util');
 var data =         require('gulp-data');
 var concat =       require('gulp-concat');
 var nunjucks =     require('gulp-nunjucks-html');
@@ -18,7 +18,7 @@ function catchError (error) {
     var lineNumber = (error.lineNumber) ? 'LINE ' + error.lineNumber + ' -- ' : '';
     
     notify({
-        title: 'Gulp Task [' + error.plugin + '] Error',
+        title: error.plugin + ' error',
         message: lineNumber
     }).write(error);
 
@@ -44,8 +44,8 @@ gulp.task('serve', ['nunjucks', 'sass', 'scripts'], function() {
         port: 5555
     }); 
 
-    gulp.watch(['./app/templates/**/*.+(html|nunjucks|njk)', 
-                './app/pages/**/*.+(html|nunjucks|njk)'], 
+    gulp.watch(['./app/nunjucks/templates/**/*.+(html|nunjucks|njk)', 
+                './app/nunjucks/pages/**/*.+(html|nunjucks|njk)'], 
                 ['nunjucks']); 
     gulp.watch('./app/scss/**/*.scss', ['sass']); 
     gulp.watch('./app/js/**/*.js', ['scripts']);
@@ -55,10 +55,10 @@ gulp.task('serve', ['nunjucks', 'sass', 'scripts'], function() {
 // tasks
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
-  return gulp.src('./app/pages/**/*.+(html|nunjucks|njk)')
+  return gulp.src('./app/nunjucks/pages/**/*.+(html|nunjucks|njk)')
   // Renders template with nunjucks
   .pipe(nunjucks({
-      searchPaths: ['./app/templates'],
+      searchPaths: ['.app/nunjucks/templates'],
       autoescape: ['true'],
       ext: ['.html']
     }))
