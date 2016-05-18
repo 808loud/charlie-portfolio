@@ -2,13 +2,17 @@
   "author": "David Monson",
   "devDependencies": {
     "bootstrap-sass": "^3.3.6",
+    "browser-sync": "^2.12.8",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.6.0",
+    "gulp-data": "^1.2.1",
+    "gulp-notify": "^2.2.0",
     "gulp-nunjucks-html": "^2.0.0",
     "gulp-nunjucks-render": "^2.0.0",
     "gulp-sass": "^2.1.0",
     "gulp-server-livereload": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
     "gulp-webserver": "^0.9.1",
     "run-sequence": "^1.1.5"
   },
