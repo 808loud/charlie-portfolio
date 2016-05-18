@@ -19,13 +19,9 @@ function catchError (error) {
     
     notify({
         title: error.plugin + ' error',
-<<<<<<< HEAD
         subtitle: error.lineNumber,
         message: lineNumber,
         wait: true
-=======
-        message: lineNumber
->>>>>>> gulp
     }).write(error);
 
     // Pretty error reporting
