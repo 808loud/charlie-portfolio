@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp =         require('gulp');
-var gutil =         require('gulp-util');
+var gutil =        require('gulp-util');
 var data =         require('gulp-data');
 var concat =       require('gulp-concat');
 var nunjucks =     require('gulp-nunjucks-html');
@@ -18,8 +18,10 @@ function catchError (error) {
     var lineNumber = (error.lineNumber) ? 'LINE ' + error.lineNumber + ' -- ' : '';
     
     notify({
-        title: 'Gulp Task [' + error.plugin + '] Error',
-        message: lineNumber
+        title: error.plugin + ' error',
+        subtitle: error.lineNumber,
+        message: lineNumber,
+        wait: true
     }).write(error);
 
     // Pretty error reporting
