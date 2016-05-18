@@ -58,7 +58,7 @@ gulp.task('nunjucks', function() {
   return gulp.src('./app/nunjucks/pages/**/*.+(html|nunjucks|njk)')
   // Renders template with nunjucks
   .pipe(nunjucks({
-      searchPaths: ['.app/nunjucks/templates'],
+      searchPaths: ['./app/nunjucks/templates'],
       autoescape: ['true'],
       ext: ['.html']
     }))
