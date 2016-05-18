@@ -12,6 +12,12 @@
   <body>
     {% include "partials/navigation.njk" %}
 
+    {{ david.message }}
+
+    {% set david = {firstName:"John", lastName:"Doe", message:"herp"} %}
+
+    {{ david.message }}
+
     {% block content %}
     {% endblock %}
 
