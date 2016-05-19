@@ -47,7 +47,8 @@ gulp.task('serve', ['nunjucks', 'sass', 'scripts'], function() {
     }); 
 
     gulp.watch(['./app/nunjucks/templates/**/*.+(html|nunjucks|njk)', 
-                './app/nunjucks/pages/**/*.+(html|nunjucks|njk)'], 
+                './app/nunjucks/pages/**/*.+(html|nunjucks|njk)',
+                './app/nunjucks/data.json'], 
                 ['nunjucks']); 
     gulp.watch('./app/scss/**/*.scss', ['sass']); 
     gulp.watch('./app/js/**/*.js', ['scripts']);
@@ -58,10 +59,16 @@ gulp.task('serve', ['nunjucks', 'sass', 'scripts'], function() {
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
   return gulp.src('./app/nunjucks/pages/**/*.+(html|nunjucks|njk)')
+  // Adding data to Nunjucks
+  .pipe(data(function(file) {
+    var json = './app/nunjucks/data.json';
+    delete require.cache[require.resolve(json)];
+    return require(json);
+  }))
   // Renders template with nunjucks
   .pipe(nunjucks({
       searchPaths: ['./app/nunjucks/templates'],
-      autoescape: ['true'],
+      autoescape: false,
       ext: ['.html']
     }))
   .on('error', catchError)

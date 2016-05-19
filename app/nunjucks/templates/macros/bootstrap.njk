@@ -10,3 +10,15 @@
   <p>{{ paragraph }}</p>
 </div>
 {% endmacro %}
+
+{% macro offset2col( headerLeft, headerRight, paragraph ) %}
+<div class="row">
+	<div class="col-sm-3 outline-heading">
+	  <h2>{{ headerLeft }}</h2>
+	</div>
+	<div class="col-sm-9">
+	  <h4>{{ headerRight }}</h4>
+	  {{ paragraph }}
+	</div>
+</div>
+{% endmacro %}

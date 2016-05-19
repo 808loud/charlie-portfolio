@@ -1,7 +1,7 @@
 <!-- index.nunjucks -->
 {% extends "base.njk" %}
 
-{% set david = {firstName:"John", lastName:"Doe", message:"derp"} %}
+{% set david = {message:"derp"} %}
 
 {% block content %}
 
@@ -13,47 +13,33 @@
   </div>
 </div>
 
-<div class="container">
-	{% import 'macros/bootstrap.njk' as col %}
-	{{ col.left('Intro') }}
-	{{ col.right('Welcome to my portfolio', 'I am an independent consultant/freelancer that works with start ups, agencies, and corporate in-house teams. I have experience in pretty much all sectors, most recently in B2B/C Ecommerce, Engagement Programs, and Entertainment. Below are select examples that best represent my approach & capabilities. Thanks for stopping by!') }}
-</div>
-<!--  -->
-
-<div class="container-fluid">
-  <section id="work" class="text-center">
-  <h1 class="sr-only">Work</h1>
-    <article>
-      <img src="#" alt="">
-      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#recognition_app">Recognition App</button>
-    </article>
-    <article>
-      <img src="#" alt="">
-      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#uber_finder">Uber Finder</button>
-    </article>
-    <article>
-      <img src="#" alt="">
-      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#scout_loyal">Rewards Program</button>
-    </article>
-    <article>
-      <img src="#" alt="">
-      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#countrywide">B2B Ecommerce</button>
-    </article>
-    <article>
-      <img src="#" alt="">
-      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#print">Print Projects</button>
-    </article>
-  </section>
-</div>
+{% import 'macros/bootstrap.njk' as boot %}
 
 <div class="container">
-  <section id="process">
-    <div class="row">
- 			{{ col.left('Process', 'h1' ) }}
-  		{{ col.right('Initiate a project', 'Working on-site generally requires advanced notice while off-site work provides more flexibility. By carefully managing my schedule I can accommodate most requests. If I am not available to take on your project I would be happy to refer you to someone who can.') }}
-    </div>
-  </section>
+{{ boot.offset2col(
+    'Intro', 
+    'Welcome to my portfolio', 
+    '<p>I am an independent consultant/freelancer that works with start ups, agencies, and corporate in-house teams. I have experience in pretty much all sectors, most recently in B2B/C Ecommerce, Engagement Programs, and Entertainment. Below are select examples that best represent my approach &amp; capabilities. Thanks for stopping by!</p>') 
+}}
 </div>
+
+<section id="work" class="container-fluid text-center">
+  <h2 class="sr-only">Work</h2>
+  {% for project in projects %}
+  <article>
+    <img src="{{ project.preview_img }}" alt="{{ project.preview_alt }}">
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#{{ project.slug }}">{{ project.title }}</button>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="container" id="process">
+  {{ boot.offset2col (
+    'Process',
+    'Initiate a project', 
+    '<p>Working on-site generally requires advanced notice while off-site work provides more flexibility. By carefully managing my schedule I can accommodate most requests. If I am not available to take on your project I would be happy to refer you to someone who can.</p>'
+  ) }}
+</section>
 
 <div class="container-fluid">
   <div class="row">
@@ -63,18 +49,18 @@
   </div>
 </div>
 
-<div class="container">
-  <section>  
-    <div class="row">
-      {{ col.left('On-site') }}
-      {{ col.right("Collaboration is where it's at", "The work is just as important as the people behind it. I'll take the time to get to know your team and the unique set of challenges they face. For larger projects I'll inquire about internal processes, review business requirements, and go through a discovery &amp; planning phase. For smaller projects and support roles, general direction is all that's needed. I've gone from managing small teams to working under some incredible leaders. What's important are the relationships that get forged and making great work that everyone can be proud of. I'll maintain regular check-ins with team members so projects stay on track. A huge fan of open collaboration &amp; dialogue; a happy team is a productive one, every time.") }}
-    </div>
-    <div class="row">
- 			{{ col.left('Off-site') }}
- 			{{ col.right('Fast, transparent, reliable', '<em>Working</em> remote keeps overhead low by only utilizing the services you need, when you need it. Every project starts with a discovery &amp; planning phase where I\'ll take the time to get to know your business and the challenges it faces. I\'ll ask for your feedback early and often, this saves time by only investing in solutions that are going to work. On the occasion extra help is needed, I have a pretty good network of talent from varying backgrounds to collaborate with. I\'m also open to working with members of your team or preferred partners. With advance notice on-site meetings and work sessions can be accommodated.') }}
-    </div>
-  </section>
-</div>
+<section class="container">
+  {{ boot.offset2col (
+    "On-site",
+    "Collaboration is where it's at",
+    "<p>The work is just as important as the people behind it. I'll take the time to get to know your team and the unique set of challenges they face. For larger projects I'll inquire about internal processes, review business requirements, and go through a discovery &amp; planning phase. For smaller projects and support roles, general direction is all that's needed. I've gone from managing small teams to working under some incredible leaders. What's important are the relationships that get forged and making great work that everyone can be proud of. I'll maintain regular check-ins with team members so projects stay on track. A huge fan of open collaboration &amp; dialogue; a happy team is a productive one, every time.</p>"
+  )}}
+  {{ boot.offset2col( 
+    'Off-site', 
+    'Fast, transparent, reliable',
+    "Working remote keeps overhead low by only utilizing the services you need, when you need it. Every project starts with a discovery &amp; planning phase where I'll take the time to get to know your business and the challenges it faces. I'll ask for your feedback early and often, this saves time by only investing in solutions that are going to work. On the occasion extra help is needed, I have a pretty good network of talent from varying backgrounds to collaborate with. I'm also open to working with members of your team or preferred partners. With advance notice on-site meetings and work sessions can be accommodated.")
+  }}
+</section>
 
 <div class="container-fluid">
   <div id="quote_carousel" class="carousel slide" data-ride="carousel">
@@ -147,6 +133,294 @@
       </div>
     </div>
   </section>
+</div>
+
+<div id="recognition_app" class="modal modal-fullscreen fade">
+    <div class="row">
+            <div class="col-xs-12 text-center">
+              <button type="button" class="btn btn-default" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+    </div>
+    <div class="row">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="col-xs-12">
+              {{ boot.offset2col(
+              "Work",
+              "Buzz App + Website",
+              "<p>A social recognition app targeted to Millennials with the idea that by engaging in their workforce you will earn their loyalty—and keep it for years to come. Employees and managers alike are enabled to show appreciation and emphasize that the work they're doing as a whole really is making a difference. I worked on-site with a team of in-house developers, product managers, and creatives. I advised on strategy/creative, took part in planning meetings, developed user interfaces, developed graphics, and helped prepare files for hand off.</p>
+              <ul class=\"project-data\">
+                <li>Scope: UI, Design</li>
+                <li>Client: BI Worldwide</li>
+                <li>Dev: Ashby Utting, Ryan Asleson, Court Cromwell-Carl</li>
+              </ul>")
+              }}
+            </div><!-- .col-xs-12 -->
+          </div><!-- .modal-body -->
+        </div><!-- .modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- .row -->
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>Mobile App</h4>
+        <p>Some of the features include posting stories, taking quizzes or polls, reading announcements, celebrate milestones, and even track happiness at work. The more employees interact with the app, the smarter it gets.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <img src="http://placehold.it/200x400" class="img-responsive" alt="">
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <img src="http://placehold.it/200x400" class="img-responsive" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>Admin site</h4>
+        <p>Managers can keep track of all app activity through the admin site. Access activity details, create/edit programs, monitor statistics, track employee involvement, and more.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="http://placehold.it/800x800" class="img-responsive" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <button type="button" class="btn btn-default"><i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sr-only">Back to top</span></button>
+      </div>
+    </div>              
+</div><!-- .modal -->
+
+<div id="uber_finder" class="modal modal-fullscreen fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn btn-default" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-3 outline-heading">
+              <h2>Work</h2>
+            </div>
+            <div class="col-sm-9">
+              <h4>Uber Finder + Product Description Page</h4>
+              <p>Discount Filter Store needed an easy way to help customers find the products they need with an advanced search feature. The process had to be fast and intuitive with the least amount of steps taken. They also wanted to rework their product description page to better reflect inventory, up-sell larger quantities, and cross-sell their own product line when appropriate. I worked mostly off-site advising on best practices in ecommerce and workflow. I also created wireframes, high-fidelity mock ups, presented creative, and produced final layouts.</p>
+              <ul class="project-data">
+                <li>Scope: UI, UX, Strategy, Art Direction</li>
+                <li>Client: Discount Filter Store</li>
+                <li>Dev: Ian Gloude, David Monson</li>
+              </ul>
+            </div><!-- .col-sm-9 -->
+          </div><!-- .row -->
+        </div><!-- .container-fluid -->
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h4>Uber Finder</h4>
+              <p>Access to the uber finder can be reached by tapping on the search icon in the top navigation bar. Users first select a category for the product they are searching for. They are then taken to the appropriate finder that will prompt them to make a selection under each category highlighted in a black bubble. The prompt in the black bubble is then replaced with the users selection and changed to a blue bubble. This process repeats until the finder identifies a match. If an error is made the user can simply scroll up, tap a previous selection, and make a new one.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <img src="http://placehold.it/200x400" class="img-responsive" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <img src="http://placehold.it/200x400" class="img-responsive" alt="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <h4>Product Description Page</h4>
+              <p>Many brand name products on their site have a comparable product produced by the supplier. A counter offer is strategically placed above the price to guide consumers to the supplier brand. Options for order quantity and frequency we're also redeveloped to better reflect the company offering.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <img src="http://placehold.it/200x800" class="img-responsive" alt="">
+            </div>
+          </div>
+        </div>
+      </div><!-- .modal-body -->
+    </div><!-- modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+<div id="scout_loyal" class="modal modal-fullscreen fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn btn-default" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-3 outline-heading">
+              <h2>Work</h2>
+            </div>
+            <div class="col-sm-9">
+              <h4>Rewards Website + Print</h4>
+              <p>Scout needed a way to incentivize their employees by getting more recruiters to sign up for their services and grow its use among current customers. The solution was a rewards program that would increase visits to their site and use of their services. Scout Loyal features flexible rewards that are attractive to both recruiters and the companies they work for, and provides ways for Scout to show current customers they are valued.</p>
+              <p>I worked mostly on-site to lead and mentor a small agency team. I was responsible for creative, wireframes, high-fidelity prototypes, client presentations, final layouts, and style guides.</p>
+              <ul class="project-data">
+                <li>Scope: UI, UX, Design, Creative Direction</li>
+                <li>Client: Scout Search Firm</li>
+                <li>Dev: Robert Young, Producer: Demetrius Nelson, Writer: Jennifer Littlejohn</li>
+              </ul>
+            </div><!-- .col-sm-9 -->
+          </div><!-- .row -->
+        </div><!-- .container-fluid -->
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h4>Website</h4>
+              <p>The site features a tutorial that outlines all program features and explains how points are earned. The site allows users to redeem earned points for rewards that can be assigned to employer/organization or individual recruiter. There is also a dashboard that displays user level, points earned, and a report that compares earning progress to the program average.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <img src="http://placehold.it/400x400" class="img-responsive" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <img src="http://placehold.it/200x400" class="img-responsive" alt="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <h4>Email</h4>
+              <p>Pre-launch, launch, and post-launch emails were developed to introduce and maintain engagement in the program.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <img src="http://placehold.it/800x800" class="img-responsive" alt="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <h4>Print</h4>
+              <p>The client also requested a few print materials to support the launch, including a step-by-step guide that instructs how the site works, a loyalty card, and postcard to spread the word.</p>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12">
+              <img src="http://placehold.it/800x800" class="img-responsive" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+         back to top
+        </div>
+      </div><!-- .modal-body -->
+    </div><!-- modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+<div id="countrywide" class="modal modal-fullscreen fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn btn-default" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-3 outline-heading">
+              <h2>Work</h2>
+            </div>
+            <div class="col-sm-9">
+              <h4>B2B Ecommerce Website</h4>
+              <p>Countrywide needed a new strategy + redesign for their B2B Ecommerce site. In addtion to placing orders by pallet customers can now access larger quantities by truck or container. Truck orders are fulfilled by their factory, while container orders allow direct access to factories that they have partnerships with. This feature also calculates the total amount of weight/space that an order would take up and does not allow customers to checkout until an order is filled.</p>
+              <p>I partnered with CWT&amp;R to develop strategy, sitemaps, wireframes, low/high fidelity mockups, and final layouts. I worked with their project manager to source freelance developers for the front and backend. All work was done off site with the exception of a few on-site meetings with the team.</p>
+              <ul class="project-data">
+                <li>Scope: UI, UX, Art Direction, Design</li>
+                <li>Client: Countrywide Tire &amp; Rubber</li>
+                <li>Dev: Cullan Luthar, Jeremy Groven</li>
+              </ul>
+            </div><!-- .col-sm-9 -->
+          </div><!-- .row -->
+        </div><!-- .container-fluid -->
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h4>Website</h4>
+              <p>The site is meant to primarly work with registered customers. Visitors can explore the company offering without revealing price-sensitive information. Once logged-in there is access to features that allow customers to quickly narrow their search results. Other features include a progress meter that tracks truck and container orders, a quick list function for saving item numbers, and advanced ordering options for repeat customers.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <img src="http://placehold.it/200x400" class="img-responsive" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <img src="http://placehold.it/200x400" class="img-responsive" alt="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <h4>Mobile Site</h4>
+              <p>The site was designed to be completely responsive. The ordering process adapts to work in mobile environments by making good use of side scrollers, drop downs, and pop ups.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <img src="http://placehold.it/800x800" class="img-responsive" alt="">
+            </div>
+          </div>
+        </div>
+      </div><!-- .modal-body -->
+    </div><!-- modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+<div id="print" class="modal modal-fullscreen fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn btn-default" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-3 outline-heading">
+              <h2>Work</h2>
+            </div>
+            <div class="col-sm-9">
+              <h4>The World of Print</h4>
+              <p>I've had the honor to work with some great brands over the years. The exposure has taught me what needs to happen in order to make a business successful by really taking the time to learn their market and what makes it tick. Working in print offers a unique kind of engagement that no digital product can achieve. It forces you to think differently about a marketing strategy; not only in development but how and when it's executed.</p>
+              <p>Below is a selection of projects that I have been responsible for. Some work has happened in collaboration with a team, while others were completed off-site working directly with the client.</p>
+            </div><!-- .col-sm-9 -->
+          </div><!-- .row -->
+        </div><!-- .container-fluid -->
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h4>Circulars, packaging, toy design, and so much more!</h4>
+              <p>My work in print spans across virtually every medium and sector. I chose to focus these examples in markets that I have recent experience in, including retail, restaurant, and kids entertainment. Feel free to get in touch if there is a specific type of work you would like to see.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <img src="http://placehold.it/200x400" class="img-responsive" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <img src="http://placehold.it/200x400" class="img-responsive" alt="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <h4></h4>
+              <p></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <img src="http://placehold.it/800x800" class="img-responsive" alt="">
+            </div>
+          </div>
+        </div>
+      </div><!-- .modal-body -->
+    </div><!-- modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+<div class="container">
+  {% include "partials/footer.njk" %}
 </div>
 
 {% endblock %}
