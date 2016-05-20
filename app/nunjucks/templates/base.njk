@@ -12,25 +12,35 @@
   <body>
     {% include "partials/navigation.njk" %}
 
-    {{ projects[0].preview_img }}
-
-    {% for ingredient, amount in food %}
-      Use {{ amount }} of {{ ingredient }}
-    {% endfor %}
-    <br>
-    {{ clients[0].recognition_app[0].title }}
-    {% for smack in clients.scout %} 
-      {{ smack.headline }}
-    {% endfor %}
-    <br>
-    {{ david.message }}
-    {% set david = {firstName:"John", lastName:"Doe", message:"herp"} %}
-    {{ david.message }}
-
     {% block content %}
     {% endblock %}
 
+    <section class="container">
+      {% include "partials/footer.njk" %}
+    </section>
+
   <script type="text/javascript" src="js/scripts.js"></script>
+
+  <!-- play area -->
+  {{ temp[0].preview_img }}
+  <br>
+  {% for ingredient, amount in food %}
+    Use {{ amount }} of {{ ingredient }}
+  {% endfor %}
+  <br>
+  {{ test[0].recognition_app.title }}
+  <br>
+  {% for smack, shack in test[0].recognition_app %} 
+    {{ shack }}
+  {% endfor %}
+  <br>
+  {{ projects[0].slug }} -- {{ projects[1].preview_img }}
+  <br>
+  {% set david = {message:"herp"} %}
+  {{ david.message }}
+  {% set david = {firstName:"John", lastName:"Doe", message:"derp"} %}
+  {{ david.message }}
+  <br>
 
 </body>
 </html>

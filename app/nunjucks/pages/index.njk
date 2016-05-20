@@ -1,9 +1,14 @@
 <!-- index.nunjucks -->
 {% extends "base.njk" %}
-
-{% set david = {message:"derp"} %}
+{% import 'macros/bootstrap.njk' as boot %}
 
 {% block content %}
+
+{% for modal in projects %}
+  modal preview: {{ modal.slug }}
+  {% include "modal.njk" %}
+  <br>
+{% endfor %}
 
 <div class="jumbotron">
   <div class="container text-center">
@@ -13,27 +18,25 @@
   </div>
 </div>
 
-{% import 'macros/bootstrap.njk' as boot %}
-
-<div class="container">
+<section class="container">
 {{ boot.offset2col(
     'Intro', 
     'Welcome to my portfolio', 
     '<p>I am an independent consultant/freelancer that works with start ups, agencies, and corporate in-house teams. I have experience in pretty much all sectors, most recently in B2B/C Ecommerce, Engagement Programs, and Entertainment. Below are select examples that best represent my approach &amp; capabilities. Thanks for stopping by!</p>') 
 }}
-</div>
+</section>
 
 <section id="work" class="container-fluid text-center">
   <h2 class="sr-only">Work</h2>
   {% for project in projects %}
   <article>
-    <img src="{{ project.preview_img }}" alt="{{ project.preview_alt }}">
+    <img src="{{ project.preview_img }}" alt="{{ project.title }}">
     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#{{ project.slug }}">{{ project.title }}</button>
   </article>
   {% endfor %}
 </section>
 
-<section class="container" id="process">
+<section id="process" class="container">
   {{ boot.offset2col (
     'Process',
     'Initiate a project', 
@@ -58,140 +61,111 @@
   {{ boot.offset2col( 
     'Off-site', 
     'Fast, transparent, reliable',
-    "Working remote keeps overhead low by only utilizing the services you need, when you need it. Every project starts with a discovery &amp; planning phase where I'll take the time to get to know your business and the challenges it faces. I'll ask for your feedback early and often, this saves time by only investing in solutions that are going to work. On the occasion extra help is needed, I have a pretty good network of talent from varying backgrounds to collaborate with. I'm also open to working with members of your team or preferred partners. With advance notice on-site meetings and work sessions can be accommodated.")
+    "<p>Working remote keeps overhead low by only utilizing the services you need, when you need it. Every project starts with a discovery &amp; planning phase where I'll take the time to get to know your business and the challenges it faces. I'll ask for your feedback early and often, this saves time by only investing in solutions that are going to work. On the occasion extra help is needed, I have a pretty good network of talent from varying backgrounds to collaborate with. I'm also open to working with members of your team or preferred partners. With advance notice on-site meetings and work sessions can be accommodated.</p>")
   }}
 </section>
 
 <div class="container-fluid">
   <div id="quote_carousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#quote_carousel" data-slide-to="0" class="active"></li>
-      <li data-target="#quote_carousel" data-slide-to="1"></li>
+      {% for quote in quotes %}
+      <li data-target="#quote_carousel" data-slide-to="{{ quote.id }}" class="{{ quote.active }}"></li>
+      {% endfor %}
     </ol>
-
     <div class="carousel-inner text-center bg-primary" role="listbox">
-      <div class="item active">
+      {% for quote in quotes %}
+      <div class="item {{ quote.active }}">
         <blockquote>
           <div class="row">
             <div class="col-xs-12">
-              <p>&ldquo;I've worked with teams of designers that cannot produce what Charlie has by himself.&rdquo;</p>
-              <footer>Josh Ranta, Web Development Manager</footer>
+              <p>&ldquo;{{ quote.quote }}&rdquo;</p>
+              <footer>{{ quote.citation }}, {{ quote.title }}</footer>
             </div>
           </div>
         </blockquote>
       </div>
-      <div class="item">
-        <blockquote>
-          <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-              <p>&ldquo;Charlie is awesome&rdquo;<br>Yep</p>
-              <footer>David</footer>
-            </div>
-          </div>
-        </blockquote>
-      </div>
+      {% endfor %}
     </div>
   </div>
-  <script>
-    $('.carousel').carousel()
-  </script>
+  <script>$('.carousel').carousel();</script>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-3 outline-heading">
-      <h2>Experience</h2>
-    </div>
-    <div class="col-sm-9">
-      <img src="#" alt="Target, Coleman, Kmart, Warner Bros., mj, Best Buy, Geometry Global, General Mills, Preston Kelly, GAP, BI Worldwide, Cartoon Network" />
-    </div>
-  </div>
+<section class="container">
+  {{ boot.offset2col(
+  'Experience',
+  '',
+  '<img src="#" alt="Target, Coleman, Kmart, Warner Bros., mj, Best Buy, Geometry Global, General Mills, Preston Kelly, GAP, BI Worldwide, Cartoon Network">')
+  }}
+</section>
 
+<section id="booking" class="container">
+  {{ boot.offset2col(
+  'Booking',
+  'This is how the magic begins',
+  '<p>Please fill out the form below and let me know how I can help.</p>
+  <p>You will get a response within 24 of inquiry.</p>')
+  }}
+  {% include "partials/contact-form.njk" %}
+</section>
 
-  <section id="booking">
-    <div class="row">
-      <div class="col-sm-3 outline-heading">
-        <h1>Booking</h1>
-      </div>
-      <div class="col-sm-9">
-        <h4>This is how the magic begins</h4>
-        <p>Please fill out the form below and let me know how I can help.</p>
-        <p>You will get a response within 24 of inquiry.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-6 col-xs-offset-3">
-        <form>
-          <input id="name" placeholder="Name" type="text" class="form-control">
-          <input id="email" placeholder="Email" type="email" class="form-control">
-          <input id="company" placeholder="Company name" type="text" class="form-control">
-          <textarea id="message" placeholder="How can I help you?" class="form-control" rows="6"></textarea>
-          <div class="text-center">
-            <button type="submit" class="btn btn-default">Send</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-</div>
 
 <div id="recognition_app" class="modal modal-fullscreen fade">
-    <div class="row">
-            <div class="col-xs-12 text-center">
-              <button type="button" class="btn btn-default" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <button type="button" class="btn btn-default" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
     </div>
-    <div class="row">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="col-xs-12">
-              {{ boot.offset2col(
-              "Work",
+  </div>
+  <div class="row">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="col-xs-12">
+            {{ boot.offset2col(
+              "TTTTTTTTTTTTTTT",
               "Buzz App + Website",
-              "<p>A social recognition app targeted to Millennials with the idea that by engaging in their workforce you will earn their loyalty—and keep it for years to come. Employees and managers alike are enabled to show appreciation and emphasize that the work they're doing as a whole really is making a difference. I worked on-site with a team of in-house developers, product managers, and creatives. I advised on strategy/creative, took part in planning meetings, developed user interfaces, developed graphics, and helped prepare files for hand off.</p>
-              <ul class=\"project-data\">
+              "<p>A social recognition app targeted to Millennials with the idea that by engaging in their workforce you will earn their loyalty&endash;and keep it for years to come. Employees and managers alike are enabled to show appreciation and emphasize that the work they're doing as a whole really is making a difference. I worked on-site with a team of in-house developers, product managers, and creatives. I advised on strategy/creative, took part in planning meetings, developed user interfaces, developed graphics, and helped prepare files for hand off.</p>
+              <ul class='project-data'>
                 <li>Scope: UI, Design</li>
                 <li>Client: BI Worldwide</li>
                 <li>Dev: Ashby Utting, Ryan Asleson, Court Cromwell-Carl</li>
               </ul>")
-              }}
-            </div><!-- .col-xs-12 -->
-          </div><!-- .modal-body -->
-        </div><!-- .modal-content -->
-      </div><!-- modal-dialog -->
-    </div><!-- .row -->
-    <div class="row">
-      <div class="col-xs-12">
-        <h4>Mobile App</h4>
-        <p>Some of the features include posting stories, taking quizzes or polls, reading announcements, celebrate milestones, and even track happiness at work. The more employees interact with the app, the smarter it gets.</p>
-      </div>
+            }}
+          </div><!-- .col-xs-12 -->
+        </div><!-- .modal-body -->
+      </div><!-- .modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- .row -->
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>Mobile App</h4>
+      <p>Some of the features include posting stories, taking quizzes or polls, reading announcements, celebrate milestones, and even track happiness at work. The more employees interact with the app, the smarter it gets.</p>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <img src="http://placehold.it/200x400" class="img-responsive" alt="">
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <img src="http://placehold.it/200x400" class="img-responsive" alt="">
-      </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <img src="http://placehold.it/200x400" class="img-responsive" alt="">
     </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <h4>Admin site</h4>
-        <p>Managers can keep track of all app activity through the admin site. Access activity details, create/edit programs, monitor statistics, track employee involvement, and more.</p>
-      </div>
+    <div class="col-xs-12 col-sm-6">
+      <img src="http://placehold.it/200x400" class="img-responsive" alt="">
     </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <img src="http://placehold.it/800x800" class="img-responsive" alt="">
-      </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>Admin site</h4>
+      <p>Managers can keep track of all app activity through the admin site. Access activity details, create/edit programs, monitor statistics, track employee involvement, and more.</p>
     </div>
-    <div class="row">
-      <div class="col-xs-12 text-center">
-        <button type="button" class="btn btn-default"><i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sr-only">Back to top</span></button>
-      </div>
-    </div>              
-</div><!-- .modal -->
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <img src="http://placehold.it/800x800" class="img-responsive" alt="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <button type="button" class="btn btn-default"><i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sr-only">Back to top</span></button>
+    </div>
+  </div>              
+</div>
 
 <div id="uber_finder" class="modal modal-fullscreen fade">
   <div class="modal-dialog">
@@ -418,9 +392,5 @@
     </div><!-- modal-content -->
   </div><!-- .modal-dialog -->
 </div><!-- .modal -->
-
-<div class="container">
-  {% include "partials/footer.njk" %}
-</div>
 
 {% endblock %}
