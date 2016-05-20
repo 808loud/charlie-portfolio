@@ -1,0 +1,116 @@
+{
+	"projects": [{
+		"id": 0,
+		"title": "Recognition App",
+		"slug": "recognition_app",
+		"headline": "",
+  	"preview_img": "#",
+  	"modal": {
+  		"header": "Buzz App + Website",
+  		"summary": "<p>A social recognition app targeted to Millennials with the idea that by engaging in their workforce you will earn their loyalty&endash;and keep it for years to come. Employees and managers alike are enabled to show appreciation and emphasize that the work they're doing as a whole really is making a difference.</p><p>I worked on-site with a team of in-house developers, product managers, and creatives. I advised on strategy/creative, took part in planning meetings, developed user interfaces, developed graphics, and helped prepare files for hand off.</p>",
+  		"content": "<img src=\"#\">"
+  	},
+  	"project_meta": {
+  		"scope": "UI, Design",
+  		"client": "BI Worldwide",
+  		"dev": "Ashby Utting, Ryan Asleson, Court Cromwell-Carl"
+  	}
+	}, {
+		"id": 1,
+		"title": "Uber Finder",
+		"slug": "uber_finder",
+		"headline": "",
+  	"preview_img": "#"
+	}, {
+		"id": 2,
+		"title": "Rewards Program",
+		"slug": "scout_loyal",
+		"headline": "",
+  	"preview_img": "#"
+	}, {
+		"id": 3,
+		"title": "B2B Ecommerce",
+		"slug": "countrywide",
+		"headline": "",
+  	"preview_img": "#"
+	}, {
+		"id": 4,
+		"title": "Print Projects",
+		"slug": "print",
+		"headline": "",
+  	"preview_img": "#"
+	}],
+	"quotes": [{
+		"id": 0,
+		"quote": "I've worked with teams of designers that cannot produce what Charlie has by himself",
+		"citation": "Josh Ranta",
+		"title": "Web Development Manager",
+		"active": "active"
+	}, {
+		"id": 1,
+		"quote": "Charlie's understanding of web development meant that all of his work was easily transferred to the development stage",
+		"citation": "David Monson",
+		"title": "Front-end Developer",
+		"active": ""
+	}, {
+		"id": 2,
+		"quote": "We have happy clients across the Twin Cities because of Charlie's unwavering devotion to his craft.",
+		"citation": "Bryan Peglow",
+		"title": "Business Development Manager",
+		"active": ""
+	}],
+	"test": [{
+		"recognition_app": {
+			"title": "Recognition App",
+			"headline": ["roger that", "whyyy"]
+		},
+		"scout": {
+			"title": "Rewards Program",
+			"headline": "making waves"
+		}
+	}],
+	"food": {
+	  "ketchup": "5 tbsp",
+	  "mustard": "1 tbsp",
+	  "pickle": "0 tbsp"
+	},
+  "images": [{
+    "src": "image-C.png",
+    "alt": "Image A alt text"
+  }, {
+    "src": "image-two.png",
+    "alt": "Image two alt text"
+  }],
+  "top": [{
+  	"mid": [{
+  		"low": "success",
+  		"foo": "bar"
+  	}]
+  }],
+  "temp": [{
+  	"title": "Recognition App",
+  	"slug": "recognition_app",
+  	"preview_img": "#",
+  	"preview_alt": ""
+  }, {
+  	"title": "Uber Finder",
+  	"slug": "uber_finder",
+  	"preview_img": "#",
+  	"preview_alt": ""
+  }, {
+  	"title": "Rewards Program",
+  	"slug": "scout_loyal",
+  	"preview_img": "#",
+  	"preview_alt": ""
+  }, {
+  	"title": "B2B Ecommerce",
+  	"slug": "countrywide",
+  	"preview_img": "#",
+  	"preview_alt": ""
+  }, {
+  	"title": "Print Projects",
+  	"slug": "print",
+  	"preview_img": "#",
+  	"preview_alt": ""
+  }]
+}

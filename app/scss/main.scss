@@ -62,7 +62,7 @@ body {
 
 .outline-heading {
 
-  h1, h2 {
+  h2 {
     font-size: $font_size_medium;
     font-weight: bold;
     text-transform: uppercase;
@@ -82,13 +82,22 @@ h4 {
   text-transform: uppercase;
 }
 
-.carousel blockquote {
-  p {
-    font-size: $font_size_xl;
-  }
+.carousel .carousel-inner {
 
-  footer {
-    font-size: $font_size_medium;
+  height: 240px;
+
+  blockquote {
+  
+    border-left: none;
+
+    p {
+      font-size: $font_size_xl;
+    }
+
+    footer {
+      font-size: $font_size_medium;
+    }
+
   }
 }
 .modal-fullscreen {
