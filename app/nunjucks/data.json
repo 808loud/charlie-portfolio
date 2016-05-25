@@ -8,7 +8,12 @@
   	"modal": {
   		"header": "Buzz App + Website",
   		"summary": "<p>A social recognition app targeted to Millennials with the idea that by engaging in their workforce you will earn their loyalty&ndash;and keep it for years to come. Employees and managers alike are enabled to show appreciation and emphasize that the work they're doing as a whole really is making a difference.</p><p>I worked on-site with a team of in-house developers, product managers, and creatives. I advised on strategy/creative, took part in planning meetings, developed user interfaces, developed graphics, and helped prepare files for hand off.</p>",
-  		"content": "<img src=\"#\">"
+  		"content": [
+  			"<div class='col-xs-12'><h4>Mobile App</h4><p>Some of the features include posting stories, taking quizzes or polls, reading announcements, celebrate milestones, and even track happiness at work. The more employees interact with the app, the smarter it gets.</p></div>", 
+  			"<div class='col-xs-12 col-sm-6'><img src='http://placehold.it/200x400' class='img-responsive' alt=''></div><div class='col-xs-12 col-sm-6'><img src='http://placehold.it/200x400' class='img-responsive' alt=''></div>", 
+  			"<div class='col-xs-12'><h4>Admin site</h4><p>Managers can keep track of all app activity through the admin site. Access activity details, create/edit programs, monitor statistics, track employee involvement, and more.</p></div>", 
+  			"<div class='col-xs-12'><img src='http://placehold.it/800x800' class='img-responsive' alt=''></div>"
+  		]
   	},
   	"project_meta": {
   		"scope": "UI, Design",

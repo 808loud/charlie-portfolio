@@ -1,42 +1,47 @@
 
 {% import 'macros/bootstrap.njk' as boot %}
 
-{{ boot.offset2col( "Work", modal.modal.header, modal.modal.summary ) }}
-<div class="row">
-	<div class="col-sm-9 col-sm-offset-3">
-	  <ul class="project-data">
-	    <li>Scope: {{ modal.project_meta.scope }}</li>
-	    <li>Client: {{ modal.project_meta.client }}</li>
-	    <li>Dev: {{ modal.project_meta.dev }}</li>
-	  </ul>
-	</div>
-</div>
-{{ modal.modal.content }}
-
 <div id="{{ modal.slug }}" class="modal modal-fullscreen fade">
+
   <div class="row">
     <div class="col-xs-12 text-center">
       <button type="button" class="btn btn-default" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
     </div>
   </div>
-  <div class="row">
+
+  <div class="row bg-info">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body">
-          <div class="col-xs-12">
-						{{ boot.offset2col( modal.headerLeft, modal.headerRight, modal.summary ) }}
-
-              <ul class='project-data'>
-                <li>Scope: UI, Design</li>
-                <li>Client: BI Worldwide</li>
-                <li>Dev: Ashby Utting, Ryan Asleson, Court Cromwell-Carl</li>
-              </ul>
-            
-          </div><!-- .col-xs-12 -->
+          <div class="row">
+            <div class="col-xs-12">
+              {{ boot.offset2col( "Work", project.modal.header, project.modal.summary ) }}
+            </div>
+          </div>
+          <div class="row">
+          	<div class="col-sm-9 col-sm-offset-3">
+          	  <ul class="project-data list-unstyled">
+          	    <li>Scope: {{ project.project_meta.scope }}</li>
+          	    <li>Client: {{ project.project_meta.client }}</li>
+          	    <li>Dev: {{ project.project_meta.dev }}</li>
+          	  </ul>
+          	</div>
+          </div>
         </div><!-- .modal-body -->
       </div><!-- .modal-content -->
     </div><!-- modal-dialog -->
   </div><!-- .row -->
-</div>
 
+  {% for row in project.modal.content %}
+  <div class="row">
+    {{ row }}
+  </div>
+  {% endfor %}
 
+  <div class='row'>
+    <div class='col-xs-12 text-center'>
+      <button type='button' class='btn btn-default'><i class='fa fa-arrow-up' aria-hidden='true'></i><span class='sr-only'>Back to top</span></button>
+    </div>
+  </div>
+
+</div
