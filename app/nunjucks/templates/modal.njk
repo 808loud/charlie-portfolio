@@ -1,7 +1,6 @@
-
 {% import 'macros/bootstrap.njk' as boot %}
 
-<div id="{{ modal.slug }}" class="modal modal-fullscreen fade">
+<div id="{{ project.slug }}" class="modal modal-fullscreen fade">
 
   <div class="row">
     <div class="col-xs-12 text-center">
@@ -15,7 +14,9 @@
         <div class="modal-body">
           <div class="row">
             <div class="col-xs-12">
-              {{ boot.offset2col( "Work", project.modal.header, project.modal.summary ) }}
+              {% block square %}
+              {% endblock %}
+              {{ boot.offset2col( "Work", project.title, project.summary ) }}
             </div>
           </div>
           <div class="row">
@@ -32,11 +33,9 @@
     </div><!-- modal-dialog -->
   </div><!-- .row -->
 
-  {% for row in project.modal.content %}
-  <div class="row">
-    {{ row }}
-  </div>
-  {% endfor %}
+
+  {% block fuck %}
+  {% endblock %}
 
   <div class='row'>
     <div class='col-xs-12 text-center'>
@@ -44,4 +43,4 @@
     </div>
   </div>
 
-</div
+</div>

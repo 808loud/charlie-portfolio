@@ -40,8 +40,8 @@ function catchError (error) {
 gulp.task('serve', ['nunjucks', 'sass', 'scripts'], function() { 
     browserSync.init({ 
         server: {
-            baseDir: "./public",
-            index: "index.html"
+            baseDir: "./public"
+            // index: "index.html"
         },
         port: 5555
     }); 
