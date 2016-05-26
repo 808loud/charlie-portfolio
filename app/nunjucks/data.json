@@ -1,46 +1,45 @@
 {
-	"projects": [{
+"projects": [
+	{
 		"id": 0,
-		"title": "Recognition App",
+		"title": "Buzz App + Website",
 		"slug": "recognition_app",
-		"headline": "",
-  	"preview_img": "#",
-  	"modal": {
-  		"header": "Buzz App + Website",
-  		"summary": "<p>A social recognition app targeted to Millennials with the idea that by engaging in their workforce you will earn their loyalty&ndash;and keep it for years to come. Employees and managers alike are enabled to show appreciation and emphasize that the work they're doing as a whole really is making a difference.</p><p>I worked on-site with a team of in-house developers, product managers, and creatives. I advised on strategy/creative, took part in planning meetings, developed user interfaces, developed graphics, and helped prepare files for hand off.</p>",
-  		"content": "<img src=\"#\">"
-  	},
-  	"project_meta": {
-  		"scope": "UI, Design",
-  		"client": "BI Worldwide",
-  		"dev": "Ashby Utting, Ryan Asleson, Court Cromwell-Carl"
-  	}
+		"button": "Recognition App",
+		"logo": "#",
+		"preview_img": "#"
 	}, {
 		"id": 1,
-		"title": "Uber Finder",
+		"title": "Uber Finder + Product Description Page",
 		"slug": "uber_finder",
-		"headline": "",
-  	"preview_img": "#"
+		"button": "Uber Finder",
+		"logo": "#",
+		"preview_img": "#"
 	}, {
 		"id": 2,
-		"title": "Rewards Program",
+		"title": "",
 		"slug": "scout_loyal",
-		"headline": "",
-  	"preview_img": "#"
+		"button": "Rewards Program",
+		"logo": "#",
+		"preview_img": "#"
 	}, {
 		"id": 3,
-		"title": "B2B Ecommerce",
+		"title": "",
 		"slug": "countrywide",
-		"headline": "",
-  	"preview_img": "#"
+		"button": "B2B Ecommerce",
+		"logo": "#",
+		"preview_img": "#"
 	}, {
 		"id": 4,
-		"title": "Print Projects",
+		"title": "",
 		"slug": "print",
-		"headline": "",
-  	"preview_img": "#"
-	}],
-	"quotes": [{
+		"button": "Print Projects",
+		"logo": "#",
+		"preview_img": "#"
+	}
+],
+
+"quotes": [
+	{
 		"id": 0,
 		"quote": "I've worked with teams of designers that cannot produce what Charlie has by himself",
 		"citation": "Josh Ranta",
@@ -58,59 +57,23 @@
 		"citation": "Bryan Peglow",
 		"title": "Business Development Manager",
 		"active": ""
-	}],
-	"test": [{
-		"recognition_app": {
-			"title": "Recognition App",
-			"headline": ["roger that", "captain"]
-		},
-		"scout": {
-			"title": "Rewards Program",
-			"headline": "making waves"
-		}
-	}],
-	"food": {
-	  "ketchup": "5 tbsp",
-	  "mustard": "1 tbsp",
-	  "pickle": "0 tbsp"
+	}
+],
+
+
+"test": [{
+	"recognition_app": {
+		"title": "Recognition App",
+		"headline": ["roger that", "captain"]
 	},
-  "images": [{
-    "src": "image-C.png",
-    "alt": "Image A alt text"
-  }, {
-    "src": "image-two.png",
-    "alt": "Image two alt text"
-  }],
-  "top": [{
-  	"mid": [{
-  		"low": "success",
-  		"foo": "bar"
-  	}]
-  }],
-  "temp": [{
-  	"title": "Recognition App",
-  	"slug": "recognition_app",
-  	"preview_img": "#",
-  	"preview_alt": ""
-  }, {
-  	"title": "Uber Finder",
-  	"slug": "uber_finder",
-  	"preview_img": "#",
-  	"preview_alt": ""
-  }, {
-  	"title": "Rewards Program",
-  	"slug": "scout_loyal",
-  	"preview_img": "#",
-  	"preview_alt": ""
-  }, {
-  	"title": "B2B Ecommerce",
-  	"slug": "countrywide",
-  	"preview_img": "#",
-  	"preview_alt": ""
-  }, {
-  	"title": "Print Projects",
-  	"slug": "print",
-  	"preview_img": "#",
-  	"preview_alt": ""
-  }]
+	"scout": {
+		"title": "Rewards Program",
+		"headline": "making waves"
+	}
+}],
+	"food": {
+		"ketchup": "5 tbsp",
+		"mustard": "1 tbsp",
+		"pickle": "0 tbsp"
+	}
 }

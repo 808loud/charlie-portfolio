@@ -40,14 +40,13 @@ function catchError (error) {
 gulp.task('serve', ['nunjucks', 'sass', 'scripts'], function() { 
     browserSync.init({ 
         server: {
-            baseDir: "./public",
-            index: "index.html"
+            baseDir: "./public"
+            // index: "index.html"
         },
         port: 5555
     }); 
 
-    gulp.watch(['./app/nunjucks/templates/**/*.+(html|nunjucks|njk)', 
-                './app/nunjucks/pages/**/*.+(html|nunjucks|njk)',
+    gulp.watch(['./app/nunjucks/**/*.+(html|nunjucks|njk)',
                 './app/nunjucks/data.json'], 
                 ['nunjucks']); 
     gulp.watch('./app/scss/**/*.scss', ['sass']); 
@@ -67,7 +66,7 @@ gulp.task('nunjucks', function() {
   }))
   // Renders template with nunjucks
   .pipe(nunjucks({
-      searchPaths: ['./app/nunjucks/templates'],
+      searchPaths: ['./app/nunjucks'],
       autoescape: false,
       ext: ['.html']
     }))

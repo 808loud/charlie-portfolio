@@ -1,0 +1,56 @@
+{% extends "one.njk" %}
+{% import 'macros/bootstrap.njk' as boot %}
+
+{% block circle %}
+<p>circle: test.njk</p>
+{{ super() }}
+{% endblock %}
+  
+{% block square %}
+<p>square: test1</p>
+{% endblock %}
+
+
+{% block content %}
+
+	<h1>HELLO WORLD</h1>
+
+	{# doesn't seem to work #}
+	{{ boot.offset2col( "5", "6", "7" ) }}
+
+	<!-- TESTING GROUNDS -->
+	<h3>testing grounds, please ignore</h3>
+
+
+	{% for project in projects %}
+	<p>{{ project.title }}</p>
+	  {% for row in project.modal.content %}
+	    <p>
+	      {{ row }}
+	    </p> 
+	  {% endfor %}
+	{% endfor %} 
+	<br>
+	{{ temp[0].preview_img }}
+	<br>
+	{% for ingredient, amount in food %}
+	  Use {{ amount }} of {{ ingredient }}
+	{% endfor %}
+	<br>
+	{{ test[0].recognition_app.title }}
+	<br>
+	{% for smack, shack in test[0].recognition_app %} 
+	  {{ shack }}
+	{% endfor %}
+	<br>
+	{{ projects[0].slug }} -- {{ projects[1].preview_img }}
+	<br>
+	{% set david = {message:"herp"} %}
+	{{ david.message }}
+	{% set david = {firstName:"John", lastName:"Doe", message:"derp"} %}
+	{{ david.message }}
+	<br>
+
+{% endblock %}
+
+

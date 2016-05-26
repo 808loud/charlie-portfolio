@@ -10,6 +10,7 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
+
     {% include "partials/navigation.njk" %}
 
     {% block content %}
@@ -19,28 +20,11 @@
       {% include "partials/footer.njk" %}
     </section>
 
-  <script type="text/javascript" src="js/scripts.js"></script>
+    {% for project in projects %}
+      {% include "projects/" + project.slug + ".njk" %} 
+    {% endfor %} 
 
-  <h3>testing grounds, please ignore</h3>
-  {{ temp[0].preview_img }}
-  <br>
-  {% for ingredient, amount in food %}
-    Use {{ amount }} of {{ ingredient }}
-  {% endfor %}
-  <br>
-  {{ test[0].recognition_app.title }}
-  <br>
-  {% for smack, shack in test[0].recognition_app %} 
-    {{ shack }}
-  {% endfor %}
-  <br>
-  {{ projects[0].slug }} -- {{ projects[1].preview_img }}
-  <br>
-  {% set david = {message:"herp"} %}
-  {{ david.message }}
-  {% set david = {firstName:"John", lastName:"Doe", message:"derp"} %}
-  {{ david.message }}
-  <br>
+  <script type="text/javascript" src="js/scripts.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,51 @@
+{% macro offset2col( headerLeft, headerRight, para1, para2 ) %}
+<div class="row">
+	<div class="col-sm-3 outline-heading">
+		<h2>{{ headerLeft }}</h2>
+	</div>
+	<div class="col-sm-9">
+		<h4>{{ headerRight }}</h4>
+		<p>{{ para1 }}</p>
+		<p>{{ para2 }}</p>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro offset2colImg( headerLeft, imgSrc, imgAlt ) %}
+<div class="row">
+	<div class="col-sm-3 outline-heading">
+		<h2>{{ headerLeft }}</h2>
+	</div>
+	<div class="col-sm-9">
+		<img src="{{ imgSrc  }}" alt="{{ imgAlt }}" >
+	</div>
+</div>
+{% endmacro %}
+
+{% macro offset1col( headerRight, content ) %}
+<div class="row">
+	<div class="col-sm-9 col-sm-offset-3">
+		<h4>{{ headerRight }}</h4>
+		<p>{{ content }}</p>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro twoImg( img1, img2 ) %}
+<div class="row">
+	<div class="col-sm-3 col-sm-offset-2">
+		<img src="{{ img1 }}" alt="" class="img-responsive">
+	</div>
+	<div class="col-sm-3">
+		<img src="{{ img2 }}" alt="" class="img-responsive">
+	</div>
+</div>
+{% endmacro %}
+
+{% macro oneImg( img1, imgAlt1 ) %}
+<div class="row">
+	<div class="col-xs-12">
+		<img src="{{ img1 }}" class="img-responsive' alt="{{ imgAlt1 }}">
+	</div>
+</div>
+{% endmacro %}

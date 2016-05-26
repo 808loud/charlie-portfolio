@@ -1,0 +1,55 @@
+{% extends "modal.njk" %}
+{% import "macros/bootstrap.njk" as boot %}
+
+{% block title %}
+	Rewards Website + Print
+{% endblock title %}
+
+{% block summary %}
+	<p>Scout needed a way to incentivize their employees by getting more recruiters to sign up for their services and grow its use among current customers. The solution was a rewards program that would increase visits to their site and use of their services. Scout Loyal features flexible rewards that are attractive to both recruiters and the companies they work for, and provides ways for Scout to show current customers they are valued.</p>
+	<p>I worked mostly on-site to lead and mentor a small agency team. I was responsible for creative, wireframes, high-fidelity prototypes, client presentations, final layouts, and style guides.</p>
+{% endblock summary %}
+
+{% block scope %}
+	UI, UX, Design, Creative Direction
+{% endblock scope %}
+
+{% block client %}
+	Scout Search Firm
+{% endblock client %}
+
+{% block dev %}
+	Robert Young, Producer: Demetrius Nelson, Writer: Jennifer Littlejohn
+{% endblock dev %}
+
+{% block description %}
+
+	{{ boot.offset1col (
+		"Website", 
+		"The site features a tutorial that outlines all program features and explains how points are earned. The site allows users to redeem earned points for rewards that can be assigned to employer/organization or individual recruiter. There is also a dashboard that displays user level, points earned, and a report that compares earning progress to the program average." )
+	}}
+
+	{{ boot.twoImg( 
+		"http://placehold.it/300x400", 
+		"http://placehold.it/300x400")
+	}}
+
+	{{ boot.offset1col ( 
+		"Email", 
+		"Pre-launch, launch, and post-launch emails were developed to introduce and maintain engagement in the program.")
+	}}
+
+	{{ boot.oneImg(
+		"http://placehold.it/800x800") 
+	}}
+
+	{{ boot.offset1col ( 
+		"Print", 
+		"The client also requested a few print materials to support the launch, including a step-by-step guide that instructs how the site works, a loyalty card, and postcard to spread the word.")
+	}}
+
+	{{ boot.oneImg(
+		"http://placehold.it/800x800") 
+	}}
+
+{% endblock description %}
