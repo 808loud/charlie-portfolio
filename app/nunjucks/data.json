@@ -41,7 +41,7 @@
 	}, {
 		"id": 2,
 		"title": "",
-		"slug": "",
+		"slug": "scout_loyal",
 		"button": "",
 		"preview_img": "#",
 		"summary": "",
@@ -60,7 +60,7 @@
 	}, {
 		"id": 3,
 		"title": "",
-		"slug": "",
+		"slug": "countrywide",
 		"button": "",
 		"preview_img": "#",
 		"summary": "",
@@ -79,7 +79,7 @@
 	}, {
 		"id": 4,
 		"title": "",
-		"slug": "",
+		"slug": "print",
 		"button": "",
 		"preview_img": "#",
 		"summary": "",
@@ -97,6 +97,7 @@
 		]
 	}
 ],
+
 "quotes": [
 	{
 		"id": 0,
@@ -118,58 +119,21 @@
 		"active": ""
 	}
 ],
+
+
 "test": [{
-"recognition_app": {
-"title": "Recognition App",
-"headline": ["roger that", "captain"]
-},
-"scout": {
-"title": "Rewards Program",
-"headline": "making waves"
-}
+	"recognition_app": {
+		"title": "Recognition App",
+		"headline": ["roger that", "captain"]
+	},
+	"scout": {
+		"title": "Rewards Program",
+		"headline": "making waves"
+	}
 }],
-"food": {
-"ketchup": "5 tbsp",
-"mustard": "1 tbsp",
-"pickle": "0 tbsp"
-},
-"images": [{
-"src": "image-C.png",
-"alt": "Image A alt text"
-}, {
-"src": "image-two.png",
-"alt": "Image two alt text"
-}],
-"top": [{
-"mid": [{
-"low": "success",
-"foo": "bar"
-}]
-}],
-"temp": [{
-"title": "Recognition App",
-"slug": "recognition_app",
-"preview_img": "#",
-"preview_alt": ""
-}, {
-"title": "Uber Finder",
-"slug": "uber_finder",
-"preview_img": "#",
-"preview_alt": ""
-}, {
-"title": "Rewards Program",
-"slug": "scout_loyal",
-"preview_img": "#",
-"preview_alt": ""
-}, {
-"title": "B2B Ecommerce",
-"slug": "countrywide",
-"preview_img": "#",
-"preview_alt": ""
-}, {
-"title": "Print Projects",
-"slug": "print",
-"preview_img": "#",
-"preview_alt": ""
-}]
+	"food": {
+		"ketchup": "5 tbsp",
+		"mustard": "1 tbsp",
+		"pickle": "0 tbsp"
+	}
 }
