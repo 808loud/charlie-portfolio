@@ -5,95 +5,36 @@
 		"title": "Buzz App + Website",
 		"slug": "recognition_app",
 		"button": "Recognition App",
-		"preview_img": "#",
-		"summary": "<p>A social recognition app targeted to Millennials with the idea that by engaging in their workforce you will earn their loyalty&ndash;and keep it for years to come. Employees and managers alike are enabled to show appreciation and emphasize that the work they're doing as a whole really is making a difference.</p><p>I worked on-site with a team of in-house developers, product managers, and creatives. I advised on strategy/creative, took part in planning meetings, developed user interfaces, developed graphics, and helped prepare files for hand off.</p>",
-		"project_meta": {
-			"scope": "UI, Design",
-			"client": "BI Worldwide",
-			"dev": "Ashby Utting, Ryan Asleson, Court Cromwell-Carl"
-		},
-		"content": [
-			"<div class='col-xs-12'><h4>Mobile App</h4><p>Some of the features include posting stories, taking quizzes or polls, reading announcements, celebrate milestones, and even track happiness at work. The more employees interact with the app, the smarter it gets.</p></div>", 
-			"<div class='col-xs-12 col-sm-6'><img src='http://placehold.it/200x400' class='img-responsive' alt=''></div><div class='col-xs-12 col-sm-6'><img src='http://placehold.it/200x400' class='img-responsive' alt=''></div>", 
-			"<div class='col-xs-12'><h4>Admin site</h4><p>Managers can keep track of all app activity through the admin site. Access activity details, create/edit programs, monitor statistics, track employee involvement, and more.</p></div>", 
-			"<div class='col-xs-12'><img src='http://placehold.it/800x800' class='img-responsive' alt=''></div>"
-		]
+		"logo": "#",
+		"preview_img": "#"
 	}, {
 		"id": 1,
 		"title": "Uber Finder + Product Description Page",
 		"slug": "uber_finder",
 		"button": "Uber Finder",
-		"preview_img": "#",
-		"summary": "<p>Discount Filter Store needed an easy way to help customers find the products they need with an advanced search feature. The process had to be fast and intuitive with the least amount of steps taken. They also wanted to rework their product description page to better reflect inventory, up-sell larger quantities, and cross-sell their own product line when appropriate. I worked mostly off-site advising on best practices in ecommerce and workflow. I also created wireframes, high-fidelity mock ups, presented creative, and produced final layouts.</p>",
-		"project_meta": {
-			"scope": "UI, UX, Strategy, Art Direction",
-			"client": "Discount Filter Store",
-			"dev": "Ian Gloude, David Monson"
-		},
-		"content": [
-			"<div class='col-xs-12'><h4>Uber Finder</h4><p>Access to the uber finder can be reached by tapping on the search icon in the top navigation bar. Users first select a category for the product they are searching for. They are then taken to the appropriate finder that will prompt them to make a selection under each category highlighted in a black bubble. The prompt in the black bubble is then replaced with the users selection and changed to a blue bubble. This process repeats until the finder identifies a match. If an error is made the user can simply scroll up, tap a previous selection, and make a new one.</p></div>", 
-			"<div class='col-xs-12 col-sm-6'><img src='http://placehold.it/200x400' class='img-responsive' alt=''></div><div class='col-xs-12 col-sm-6'><img src='http://placehold.it/200x400' class='img-responsive' alt=''></div>",
-			"<div class='col-xs-12'><h4>Product Description Page</h4><p>Many brand name products on their site have a comparable product produced by the supplier. A counter offer is strategically placed above the price to guide consumers to the supplier brand. Options for order quantity and frequency we're also redeveloped to better reflect the company offering.</p></div>",
-			"<div class='col-xs-12'><img src='http://placehold.it/200x800' class='img-responsive' alt=''></div>",
-			""
-		]
+		"logo": "#",
+		"preview_img": "#"
 	}, {
 		"id": 2,
 		"title": "",
 		"slug": "scout_loyal",
-		"button": "",
-		"preview_img": "#",
-		"summary": "",
-		"project_meta": {
-			"scope": "",
-			"client": "",
-			"dev": ""
-		},
-		"content": [
-			"", 
-			"",
-			"",
-			"",
-			""
-		]
+		"button": "Rewards Program",
+		"logo": "#",
+		"preview_img": "#"
 	}, {
 		"id": 3,
 		"title": "",
 		"slug": "countrywide",
-		"button": "",
-		"preview_img": "#",
-		"summary": "",
-		"project_meta": {
-			"scope": "",
-			"client": "",
-			"dev": ""
-		},
-		"content": [
-			"", 
-			"",
-			"",
-			"",
-			""
-		]
+		"button": "B2B Ecommerce",
+		"logo": "#",
+		"preview_img": "#"
 	}, {
 		"id": 4,
 		"title": "",
 		"slug": "print",
-		"button": "",
-		"preview_img": "#",
-		"summary": "",
-		"project_meta": {
-			"scope": "",
-			"client": "",
-			"dev": ""
-		},
-		"content": [
-			"", 
-			"",
-			"",
-			"",
-			""
-		]
+		"button": "Print Projects",
+		"logo": "#",
+		"preview_img": "#"
 	}
 ],
 

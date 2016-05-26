@@ -1,2 +1,27 @@
+{% extends "modal.njk" %}
+{% import "macros/bootstrap.njk" as boot %}
 
-<h1>project file: print</h1>
+{% block title %}
+	The World of Print
+{% endblock title %}
+
+{% block summary %}
+	<p>I've had the honor to work with some great brands over the years. The exposure has taught me what needs to happen in order to make a business successful by really taking the time to learn their market and what makes it tick. Working in print offers a unique kind of engagement that no digital product can achieve. It forces you to think differently about a marketing strategy; not only in development but how and when it's executed.</p>
+	<p>Below is a selection of projects that I have been responsible for. Some work has happened in collaboration with a team, while others were completed off-site working directly with the client.</p>
+{% endblock summary %}
+
+{% block description %}
+
+	{{ boot.offset1col (
+		"Circulars, packaging, toy design, and so much more!", 
+		"My work in print spans across virtually every medium and sector. I chose to focus these examples in markets that I have recent experience in, including retail, restaurant, and kids entertainment. Feel free to get in touch if there is a specific type of work you would like to see." )
+	}}
+
+	{{ boot.twoImg( 
+		"http://placehold.it/300x400", 
+		"http://placehold.it/300x400")
+	}}
+
+	<p>A lot of this is going to be simple image tags wrapped in bootstrap divs. I will probably <em>not</em> need to use macros here.</p>
+
+{% endblock description %}

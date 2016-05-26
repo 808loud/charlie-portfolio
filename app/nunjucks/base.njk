@@ -11,12 +11,6 @@
   </head>
   <body>
 
-    {% for project in projects %}
-      {% include "modal.njk" %}
-    {% endfor %}
-
-    {# include "two.njk" #}
-
     {% include "partials/navigation.njk" %}
 
     {% block content %}
@@ -25,6 +19,10 @@
     <section class="container">
       {% include "partials/footer.njk" %}
     </section>
+
+    {% for project in projects %}
+      {% include "projects/" + project.slug + ".njk" %} 
+    {% endfor %} 
 
   <script type="text/javascript" src="js/scripts.js"></script>
 

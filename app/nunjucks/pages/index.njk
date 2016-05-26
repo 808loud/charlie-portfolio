@@ -13,27 +13,27 @@
 
 <section id="intro" class="container">
   {{ boot.offset2col(
-    'Intro', 
-    'Welcome to my portfolio', 
-    '<p>I am an independent consultant/freelancer that works with start ups, agencies, and corporate in-house teams. I have experience in pretty much all sectors, most recently in B2B/C Ecommerce, Engagement Programs, and Entertainment. Below are select examples that best represent my approach &amp; capabilities. Thanks for stopping by!</p>') 
+    "Intro", 
+    "Welcome to my portfolio", 
+    "I am an independent consultant/freelancer that works with start ups, agencies, and corporate in-house teams. I have experience in pretty much all sectors, most recently in B2B/C Ecommerce, Engagement Programs, and Entertainment. Below are select examples that best represent my approach &amp; capabilities. Thanks for stopping by!") 
   }}
 </section>
 
 <section id="work" class="container-fluid text-center">
   <h2 class="sr-only">Work</h2>
   {% for project in projects %}
-  <article>
-    <img src="{{ project.preview_img }}" alt="{{ project.button }}">
+  <article class="project {{ project.slug }}" style="background-image: {{ project.preview_img }}">
+    <img src="{{ project.logo }}" alt="{{ project.button }}">
     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#{{ project.slug }}">{{ project.button }}</button>
   </article>
   {% endfor %}
 </section>
 
-<section id="process">
+<section id="process" class="container">
   {{ boot.offset2col (
-    'Process',
-    'Initiate a project', 
-    '<p>Working on-site generally requires advanced notice while off-site work provides more flexibility. By carefully managing my schedule I can accommodate most requests. If I am not available to take on your project I would be happy to refer you to someone who can.</p>') 
+    "Process",
+    "Initiate a project", 
+    "Working on-site generally requires advanced notice while off-site work provides more flexibility. By carefully managing my schedule I can accommodate most requests. If I am not available to take on your project I would be happy to refer you to someone who can.") 
   }}
 </section>
 
@@ -49,12 +49,12 @@
   {{ boot.offset2col (
     "On-site",
     "Collaboration is where it's at",
-    "<p>The work is just as important as the people behind it. I'll take the time to get to know your team and the unique set of challenges they face. For larger projects I'll inquire about internal processes, review business requirements, and go through a discovery &amp; planning phase. For smaller projects and support roles, general direction is all that's needed. I've gone from managing small teams to working under some incredible leaders. What's important are the relationships that get forged and making great work that everyone can be proud of. I'll maintain regular check-ins with team members so projects stay on track. A huge fan of open collaboration &amp; dialogue; a happy team is a productive one, every time.</p>")
+    "The work is just as important as the people behind it. I'll take the time to get to know your team and the unique set of challenges they face. For larger projects I'll inquire about internal processes, review business requirements, and go through a discovery &amp; planning phase. For smaller projects and support roles, general direction is all that's needed. I've gone from managing small teams to working under some incredible leaders. What's important are the relationships that get forged and making great work that everyone can be proud of. I'll maintain regular check-ins with team members so projects stay on track. A huge fan of open collaboration &amp; dialogue; a happy team is a productive one, every time.")
   }}
   {{ boot.offset2col( 
-    'Off-site', 
-    'Fast, transparent, reliable',
-    "<p>Working remote keeps overhead low by only utilizing the services you need, when you need it. Every project starts with a discovery &amp; planning phase where I'll take the time to get to know your business and the challenges it faces. I'll ask for your feedback early and often, this saves time by only investing in solutions that are going to work. On the occasion extra help is needed, I have a pretty good network of talent from varying backgrounds to collaborate with. I'm also open to working with members of your team or preferred partners. With advance notice on-site meetings and work sessions can be accommodated.</p>")
+    "Off-site", 
+    "Fast, transparent, reliable",
+    "Working remote keeps overhead low by only utilizing the services you need, when you need it. Every project starts with a discovery &amp; planning phase where I'll take the time to get to know your business and the challenges it faces. I'll ask for your feedback early and often, this saves time by only investing in solutions that are going to work. On the occasion extra help is needed, I have a pretty good network of talent from varying backgrounds to collaborate with. I'm also open to working with members of your team or preferred partners. With advance notice on-site meetings and work sessions can be accommodated.")
   }}
 </section>
 
@@ -84,10 +84,10 @@
 </section>
 
 <section class="container">
-  {{ boot.offset2col(
-  'Experience',
-  '',
-  '<img src="#" alt="Target, Coleman, Kmart, Warner Bros., mj, Best Buy, Geometry Global, General Mills, Preston Kelly, GAP, BI Worldwide, Cartoon Network">')
+  {{ boot.offset2colImg(
+    "Experience",
+    "experience.png",
+    "Target, Coleman, Kmart, Warner Bros., mj, Best Buy, Geometry Global, General Mills, Preston Kelly, GAP, BI Worldwide, Cartoon Network")
   }}
 </section>
 
