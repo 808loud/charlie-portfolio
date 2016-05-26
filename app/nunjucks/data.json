@@ -2,35 +2,30 @@
 "projects": [
 	{
 		"id": 0,
-		"title": "Buzz App + Website",
 		"slug": "recognition_app",
 		"button": "Recognition App",
 		"logo": "#",
 		"preview_img": "#"
 	}, {
 		"id": 1,
-		"title": "Uber Finder + Product Description Page",
 		"slug": "uber_finder",
 		"button": "Uber Finder",
 		"logo": "#",
 		"preview_img": "#"
 	}, {
 		"id": 2,
-		"title": "",
 		"slug": "scout_loyal",
 		"button": "Rewards Program",
 		"logo": "#",
 		"preview_img": "#"
 	}, {
 		"id": 3,
-		"title": "",
 		"slug": "countrywide",
 		"button": "B2B Ecommerce",
 		"logo": "#",
 		"preview_img": "#"
 	}, {
 		"id": 4,
-		"title": "",
 		"slug": "print",
 		"button": "Print Projects",
 		"logo": "#",
