@@ -22,10 +22,7 @@
 <section id="work" class="container-fluid text-center">
   <h2 class="sr-only">Work</h2>
   {% for project in projects %}
-  <article class="project {{ project.slug }}" style="background-image: {{ project.preview_img }}">
-    <img src="{{ project.logo }}" alt="{{ project.button }}">
-    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#{{ project.slug }}">{{ project.button }}</button>
-  </article>
+    {% include "project-preview.njk" %}
   {% endfor %}
 </section>
 

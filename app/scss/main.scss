@@ -3,6 +3,12 @@ $font_size_large:  20px;
 $font_size_medium: 16px;
 $font_size_small:  14px;
 
+$dark_grey:   rgba(64,  64,  62,  1);
+$light_grey:  rgba(246, 244, 240, 1);
+$medium_grey: rgba(155, 153, 152, 1);
+$red:         rgba(165, 77,  64,  1);
+
+
 body {
   font-size: $font_size_medium;
 }
@@ -12,51 +18,26 @@ body {
 .font-size-large  { font-size: $font_size_large; }
 .font-size-xl     { font-size: $font_size_xl; }
 
-#bootstrap_nav1 {
-  .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-  }
-  #main_navigation {
-    text-align: center;
-  }
-  .navbar-header {
-    text-align: center;
-
-    .navbar-toggle {
-      float: none;
-      background-color: #333;
-      .icon-bar {
-        color: yellow;
-      }
-    }
-  }
-}
-
-#w3_navbar {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
+#main_navigation {
+    position: fixed;
+    top: 10px;
+    white-space:nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-x: visible;
+    z-index: 10;
 
   .nav>li {
     display: inline;
-    float: left;
     margin-right: 10px;
-
     &:last-of-type {
       margin-right: 0;
     }
-  }
-  .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-  }
-  #main_navigation {
-    text-align: center;
+
+    button {
+      /* ensure that nav buttons don't "pop" when font-awesome icons load */
+      min-width: 40px;
+    }
   }
 }
 
@@ -83,11 +64,9 @@ h4 {
 }
 
 .carousel .carousel-inner {
-
   height: 240px;
 
   blockquote {
-  
     border-left: none;
 
     p {
@@ -97,11 +76,31 @@ h4 {
     footer {
       font-size: $font_size_medium;
     }
-
   }
 }
-.modal-fullscreen {
 
+#work {
+
+  .project {
+    padding: 20px;
+    background: #ddd;
+    border-width: 16px 0 0;
+    border-style: solid;
+    border-color: $dark_grey;
+    &:last-of-type {
+      border-bottom-width: 16px;
+    }
+
+    img {
+
+    }
+    button {
+      clear: both;
+    }
+  } 
+}
+
+.modal-fullscreen {
   background: #ffffff;
 
   .modal-content {
