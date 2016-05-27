@@ -18,6 +18,33 @@ body {
 .font-size-large  { font-size: $font_size_large; }
 .font-size-xl     { font-size: $font_size_xl; }
 
+.btn {
+  background: $dark_grey;
+  border-color: transparent;
+  border-size: none;
+  text-transform: uppercase;
+  a {
+    color: $light_grey;
+    font-weight: bold;
+  }
+  &:hover {
+    background: $red;
+  }
+
+  &.btn-primary {
+    background: $red;
+  }
+}
+
+.bg-primary {
+  background: $red;
+  color: $light_grey;
+}
+
+.letter-spacing-lg {
+  letter-spacing: 2px;
+}
+
 #main_navigation {
     position: fixed;
     top: 10px;
@@ -36,7 +63,7 @@ body {
 
     button {
       /* ensure that nav buttons don't "pop" when font-awesome icons load */
-      min-width: 40px;
+      min-width: 42px;
     }
   }
 }
@@ -63,11 +90,13 @@ h4 {
   text-transform: uppercase;
 }
 
-.carousel .carousel-inner {
-  height: 240px;
+.carousel {
+  .carousel-inner {
+  }
 
   blockquote {
     border-left: none;
+    text-transform: uppercase;
 
     p {
       font-size: $font_size_xl;
@@ -75,6 +104,7 @@ h4 {
 
     footer {
       font-size: $font_size_medium;
+      color: $light_grey;
     }
   }
 }

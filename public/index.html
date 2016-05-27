@@ -14,10 +14,10 @@
     <nav id="main_navigation">
   <ul class="nav">
     <li>
-      <button type="button" class="btn btn-primary"><a class="" href="#">Charlie</a></button>
+      <button type="button" class="btn btn-primary"><a class="letter-spacing-lg" href="#">Charlie</a></button>
     </li>
     <li>
-      <button type="button" class="btn btn-default">
+      <button type="button" class="btn btn-default text-uppercase">
         <a href="#">Work</a>
       </button>
     </li>
@@ -206,7 +206,7 @@
 </section>
 
 <section class="container-fluid">
-  <div id="quote_carousel" class="carousel slide" data-ride="carousel">
+  <div id="quote_carousel" class="carousel slide row" data-ride="carousel">
     <ol class="carousel-indicators">
       
       <li data-target="#quote_carousel" data-slide-to="0" class="active"></li>
@@ -254,6 +254,34 @@
     </div>
   </div>
   <script>$('.carousel').carousel();</script>
+  <script>
+    function carouselNormalization() {
+      var items = $('#quote_carousel .item'), //grab all slides
+          heights = [], //create empty array to store height values
+          tallest; //create variable to make note of the tallest slide
+
+      if (items.length) {
+          function normalizeHeights() {
+              items.each(function() { //add heights to array
+                  heights.push($(this).height()); 
+              });
+              tallest = Math.max.apply(null, heights); //cache largest value
+              items.each(function() {
+                  $(this).css('min-height',tallest + 'px');
+              });
+          };
+          normalizeHeights();
+
+          $(window).on('resize orientationchange', function () {
+              tallest = 0, heights.length = 0; //reset vars
+              items.each(function() {
+                  $(this).css('min-height','0'); //reset min-height
+              }); 
+              normalizeHeights(); //run it again 
+          });
+      }
+    }
+  </script>
 </section>
 
 <section class="container">
