@@ -1,0 +1,15 @@
+
+<article class="project row {{ project.slug }}" style="background-image: {{ project.preview_img }}">
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-xs-12">
+        <img class="" src="{{ project.logo }}" alt="{{ project.button }}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-default" type="button" data-toggle="modal" data-target="#{{ project.slug }}">{{ project.button }}</button>
+      </div>
+    </div>
+  </div>
+</article>
