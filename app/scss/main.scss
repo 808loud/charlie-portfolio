@@ -23,18 +23,24 @@ section {
 .font-size-xl     { font-size: $font_size_xl; }
 
 .btn {
+  padding: 14px;
   background: $dark_grey;
   border-color: transparent;
   border-size: none;
   text-transform: uppercase;
   color: $light_grey;
   font-weight: bold;
+  &:hover {
+    background: $red;
+    color: $light_grey;
+  }
+
   a {
     color: inherit;
     font-weight: inherit;
-  }
-  &:hover {
-    background: $red;
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &.btn-primary {
@@ -48,30 +54,7 @@ section {
 }
 
 .letter-spacing-lg {
-  letter-spacing: 2px;
-}
-
-#main_navigation {
-    position: fixed;
-    top: 10px;
-    white-space:nowrap;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow-x: visible;
-    z-index: 10;
-
-  .nav>li {
-    display: inline;
-    margin-right: 10px;
-    &:last-of-type {
-      margin-right: 0;
-    }
-
-    button {
-      /* ensure that nav buttons don't "pop" when font-awesome icons load */
-      min-width: 42px;
-    }
-  }
+  letter-spacing: 3px;
 }
 
 .outline-heading {
@@ -94,6 +77,43 @@ h4 {
   font-size: $font_size_medium;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+p {
+  line-height: 2em;
+}
+
+#main_navigation {
+    position: fixed;
+    top: 34px;
+    white-space:nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-x: visible;
+    z-index: 10;
+
+  .nav>li {
+    display: inline;
+    margin-right: 10px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    button {
+      /* ensure that nav buttons don't "pop" when font-awesome icons load */
+      min-width: 50px;
+    }
+  }
+}
+
+#hero {
+  padding: 160px 0 150px;
+  margin-bottom: 70px;
+  background: $light_grey;
+
+  h2 {
+    margin-height: 3em;
+  }
 }
 
 .carousel {
