@@ -13,6 +13,10 @@ body {
   font-size: $font_size_medium;
 }
 
+section {
+  padding: 70px 0;
+}
+
 .font-size-small  { font-size: $font_size_small; }
 .font-size-medium { font-size: $font_size_medium; }
 .font-size-large  { font-size: $font_size_large; }
@@ -23,9 +27,11 @@ body {
   border-color: transparent;
   border-size: none;
   text-transform: uppercase;
+  color: $light_grey;
+  font-weight: bold;
   a {
-    color: $light_grey;
-    font-weight: bold;
+    color: inherit;
+    font-weight: inherit;
   }
   &:hover {
     background: $red;
