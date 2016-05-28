@@ -23,24 +23,24 @@ section {
 .font-size-xl     { font-size: $font_size_xl; }
 
 .btn {
-  padding: 14px;
+  padding: 15px;
   background: $dark_grey;
   border-color: transparent;
-  border-size: none;
+  border-width: 0;
   text-transform: uppercase;
   color: $light_grey;
   font-weight: bold;
-  &:hover {
+  &:hover,
+  &:hover:active {
     background: $red;
     color: $light_grey;
+    text-decoration: none;
+    border-width: 0;
   }
-
-  a {
-    color: inherit;
-    font-weight: inherit;
-    &:hover {
-      text-decoration: none;
-    }
+  &:focus,
+  &:active {
+    background: $dark_grey;
+    color: $light_grey;
   }
 
   &.btn-primary {
@@ -92,16 +92,23 @@ p {
     overflow-x: visible;
     z-index: 10;
 
-  .nav>li {
-    display: inline;
-    margin-right: 10px;
-    &:last-of-type {
-      margin-right: 0;
-    }
-
-    button {
-      /* ensure that nav buttons don't "pop" when font-awesome icons load */
-      min-width: 50px;
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    &>li {
+      display: inline;
+      margin-right: 4px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      >a {
+        min-width: 50px;
+        display: inline-block;
+        &:hover {
+          background-color: $red;
+        }
+      }
     }
   }
 }
