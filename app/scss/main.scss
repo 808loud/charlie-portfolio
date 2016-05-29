@@ -163,6 +163,58 @@ p {
   } 
 }
 
+#booking {
+  input, textarea {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    line-height: 1;
+    color: $dark_grey;
+    background-color: none;
+    background-image: none;
+    border: 0px solid transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+    /* 
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; 
+    */
+  }
+  input {
+    height: 34px;
+  }
+}
+
+.input-underline {
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  &:after {
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $dark_grey;
+    height: 3px;
+    border-radius: 3px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 .modal-fullscreen {
   background: #ffffff;
 
