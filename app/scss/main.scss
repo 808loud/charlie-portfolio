@@ -81,6 +81,9 @@ h4 {
 
 p {
   line-height: 2em;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 #main_navigation {
@@ -118,8 +121,10 @@ p {
   margin-bottom: 70px;
   background: $light_grey;
 
-  h2 {
-    margin-height: 3em;
+  h2, h3 {
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 18px;
   }
 }
 
@@ -161,6 +166,12 @@ p {
       clear: both;
     }
   } 
+}
+
+#location {
+  .message {
+    padding: 34px 0;
+  }
 }
 
 #booking {
