@@ -7,6 +7,7 @@ var concat =       require('gulp-concat');
 var nunjucks =     require('gulp-nunjucks-html');
 var sass =         require('gulp-sass');
 var sourcemaps =   require('gulp-sourcemaps');
+var gulpLint =     require('gulp-bootlint');
 var notify =       require('gulp-notify');
 var browserSync =  require('browser-sync').create();
 
@@ -74,6 +75,11 @@ gulp.task('nunjucks', function() {
   // output files in public folder
   .pipe(gulp.dest('./public'))
 });
+
+/*gulp.task('bootlint', function() {
+  return gulp.src('./public/index.html')
+    .pipe(bootlint());
+});*/
 
 gulp.task('sass', function () {
     return gulp.src('./app/scss/**/*.+(sass|scss)')

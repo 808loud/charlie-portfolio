@@ -1,14 +1,14 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 $('#main_navigation .icon').on('click', function(e) {
-	$('#main_navigation ul.topnav').toggleClass('responsive');
-  //$('#main_navigation li').toggleClass("visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block ");
-  $('#main_navigation li.icon a i').toggleClass('fa-bars fa-close');
+	$('#main_navigation ul').toggleClass('responsive');
+  $('#main_navigation ul > li > a.icon > i').toggleClass('fa-bars fa-close');
   $('.nav-blur').toggleClass('blurred');
-  //  
   e.preventDefault();
 });
 
-$('.carousel').carousel({ pause: "false" });
+$('.carousel').carousel(
+	//{ pause: "false" }
+);
 
 $(document).ready(
 	function carouselNormalization() {

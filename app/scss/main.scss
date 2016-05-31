@@ -55,10 +55,6 @@ section {
   color: $light_grey;
 }
 
-.letter-spacing-lg {
-  letter-spacing: 3px;
-}
-
 .outline-heading {
 
   h2 {
@@ -89,30 +85,42 @@ p {
 }
 
 #main_navigation {
-    position: fixed;
-    top: 34px;
-    white-space: nowrap;
-/*     left: 50%;
-    transform: translateX(-50%); */
-    overflow-x: visible;
-    overflow-y: hidden;
-    z-index: 10;
-
+  position: fixed;
+  top: 34px;
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
   ul {
-    /* padding-left: 0; */
+    padding-left: 0;
     margin-bottom: 0;
     list-style: none;
-    /* text-align: center; */
-    text-align: left;
+    text-align: center;
+    overflow-x: visible;
+    overflow-y: hidden;
     li {
       display: inline-block;
+      float: left;
       margin-right: 4px;
-      margin-bottom: 15px;
+      margin-bottom: 4px;
       &:last-of-type {
         margin-right: 0;
       }
       >a {
-        min-width: 50px;
+        min-width: 65px;
+        &.home {
+          width: 131px;
+          letter-spacing: 3px;
+        }
+        &.work {
+          width: 95px;
+        }
+        &.process {
+          width: 119px;
+        }
+        &.booking {
+          width:119px;
+        }
         &:hover {
           background-color: $red;
         }
@@ -121,26 +129,27 @@ p {
   }
 }
 
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (max-width:768px) {
   #main_navigation {
     ul {
       li {
-        position: relative;
-        top: -180px;
-        visibility: hidden;
-        opacity: 0;
-        z-index: 20;
-        &.icon,
-        &.home {
-          top: 0;
-          visibility: visible;
-          opacity: 1;
-          z-index: 25;
+        //float: none;
+        a {
+          position: relative;
+          top: -180px;
+          visibility: hidden;
+          opacity: 0;
+          &.home,
+          &.icon {
+            top: 0;
+            visibility: visible;
+            opacity: 1;
+            z-index: 50;
+          }
         }
       }
       /* The "responsive" class is added to the topnav with jQuery on click */ 
-      &.responsive li {
+      &.responsive li a {
         top: 0;
         visibility: visible;
         opacity: 1;
@@ -165,7 +174,8 @@ p {
 
 
 #hero {
-  padding: 160px 0 150px;
+  min-height: 300px;
+/*   padding: 160px 0 150px; */
   margin-bottom: 70px;
   background: $light_grey;
 
