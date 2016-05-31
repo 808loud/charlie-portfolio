@@ -1,3 +1,10 @@
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+$('#main_navigation .icon').on('click', function(e) {
+  $('#main_navigation li').toggleClass("visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block ");
+  $('#main_navigation li.icon a i').toggleClass('fa-bars fa-close');
+  //  
+  e.preventDefault();
+});
 
 $('.carousel').carousel({ pause: "false" });
 
