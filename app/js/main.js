@@ -1,12 +1,34 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 $('#main_navigation .icon').on('click', function(e) {
-	$('#main_navigation ul.topnav').toggleClass('responsive');
-  //$('#main_navigation li').toggleClass("visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block ");
-  $('#main_navigation li.icon a i').toggleClass('fa-bars fa-close');
-  $('.nav-blur').toggleClass('blurred');
-  //  
+	$('#main_navigation ul').toggleClass('responsive');
+	$('.nav-blur').toggleClass('blurred');
   e.preventDefault();
 });
+
+$('#main_navigation ul li a').not('#main_navigation .icon a').on('click', function(e) {
+	$('#main_navigation ul').removeClass('responsive');
+  $('#main_navigation ul > li > a.icon > i').toggleClass('fa-bars fa-close');
+  $('.nav-blur').removeClass('blurred');
+  e.preventDefault();
+});
+
+
+/*  $('#main_navigation ul li a').on('click', function(e) {
+  	console.log("close");
+  	$('#main_navigation ul').removeClass('responsive');
+    $('#main_navigation ul > li > a.icon > i').toggleClass('fa-bars fa-close');
+  	$('.nav-blur').removeClass('blurred');
+  	e.preventDefault();
+  });
+}*/
+
+
+
+/*$('#main_navigation ul > li > a').on('click', function(e) {
+	$('.nav-blur').removeClass('blurred');
+});*/
+
+
 
 $('.carousel').carousel({ pause: "false" });
 
