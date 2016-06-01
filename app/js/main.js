@@ -1,17 +1,34 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-$('#main_navigation .icon').on('click', function(e) {
-	$('#main_navigation ul').toggleClass('responsive');
+$('#main_navigation a.icon').on('click', function(e) {
+	$('#main_navigation ul').toggleClass('expanded');
 	$('.nav-blur').toggleClass('blurred');
+	$('#main_navigation ul > li > a.icon > i').toggleClass('fa-bars fa-close');
   e.preventDefault();
 });
 
-$('#main_navigation ul li a').not('#main_navigation .icon a').on('click', function(e) {
-	$('#main_navigation ul').removeClass('responsive');
-  $('#main_navigation ul > li > a.icon > i').toggleClass('fa-bars fa-close');
+$('#main_navigation ul li a').not('#main_navigation a.icon').on('click', function() {
+	$('#main_navigation ul').removeClass('expanded');
   $('.nav-blur').removeClass('blurred');
-  e.preventDefault();
+  $('#main_navigation ul > li > a.icon > i').removeClass('fa-close');
+  $('#main_navigation ul > li > a.icon > i').addClass('fa-bars');
 });
 
+
+/*
+$('#main_navigation a').on('click', function() {
+	switch () {
+
+	}
+
+	if( $(this).hasClass('icon') ) {
+		console.log("icon clicked");
+	} else if( $(this).hasClass('home') ) {
+		console.log("home icon clicked");
+	} else {
+		console.log("other icon clicked");
+	}
+});
+*/
 
 /*  $('#main_navigation ul li a').on('click', function(e) {
   	console.log("close");
