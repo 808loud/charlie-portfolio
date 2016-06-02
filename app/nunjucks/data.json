@@ -1,4 +1,7 @@
 {
+"site": {
+	"media_directory": "media/"
+},
 "projects": [
 	{
 		"id": 0,

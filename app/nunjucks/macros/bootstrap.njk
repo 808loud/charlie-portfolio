@@ -19,7 +19,7 @@
 		<h2>{{ headerLeft }}</h2>
 	</div>
 	<div class="col-sm-9">
-		<img src="media/{{ imgSrc  }}" class="img-responsive" width="{{ imgWidth }}" height="{{ imgHeight }}" alt="{{ imgAlt }}" >
+		<img src="{{ site.media_directory }}{{ imgSrc  }}" class="img-responsive" width="{{ imgWidth }}" height="{{ imgHeight }}" alt="{{ imgAlt }}" >
 	</div>
 </div>
 {% endmacro %}
@@ -36,10 +36,10 @@
 {% macro twoImg( img1, img2 ) %}
 <div class="row">
 	<div class="col-sm-3 col-sm-offset-2">
-		<img src="{{ img1 }}" alt="" class="img-responsive">
+		<img src="{{ site.media_directory }}{{ img1 }}" alt="" class="img-responsive">
 	</div>
 	<div class="col-sm-3">
-		<img src="{{ img2 }}" alt="" class="img-responsive">
+		<img src="{{ site.media_directory }}{{ img2 }}" alt="" class="img-responsive">
 	</div>
 </div>
 {% endmacro %}
@@ -47,7 +47,7 @@
 {% macro oneImg( img1, imgAlt1 ) %}
 <div class="row">
 	<div class="col-xs-12">
-		<img src="{{ img1 }}" class="img-responsive" alt="{{ imgAlt1 }}">
+		<img src="{{ site.media_directory }}{{ img1 }}" class="img-responsive" alt="{{ imgAlt1 }}">
 	</div>
 </div>
 {% endmacro %}
