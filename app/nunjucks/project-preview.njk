@@ -1,9 +1,9 @@
 
-<article class="project row {{ project.slug }}" style="background-image: '/media/{{ project.slug }}/{{ project.preview_img }}'">
-  <div class="col-xs-12">
+<article class="project row {{ project.slug }}" style="background-image: url('/media/{{ project.preview_img }}');">
+  <div class="col-xs-12 project-inner">
     <div class="row">
       <div class="col-xs-12">
-        <img class="" src="/media/{{ project.slug }}/{{ project.logo }}" alt="{{ project.button }}">
+        <img class="" src="/media/{{ project.logo.src }}" width="{{ project.logo.width }}" height="{{ project.logo.height }}" alt="{{ project.button }}">
       </div>
     </div>
     <div class="row">

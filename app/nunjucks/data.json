@@ -4,31 +4,51 @@
 		"id": 0,
 		"slug": "buzz",
 		"button": "Recognition App",
-		"logo": "logo@2x.png",
-		"preview_img": "preview.png"
+		"logo": {
+			"src": "buzz/logo@2x.png",
+			"width": "66",
+			"height": "67"
+		},
+		"preview_img": "buzz/preview.png"
 	}, {
 		"id": 1,
 		"slug": "uber_finder",
 		"button": "Uber Finder",
-		"logo": "#",
+		"logo": {
+			"src": "logo@2x.png",
+			"width": "",
+			"height": ""
+		},
 		"preview_img": "#"
 	}, {
 		"id": 2,
 		"slug": "scout",
 		"button": "Rewards Program",
-		"logo": "#",
+		"logo": {
+			"src": "logo@2x.png",
+			"width": "",
+			"height": ""
+		},
 		"preview_img": "#"
 	}, {
 		"id": 3,
 		"slug": "ctw",
 		"button": "B2B Ecommerce",
-		"logo": "#",
+		"logo": {
+			"src": "logo@2x.png",
+			"width": "",
+			"height": ""
+		},
 		"preview_img": "#"
 	}, {
 		"id": 4,
 		"slug": "print",
 		"button": "Print Projects",
-		"logo": "#",
+		"logo": {
+			"src": "logo@2x.png",
+			"width": "",
+			"height": ""
+		},				
 		"preview_img": "#"
 	}
 ],

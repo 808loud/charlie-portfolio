@@ -120,7 +120,7 @@ p {
   }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
   #main_navigation {
     ul {
       li {
@@ -202,20 +202,27 @@ p {
 #work {
 
   .project {
-    padding: 20px;
+    position: relative;
+    height: 200px;
     background: #ddd;
+    background-size: 100% auto;
+    background-size: cover;
     border-width: 16px 0 0;
     border-style: solid;
     border-color: $dark_grey;
+    vertical-align: text-bottom;
     &:last-of-type {
       border-bottom-width: 16px;
     }
 
-    img {
+    .project-inner {
+      position: absolute;
+      bottom: 34px;
+      width: 100%; 
 
-    }
-    button {
-      clear: both;
+      img {
+        margin-bottom: 10px;
+      }
     }
   } 
 }
