@@ -12,44 +12,44 @@
 		"preview_img": "buzz/preview.png"
 	}, {
 		"id": 1,
-		"slug": "uber_finder",
+		"slug": "dfs",
 		"button": "Uber Finder",
 		"logo": {
-			"src": "logo@2x.png",
-			"width": "",
-			"height": ""
+			"src": "dfs/logo@2x.png",
+			"width": "120",
+			"height": "56"
 		},
-		"preview_img": "#"
+		"preview_img": "dfs/preview.png"
 	}, {
 		"id": 2,
 		"slug": "scout",
 		"button": "Rewards Program",
 		"logo": {
-			"src": "logo@2x.png",
-			"width": "",
-			"height": ""
+			"src": "scout/logo@2x.png",
+			"width": "184",
+			"height": "46"
 		},
-		"preview_img": "#"
+		"preview_img": "scout/preview.png"
 	}, {
 		"id": 3,
-		"slug": "ctw",
+		"slug": "cwt",
 		"button": "B2B Ecommerce",
 		"logo": {
-			"src": "logo@2x.png",
-			"width": "",
-			"height": ""
+			"src": "cwt/logo@2x.png",
+			"width": "125",
+			"height": "65"
 		},
-		"preview_img": "#"
+		"preview_img": "cwt/preview.png"
 	}, {
 		"id": 4,
 		"slug": "print",
 		"button": "Print Projects",
 		"logo": {
-			"src": "logo@2x.png",
-			"width": "",
-			"height": ""
+			"src": "print/logo@2x.png",
+			"width": "53",
+			"height": "73"
 		},				
-		"preview_img": "#"
+		"preview_img": "print/preview.png"
 	}
 ],
 

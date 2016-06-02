@@ -203,7 +203,7 @@ p {
 
   .project {
     position: relative;
-    height: 200px;
+    height: 232px; // 200px article + 16 borders (top and bottom)
     background: #ddd;
     background-size: 100% auto;
     background-size: cover;
@@ -221,7 +221,7 @@ p {
       width: 100%; 
 
       img {
-        margin-bottom: 10px;
+        margin-bottom: 18px;
       }
     }
   } 

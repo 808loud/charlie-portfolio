@@ -13,13 +13,13 @@
 </div>
 {% endmacro %}
 
-{% macro offset2colImg( headerLeft, imgSrc, imgAlt ) %}
+{% macro offset2colImg( headerLeft, imgSrc, imgWidth, imgHeight, imgAlt ) %}
 <div class="row">
 	<div class="col-sm-3 outline-heading">
 		<h2>{{ headerLeft }}</h2>
 	</div>
 	<div class="col-sm-9">
-		<img src="{{ imgSrc  }}" alt="{{ imgAlt }}" >
+		<img src="media/{{ imgSrc  }}" class="img-responsive" width="{{ imgWidth }}" height="{{ imgHeight }}" alt="{{ imgAlt }}" >
 	</div>
 </div>
 {% endmacro %}
