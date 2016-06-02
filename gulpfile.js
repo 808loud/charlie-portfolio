@@ -46,7 +46,7 @@ gulp.task('serve', ['nunjucks', 'sass', 'scripts'], function() {
         port: 5555
     }); 
 
-    gulp.watch('.app/assets/**/*', ['assets'])
+    gulp.watch('.app/assets/**/*', ['move'])
     gulp.watch(['./app/nunjucks/**/*.+(html|nunjucks|njk)',
                 './app/nunjucks/data.json'], 
                 ['nunjucks']); 
@@ -56,12 +56,12 @@ gulp.task('serve', ['nunjucks', 'sass', 'scripts'], function() {
 });
 
 // tasks
-gulp.task('assets'), function() {
-  // recursively grab contents of app/assets
-  gulp.src('app/assets/**/*')
+gulp.task('move', function() {
+  // grab contents of app/assets
+  return gulp.src('./app/assets/**/*')
     // output files to the public folder
-    .pipe(gulp.dest('public'));
-}
+    .pipe(gulp.dest('./public'));
+});
 
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
