@@ -2,10 +2,10 @@
 "projects": [
 	{
 		"id": 0,
-		"slug": "recognition_app",
+		"slug": "buzz",
 		"button": "Recognition App",
-		"logo": "#",
-		"preview_img": "#"
+		"logo": "logo@2x.png",
+		"preview_img": "preview.png"
 	}, {
 		"id": 1,
 		"slug": "uber_finder",
@@ -14,13 +14,13 @@
 		"preview_img": "#"
 	}, {
 		"id": 2,
-		"slug": "scout_loyal",
+		"slug": "scout",
 		"button": "Rewards Program",
 		"logo": "#",
 		"preview_img": "#"
 	}, {
 		"id": 3,
-		"slug": "countrywide",
+		"slug": "ctw",
 		"button": "B2B Ecommerce",
 		"logo": "#",
 		"preview_img": "#"

@@ -46,52 +46,60 @@ gulp.task('serve', ['nunjucks', 'sass', 'scripts'], function() {
         port: 5555
     }); 
 
+    gulp.watch('.app/assets/**/*', ['assets'])
     gulp.watch(['./app/nunjucks/**/*.+(html|nunjucks|njk)',
                 './app/nunjucks/data.json'], 
                 ['nunjucks']); 
     gulp.watch('./app/scss/**/*.scss', ['sass']); 
     gulp.watch('./app/js/**/*.js', ['scripts']);
-    gulp.watch("./public/**/*.*").on('change', reload); 
+    gulp.watch('./public/**/*').on('change', reload); 
 });
 
 // tasks
+gulp.task('assets'), function() {
+  // recursively grab contents of app/assets
+  gulp.src('app/assets/**/*')
+    // output files to the public folder
+    .pipe(gulp.dest('public'));
+}
+
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
   return gulp.src('./app/nunjucks/pages/**/*.+(html|nunjucks|njk)')
-  // Adding data to Nunjucks
-  .pipe(data(function(file) {
-    var json = './app/nunjucks/data.json';
-    delete require.cache[require.resolve(json)];
-    return require(json);
-  }))
-  // Renders template with nunjucks
-  .pipe(nunjucks({
-      searchPaths: ['./app/nunjucks'],
-      autoescape: false,
-      ext: ['.html']
+    // Adding data to Nunjucks
+    .pipe(data(function(file) {
+      var json = './app/nunjucks/data.json';
+      delete require.cache[require.resolve(json)];
+      return require(json);
     }))
-  .on('error', catchError)
-  // output files in public folder
-  .pipe(gulp.dest('./public'))
+    // Renders template with nunjucks
+    .pipe(nunjucks({
+        searchPaths: ['./app/nunjucks'],
+        autoescape: false,
+        ext: ['.html']
+      }))
+    .on('error', catchError)
+    // output files in public folder
+    .pipe(gulp.dest('./public'))
 });
 
 gulp.task('sass', function () {
-    return gulp.src('./app/scss/**/*.+(sass|scss)')
-        .pipe(sourcemaps.init())
-        .pipe(sass({ 
-            errLogToConsole: true 
-        }))
-        .on('error', catchError)
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./public/css'));
+  return gulp.src('./app/scss/**/*.+(sass|scss)')
+    .pipe(sourcemaps.init())
+    .pipe(sass({ 
+        errLogToConsole: true 
+    }))
+    .on('error', catchError)
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('scripts', function() {
-    return gulp.src('./app/js/**/*.js')
-        .pipe(sourcemaps.init())
-        .pipe(concat('scripts.js'))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./public/js/'))
+  return gulp.src('./app/js/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(concat('scripts.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./public/js/'))
 });
 
 gulp.task('default', ['serve']);

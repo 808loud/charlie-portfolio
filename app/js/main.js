@@ -9,45 +9,11 @@ $('#main_navigation a.icon').on('click', function(e) {
 $('#main_navigation ul li a').not('#main_navigation a.icon').on('click', function() {
 	$('#main_navigation ul').removeClass('expanded');
   $('.nav-blur').removeClass('blurred');
-  $('#main_navigation ul > li > a.icon > i').removeClass('fa-close');
-  $('#main_navigation ul > li > a.icon > i').addClass('fa-bars');
+  // this needs to explicitly remove and add (rather than toggle)
+  // so that a click on .home doesn't change .icon to fa-close
+  $('#main_navigation ul > li > a.icon > i').removeClass('fa-close').addClass('fa-bars');
 });
 
-
-/*
-$('#main_navigation a').on('click', function() {
-	switch () {
-
-	}
-
-	if( $(this).hasClass('icon') ) {
-		console.log("icon clicked");
-	} else if( $(this).hasClass('home') ) {
-		console.log("home icon clicked");
-	} else {
-		console.log("other icon clicked");
-	}
-});
-*/
-
-/*  $('#main_navigation ul li a').on('click', function(e) {
-  	console.log("close");
-  	$('#main_navigation ul').removeClass('responsive');
-    $('#main_navigation ul > li > a.icon > i').toggleClass('fa-bars fa-close');
-  	$('.nav-blur').removeClass('blurred');
-  	e.preventDefault();
-  });
-}*/
-
-
-
-/*$('#main_navigation ul > li > a').on('click', function(e) {
-	$('.nav-blur').removeClass('blurred');
-});*/
-
-
-
-$('.carousel').carousel({ pause: "false" });
 
 $(document).ready(
 	function carouselNormalization() {
@@ -78,3 +44,5 @@ $(document).ready(
 		}
 	}
 )
+
+$('.carousel').carousel({ pause: "false" });
