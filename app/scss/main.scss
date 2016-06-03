@@ -171,12 +171,13 @@ p {
 #hero {
   padding: 160px 0 150px;
   margin-bottom: 70px;
-  background: $light_grey;
+  background-image: url('./../media/charlie-hero-cover.png');
 
   h2, h3 {
     line-height: 1;
     margin: 0;
     margin-bottom: 18px;
+    color: $light_grey;
   }
 }
 
@@ -233,6 +234,11 @@ p {
   }
 }
 
+#break_time {
+  height: 420px;
+  background-image: url('./../media/charlie-hero-cover.png');
+}
+
 #booking {
   input, textarea {
     display: block;
@@ -258,6 +264,14 @@ p {
   input {
     height: 34px;
   }
+}
+
+.parallax {
+  //height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .input-underline {
