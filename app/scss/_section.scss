@@ -1,0 +1,83 @@
+section {
+  padding: 70px 0;
+}
+
+#hero {
+  padding: 160px 0 150px;
+  margin-bottom: 70px;
+  background-image: url('./../media/charlie-hero-cover.png');
+
+  h2, h3 {
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 18px;
+    color: $light_grey;
+    text-shadow: 1px 1px 5px $medium_grey;
+  }
+}
+
+#work {
+
+  .project {
+    position: relative;
+    height: 232px; // 200px article + 16 borders (top and bottom)
+    background: #ddd;
+    background-size: 100% auto;
+    background-size: cover;
+    border-width: 16px 0 0;
+    border-style: solid;
+    border-color: $dark_grey;
+    vertical-align: text-bottom;
+    &:last-of-type {
+      border-bottom-width: 16px;
+    }
+
+    .project-inner {
+      position: absolute;
+      bottom: 34px;
+      width: 100%; 
+
+      img {
+        margin-bottom: 18px;
+      }
+    }
+  } 
+}
+
+#location {
+  .message {
+    padding: 34px 0;
+  }
+}
+
+#break_time {
+  height: 420px;
+  background-image: url('./../media/charlie-hero-cover.png');
+}
+
+#booking {
+  input, textarea {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    line-height: 1;
+    color: $dark_grey;
+    background-color: none;
+    background-image: none;
+    border: 0px solid transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+    /* 
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; 
+    */
+  }
+  input {
+    height: 34px;
+  }
+}

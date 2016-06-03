@@ -1,0 +1,80 @@
+
+body {
+  font-size: $font_size_medium;
+}
+
+.bg-primary {
+  background: $red;
+  color: $light_grey;
+}
+
+.letter-spacing-lg {
+  letter-spacing: 3px;
+}
+
+.outline-heading {
+
+  h2 {
+    font-size: $font_size_medium;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0;
+
+    &::after {
+      content: "\A \2013";
+      white-space: pre;
+    }
+  }
+}
+
+
+
+
+
+
+.carousel {
+  .carousel-inner {
+  }
+
+  blockquote {
+    border-left: none;
+    text-transform: uppercase;
+    padding: 3em 0;
+    p {
+      font-size: $font_size_xl;
+    }
+
+    footer {
+      font-size: $font_size_medium;
+      color: $light_grey;
+    }
+  }
+}
+
+
+
+
+
+.parallax {
+  //height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.input-underline {
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  &:after {
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $dark_grey;
+    height: 3px;
+    border-radius: 3px;
+  }
+}

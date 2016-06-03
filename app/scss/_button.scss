@@ -1,0 +1,27 @@
+.btn {
+  padding: 15px;
+  background: $dark_grey;
+  border-color: transparent;
+  border-width: 0;
+  text-transform: uppercase;
+  color: $light_grey;
+  font-weight: bold;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  &:hover,
+  &:hover:active {
+    background: $red;
+    color: $light_grey;
+    text-decoration: none;
+    border-width: 0;
+  }
+  &:focus,
+  &:active {
+    background: $dark_grey;
+    color: $light_grey;
+  }
+
+  &.btn-primary {
+    background: $red;
+  }
+}

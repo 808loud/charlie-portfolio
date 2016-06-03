@@ -1,0 +1,44 @@
+$font_size_xl:     34px;
+$font_size_large:  20px;
+$font_size_medium: 16px;
+$font_size_small:  14px;
+
+.font-size-small  { font-size: $font_size_small; }
+.font-size-medium { font-size: $font_size_medium; }
+.font-size-large  { font-size: $font_size_large; }
+.font-size-xl     { font-size: $font_size_xl; }
+
+// GothamRounded-Medium
+.g-md {
+	font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+	font-style: normal;
+	font-weight: 500;
+}
+
+// GothamRounded-Bold
+.g-bold {
+	font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+	font-style: normal;
+	font-weight: 700;
+}
+
+// GothamRounded-Book
+.g-book {
+	font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+	font-style: normal;
+	font-weight: 400;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: $font_size_medium;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 2em;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
