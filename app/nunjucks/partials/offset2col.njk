@@ -1,11 +1,11 @@
-{% extends "partials/bootstrap2.njk" %}
+{% extends "partials/section.njk" %}
 
 {% block content %}
 	<div class="row">
-		<div class="{{ rowLeft }}">
+		<div class="{{ colLeft }}">
 			<h2 class="outline-heading">{% block headerLeft %}{% endblock %}</h2>
 		</div>
-		<div class="{{ rowRight }}">
+		<div class="{{ colRight }}">
 			<h4>{% block headerRight %}{% endblock %}</h4>
 			<p>{% block para1 %}{% endblock %}</p>
 			{% if para2 %}
