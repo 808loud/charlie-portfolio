@@ -13,17 +13,14 @@ body {
 }
 
 .outline-heading {
+  font-size: $font_size_medium;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0;
 
-  h2 {
-    font-size: $font_size_medium;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: 0;
-
-    &::after {
-      content: "\A \2013";
-      white-space: pre;
-    }
+  &::after {
+    content: "\A \2013";
+    white-space: pre;
   }
 }
 
