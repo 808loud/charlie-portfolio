@@ -1,0 +1,33 @@
+{% extends "partials/section.njk" %}
+
+{% block slug -%}
+quotes
+{%- endblock %}
+
+{% block class -%}
+container-fluid
+{%- endblock %}
+
+{% block content %}
+<div id="quote_carousel" class="carousel slide row" data-ride="carousel">
+  <ol class="carousel-indicators">
+    {% for quote in quotes %}
+    <li data-target="#quote_carousel" data-slide-to="{{ quote.id }}" class="{{ quote.active }}"></li>
+    {% endfor %}
+  </ol>
+  <div class="carousel-inner text-center bg-primary" role="listbox">
+    {% for quote in quotes %}
+    <div class="item {{ quote.active }}">
+      <blockquote>
+        <div class="row">
+          <div class="col-xs-12">
+            <p>&ldquo;{{ quote.quote }}&rdquo;</p>
+            <footer>{{ quote.citation }}, {{ quote.title }}</footer>
+          </div>
+        </div>
+      </blockquote>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

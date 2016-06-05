@@ -1,0 +1,22 @@
+{% extends "partials/section.njk" %}
+
+{% block slug -%}
+booking
+{%- endblock %}
+
+{% block class -%}
+container
+{%- endblock %}
+
+{% block content %}
+  {{ boot.offset2col(
+	  'Booking',
+	  'This is how the magic begins',
+	  '<p>Please fill out the form below and let me know how I can help.</p>
+	  <p>You will get a response within 24 hours of inquiry.</p>')
+  }}
+{% endblock %}
+
+
+{% include "partials/contact-form.njk" %}
+

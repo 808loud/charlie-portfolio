@@ -1,0 +1,16 @@
+{% extends "partials/section.njk" %}
+
+{% block slug -%}
+work
+{%- endblock %}
+
+{% block class -%}
+container-fluid text-center
+{%- endblock %}
+
+{% block content %}
+  <h2 class="sr-only">Work</h2>
+  {% for project in projects %}
+    {% include "project-preview.njk" %}
+  {% endfor %}
+{% endblock %}
