@@ -44,9 +44,15 @@ section {
   } 
 }
 
-#location {
+#location-banner {
   .message {
     padding: 34px 0;
+  }
+}
+
+#experience {
+  h4 { 
+    display: none;
   }
 }
 

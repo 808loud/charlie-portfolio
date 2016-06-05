@@ -7,48 +7,15 @@
 
   {% include "section/intro.njk" %}
 
-  {% include "section/work-samples.njk" %}
+  {% include "section/work.njk" %}
 
   {% include "section/process.njk" %}
 
+  {% include "section/location-banner.njk" %}
+
   {% include "section/location.njk" %}
 
-<section class="container">
-  {{ boot.offset2col (
-    "On-site",
-    "Collaboration is where it's at",
-    "The work is just as important as the people behind it. I'll take the time to get to know your team and the unique set of challenges they face. For larger projects I'll inquire about internal processes, review business requirements, and go through a discovery &amp; planning phase. For smaller projects and support roles, general direction is all that's needed. I've gone from managing small teams to working under some incredible leaders. What's important are the relationships that get forged and making great work that everyone can be proud of. I'll maintain regular check-ins with team members so projects stay on track. A huge fan of open collaboration &amp; dialogue; a happy team is a productive one, every time.")
-  }}
-  {{ boot.offset2col( 
-    "Off-site", 
-    "Fast, transparent, reliable",
-    "Working remote keeps overhead low by only utilizing the services you need, when you need it. Every project starts with a discovery &amp; planning phase where I'll take the time to get to know your business and the challenges it faces. I'll ask for your feedback early and often, this saves time by only investing in solutions that are going to work. On the occasion extra help is needed, I have a pretty good network of talent from varying backgrounds to collaborate with. I'm also open to working with members of your team or preferred partners. With advance notice on-site meetings and work sessions can be accommodated.")
-  }}
-</section>
-
-<section class="container-fluid">
-  <div id="quote_carousel" class="carousel slide row" data-ride="carousel">
-    <ol class="carousel-indicators">
-      {% for quote in quotes %}
-      <li data-target="#quote_carousel" data-slide-to="{{ quote.id }}" class="{{ quote.active }}"></li>
-      {% endfor %}
-    </ol>
-    <div class="carousel-inner text-center bg-primary" role="listbox">
-      {% for quote in quotes %}
-      <div class="item {{ quote.active }}">
-        <blockquote>
-          <div class="row">
-            <div class="col-xs-12">
-              <p>&ldquo;{{ quote.quote }}&rdquo;</p>
-              <footer>{{ quote.citation }}, {{ quote.title }}</footer>
-            </div>
-          </div>
-        </blockquote>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+  {% include "section/quotes.njk" %}
 
   {% include "section/experience.njk" %}
 
@@ -56,14 +23,6 @@
   <!-- image is handled by CSS -->
 </section>
 
-<section id="booking" class="container">
-  {{ boot.offset2col(
-  'Booking',
-  'This is how the magic begins',
-  '<p>Please fill out the form below and let me know how I can help.</p>
-  <p>You will get a response within 24 hours of inquiry.</p>')
-  }}
-  {% include "partials/contact-form.njk" %}
-</section>
+{% include "section/booking.njk" %}
 
 {% endblock %}
