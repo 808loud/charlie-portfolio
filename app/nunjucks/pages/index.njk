@@ -1,5 +1,4 @@
 {% extends "base.njk" %}
-{% import 'macros/bootstrap.njk' as boot %}
 
 {% block content %}
 
@@ -19,10 +18,8 @@
 
   {% include "section/experience.njk" %}
 
-<section id="break_time" class="container-fluid parallax">
-  <!-- image is handled by CSS -->
-</section>
+  {% include "section/break_time.njk" %}
 
-{% include "section/booking.njk" %}
+  {% include "section/booking.njk" %}
 
 {% endblock %}

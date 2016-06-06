@@ -27,11 +27,11 @@
 </div>
 {% endmacro %}
 
-{% macro offset1col( headerRight, content ) %}
+{% macro offset1col( headerRight, contentRight ) %}
 <div class="row">
 	<div class="{{ col1Right }}">
 		<h4>{{ headerRight }}</h4>
-		<p>{{ content }}</p>
+		{{ contentRight }}
 	</div>
 </div>
 {% endmacro %}
