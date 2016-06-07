@@ -1,3 +1,8 @@
+/* remove before client review */
+$(window).load(function(){
+   $('#buzz').modal('show');
+});
+
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 $('#main_navigation a.icon').on('click', function(e) {
 	$('#main_navigation ul').toggleClass('expanded');
@@ -15,7 +20,7 @@ $('#main_navigation ul li a').not('#main_navigation a.icon').on('click', functio
 });
 
 
-$(document).ready(
+$(window).load(
 	function carouselNormalization() {
 
 		var items = $('#quote_carousel .item'), //grab all slides

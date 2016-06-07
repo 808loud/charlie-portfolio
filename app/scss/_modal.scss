@@ -1,5 +1,5 @@
 .modal-fullscreen {
-  background: #ffffff;
+  background-color: #fff;
 
   .modal-content {
     background: transparent;
@@ -10,11 +10,6 @@
 
   &.modal-backdrop-fullscreen {
     background: transparent;
-
-    &.in {
-      opacity: 1;
-      filter: alpha(opacity=100);
-    }
   }
 }
 
@@ -24,13 +19,15 @@
   margin-left: auto;
   width: 100%;
 }
+
+/* overrides for bootstrap default styles  */
 @media (min-width: 768px) {
   .modal-fullscreen .modal-dialog {
-    width: 750px;
+    width: inherit;
   }
 }
 @media (min-width: 992px) {
   .modal-fullscreen .modal-dialog {
-    width: 970px;
+    width: inherit;
   }
 }

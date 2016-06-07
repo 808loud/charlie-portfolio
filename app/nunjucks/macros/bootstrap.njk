@@ -1,8 +1,10 @@
-{% set media_dir = "./media/" %}
-{% set colLeft    = "col-sm-3 col-md-2 col-sm-offset-0 col-md-offset-1" %}
-{% set colRight   = "col-sm-8 col-md-7 col-lg-6" %}
-{% set offsetRight = "col-sm-offset-3" %}{% macro row( headerLeft, headerRight, contentRight ) %}
+{% set media       = "./media/" %}
+{% set colLeft     = "col-sm-3 col-md-2 col-sm-offset-0 col-md-offset-1" %}
+{% set colRight    = "col-sm-8 col-md-7 col-lg-6" %}
+{% set offsetRight = "col-sm-offset-3" %}
 
+{% macro row( headerLeft, headerRight, contentRight ) %}
+{% if headerLeft or headerRight or contentRight -%}
 <div class="row">
 	{% if headerLeft -%}
 	<div class="{{ colLeft }}">
@@ -14,38 +16,51 @@
 		{% if headerRight -%}
 		<h4>{{ headerRight }}</h4>
 		{%- endif %}
+		{% if caller -%}
+		{{ caller() }}
+		{%- endif %}
 		{% if contentRight -%}
 		{{ contentRight }}
 		{%- endif %}
 	</div>
 	{%- endif %}
 </div>
+{%- endif %}
 {% endmacro %}
 
-{% macro offset1col( headerRight, contentRight ) %}
-<div class="row">
-	<div class="{{ colRight }}{{ offsetRight }}">
-		<h4>{{ headerRight }}</h4>
-		{{ contentRight }}
+{% macro img( img1, img2) %}
+	<div class="row">
+		{% if img1 and img2 %}
+		<div class="col-sm-5 col-sm-offset-1">
+			<img src="{{ media }}{{ img1 }}" alt="" class="img-responsive">
+		</div>
+		<div class="col-sm-5">
+			<img src="{{ media }}{{ img2 }}" alt="" class="img-responsive">
+		</div>
+		{% elif img1 %}
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				<img src="{{ media }}{{ img1 }}" class="img-responsive">
+			</div>
+		</div>
+		{% else %}
+		<!-- please provide an image path as a parameter -->
+		{% endif %}
 	</div>
-</div>
 {% endmacro %}
 
-{% macro twoImg( img1, img2 ) %}
-<div class="row">
-	<div class="col-sm-3 col-sm-offset-2">
-		<img src="1/{{ media }}{{ img1 }}" alt="" class="img-responsive">
-	</div>
-	<div class="col-sm-3">
-		<img src="2/{{ media_dir }}{{ img2 }}" alt="" class="img-responsive">
-	</div>
-</div>
-{% endmacro %}
-
-{% macro oneImg( img1, imgAlt1 ) %}
-<div class="row">
-	<div class="col-xs-12">
-		<img src="{{ site.media_directory }}{{ img1 }}" class="img-responsive" alt="{{ imgAlt1 }}">
-	</div>
-</div>
+{% macro credits ( scope, client, dev ) %}
+	{% if scope or client or dev -%}
+	<ul class="project-data list-unstyled">
+		{% if scope -%}
+			<li>Scope: {{ scope }}</li>
+		{%- endif %}
+		{% if scope -%}
+			<li>Client: {{ client }}</li>
+		{%- endif %}
+		{% if scope -%}
+			<li>Dev: {{ dev }}</li>
+		{%- endif %}
+	</ul>
+	{%- endif %}
 {% endmacro %}
