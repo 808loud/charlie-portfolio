@@ -1,7 +1,7 @@
 /* remove before client review */
-$(window).load(function(){
+/*$(window).load(function(){
    $('#buzz').modal('show');
-});
+});*/
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 $('#main_navigation a.icon').on('click', function(e) {
