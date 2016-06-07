@@ -29,14 +29,19 @@ $font_size_small:  14px;
 	font-weight: 400;
 }
 
+body {
+	@extend .g-md;
+}
+
 h4 {
   margin-top: 0;
+  @extend .g-bold;
   font-size: $font_size_medium;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
 p {
+	@extend .g-book;
   line-height: 2em;
   &:last-of-type {
     margin-bottom: 0;

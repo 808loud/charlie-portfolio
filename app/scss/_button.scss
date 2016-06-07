@@ -3,9 +3,9 @@
   background: $dark_grey;
   border-color: transparent;
   border-width: 0;
+  @extend .g-bold;
   text-transform: uppercase;
   color: $light_grey;
-  font-weight: bold;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   &:hover,
