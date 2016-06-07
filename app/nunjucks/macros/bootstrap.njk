@@ -32,15 +32,15 @@
 	<div class="row">
 		{% if img1 and img2 %}
 		<div class="col-sm-5 col-sm-offset-1">
-			<img src="{{ media }}{{ img1 }}" alt="" class="img-responsive">
+			<img src="{{ media }}{{ img1 }}" alt="{{ img1 }}" class="img-responsive">
 		</div>
 		<div class="col-sm-5">
-			<img src="{{ media }}{{ img2 }}" alt="" class="img-responsive">
+			<img src="{{ media }}{{ img2 }}" alt="{{ img2 }}" class="img-responsive">
 		</div>
 		{% elif img1 %}
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<img src="{{ media }}{{ img1 }}" class="img-responsive">
+				<img src="{{ media }}{{ img1 }}" alt="{{ img1 }}" class="img-responsive">
 			</div>
 		</div>
 		{% else %}
