@@ -10,34 +10,29 @@ container
 
 {% block content %}
 
-  {{ boot.offset2col(
+  {{ boot.row(
 	  'Booking',
 	  'This is how the magic begins',
 	  '<p>Please fill out the form below and let me know how I can help.</p>
-	  <p>You will get a response within 24 hours of inquiry.</p>')
+	  <p>You will get a response within 24 hours of inquiry.</p>
+	  <form>
+	      <div class="input-underline">
+	        <input id="name" placeholder="Name" type="text" class="form-control">
+	      </div>
+	      <div class="input-underline">
+	        <input id="email" placeholder="Email" type="email" class="form-control">
+	      </div>
+	      <div class="input-underline">
+	        <input id="company" placeholder="Company name" type="text" class="form-control">
+	      </div>
+	      <div class="input-underline">
+	        <textarea id="message" placeholder="How can I help you?" class="form-control" rows="6"></textarea>
+	      </div>
+	      <div class="text-center">
+	        <button type="submit" class="btn btn-default">Send</button>
+	      </div>
+	    </form>')
   }}
-
-  {{ boot.offset1col(
-  '',
-	'<form>
-    <div class="input-underline">
-      <input id="name" placeholder="Name" type="text" class="form-control">
-    </div>
-    <div class="input-underline">
-      <input id="email" placeholder="Email" type="email" class="form-control">
-    </div>
-    <div class="input-underline">
-      <input id="company" placeholder="Company name" type="text" class="form-control">
-    </div>
-    <div class="input-underline">
-      <textarea id="message" placeholder="How can I help you?" class="form-control" rows="6"></textarea>
-    </div>
-    <div class="text-center">
-      <button type="submit" class="btn btn-default">Send</button>
-    </div>
-  </form>')}}
-
-	{% include "partials/contact-form.njk" %}
 
 {% endblock %}
 

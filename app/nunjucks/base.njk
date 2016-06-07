@@ -15,16 +15,13 @@
 
     {% set media = "./media/" %}
     {% import 'macros/bootstrap.njk' as boot %}
-    
 
     {% include "partials/navigation.njk" %}
 
     {% block content %}
     {% endblock %}
 
-    <section class="container">
-      {% include "partials/footer.njk" %}
-    </section>
+    {% include "partials/footer.njk" %}
 
     {% for project in projects %}
       {% include "projects/" + project.slug + ".njk" %} 

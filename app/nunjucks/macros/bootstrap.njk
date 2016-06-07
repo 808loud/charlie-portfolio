@@ -1,35 +1,30 @@
 {% set media_dir = "./media/" %}
-{% set col2Left  = "col-sm-3 col-md-2"          + " col-sm-offset-0 col-md-offset-1" %}
-{% set col2Right = "col-sm-8 col-md-7 col-lg-6" %}
-{% set col1Right = "col-sm-8 col-md-7 col-lg-6" + " col-sm-offset-3" %}
+{% set colLeft    = "col-sm-3 col-md-2 col-sm-offset-0 col-md-offset-1" %}
+{% set colRight   = "col-sm-8 col-md-7 col-lg-6" %}
+{% set offsetRight = "col-sm-offset-3" %}{% macro row( headerLeft, headerRight, contentRight ) %}
 
-{% macro offset2col( headerLeft, headerRight, contentRight ) %}
 <div class="row">
-	<div class="{{ col2Left }}">
+	{% if headerLeft -%}
+	<div class="{{ colLeft }}">
 		<h2 class="outline-heading">{{ headerLeft }}</h2>
 	</div>
-	<div class="{{ col2Right }}">
+	{%- endif %}
+	{% if headerRight or contentRight -%}
+	<div class="{{ colRight }}{% if not headerLeft %} {{ offsetRight }}{% endif %}">
+		{% if headerRight -%}
 		<h4>{{ headerRight }}</h4>
+		{%- endif %}
+		{% if contentRight -%}
 		{{ contentRight }}
+		{%- endif %}
 	</div>
-</div>
-{% endmacro %}
-
-{% macro offset2colImg( headerLeft, imgSrc, imgWidth, imgHeight, imgAlt ) %}
-<div class="row">
-	<div class="{{ col2Left }}">
-		<h2 class="outline-heading">{{ headerLeft }}</h2>
-	</div>
-	<div class="{{ col2Right }}">
-		<!-- <p>dir: {{ site.media_directory }}</p> -->
-		<img src="{{ site.media_directory }}{{ imgSrc }}" class="img-responsive" width="{{ imgWidth }}" height="{{ imgHeight }}" alt="{{ imgAlt }}" >
-	</div>
+	{%- endif %}
 </div>
 {% endmacro %}
 
 {% macro offset1col( headerRight, contentRight ) %}
 <div class="row">
-	<div class="{{ col1Right }}">
+	<div class="{{ colRight }}{{ offsetRight }}">
 		<h4>{{ headerRight }}</h4>
 		{{ contentRight }}
 	</div>
