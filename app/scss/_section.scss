@@ -5,7 +5,7 @@ section {
 #hero {
   padding: 160px 0 150px;
   margin-bottom: 70px;
-  background-image: url('./../media/charlie-hero-cover.png');
+  background-image: url('./../media/charlie-hero-cropped.png');
 
   h2, h3 {
     line-height: 1;
@@ -35,13 +35,13 @@ section {
     .project-inner {
       position: absolute;
       bottom: 34px;
-      width: 100%; 
+      width: 100%;
 
       img {
         margin-bottom: 18px;
       }
     }
-  } 
+  }
 }
 
 #location-banner {
@@ -51,7 +51,7 @@ section {
 }
 
 #experience {
-  h4 { 
+  h4 {
     display: none;
   }
 }
@@ -77,10 +77,10 @@ section {
     &:-webkit-autofill {
       -webkit-box-shadow: 0 0 0px 1000px white inset;
     }
-    /* 
+    /*
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; 
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     */
   }
   input {
