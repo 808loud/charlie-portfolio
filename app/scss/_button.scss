@@ -1,9 +1,10 @@
 .btn {
-  padding: 15px;
+  padding: 15px 20px;
   background: $dark_grey;
   border-color: transparent;
   border-width: 0;
   @extend .g-bold;
+  font-size: $font_size_medium;
   text-transform: uppercase;
   color: $light_grey;
   -webkit-transition-duration: 0.3s;

@@ -50,14 +50,41 @@ section {
   }
 }
 
+#location .row:not(:first-of-type) {
+  padding-top: 70px;
+}
+
 #experience {
   h4 {
     display: none;
   }
 }
 
+#quotes {
+  .carousel {
+    .carousel-inner {
+    }
+
+    blockquote {
+      border-left: none;
+      text-transform: uppercase;
+      padding: 140px 0;
+      p {
+        font-size: $font_size_xl;
+        line-height: 2.3em;
+      }
+
+      footer {
+        font-size: $font_size_small;
+        color: $light_grey;
+      }
+    }
+  }
+}
+
 #break_time {
   height: 420px;
+  margin: 70px 0;
   background-image: url('./../media/charlie-hero-cover.png');
 }
 

@@ -8,6 +8,13 @@ $font_size_small:  14px;
 .font-size-large  { font-size: $font_size_large; }
 .font-size-xl     { font-size: $font_size_xl; }
 
+// GothamRounded-Book
+.g-book {
+	font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B";
+	font-style: normal;
+	font-weight: 400;
+}
+
 // GothamRounded-Medium
 .g-md {
 	font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B";
@@ -20,13 +27,6 @@ $font_size_small:  14px;
 	font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B";
 	font-style: normal;
 	font-weight: 700;
-}
-
-// GothamRounded-Book
-.g-book {
-	font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B";
-	font-style: normal;
-	font-weight: 400;
 }
 
 body {
