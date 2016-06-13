@@ -16,11 +16,14 @@ body {
   font-size: $font_size_medium;
   font-weight: bold;
   text-transform: uppercase;
+  color: $red;
   margin-top: 0;
 
   &::after {
-    content: "\A \2013";
+    content: "\A \2014";
     white-space: pre;
+    position: relative;
+    top: 10px;
   }
 }
 
