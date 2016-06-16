@@ -110,6 +110,10 @@ section {
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     */
   }
+  label {
+    display: none;
+  }
+  
   input {
     height: 34px;
   }
