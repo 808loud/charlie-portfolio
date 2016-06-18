@@ -17,7 +17,8 @@
     border-width: 0;
   }
   &:focus,
-  &:active {
+  &:active,
+  &[disabled]:hover {
     background: $dark_grey;
     color: $light_grey;
   }

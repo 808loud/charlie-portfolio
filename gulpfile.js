@@ -16,7 +16,7 @@ var reload = browserSync.reload;
 function catchError (error) {
 
     var lineNumber = (error.lineNumber) ? 'LINE ' + error.lineNumber + ' -- ' : '';
-    
+
     notify({
         title: error.plugin + ' error',
         subtitle: error.lineNumber,
@@ -37,22 +37,22 @@ function catchError (error) {
     this.emit('end');
 }
 
-gulp.task('serve', ['nunjucks', 'sass', 'scripts'], function() { 
-    browserSync.init({ 
+gulp.task('serve', ['move', 'nunjucks', 'sass', 'scripts'], function() {
+    browserSync.init({
         server: {
             baseDir: "./public"
             // index: "index.html"
         },
         port: 5555
-    }); 
+    });
 
-    gulp.watch('.app/assets/**/*', ['move'])
+    gulp.watch('./app/assets/**/*', ['move']);
     gulp.watch(['./app/nunjucks/**/*.+(html|nunjucks|njk)',
-                './app/nunjucks/data.json'], 
-                ['nunjucks']); 
-    gulp.watch('./app/scss/**/*.scss', ['sass']); 
+                './app/nunjucks/data.json'],
+                ['nunjucks']);
+    gulp.watch('./app/scss/**/*.scss', ['sass']);
     gulp.watch('./app/js/**/*.js', ['scripts']);
-    gulp.watch('./public/**/*').on('change', reload); 
+    gulp.watch('./public/**/*').on('change', reload);
 });
 
 // tasks
@@ -86,8 +86,8 @@ gulp.task('nunjucks', function() {
 gulp.task('sass', function () {
   return gulp.src('./app/scss/**/*.+(sass|scss)')
     .pipe(sourcemaps.init())
-    .pipe(sass({ 
-        errLogToConsole: true 
+    .pipe(sass({
+        errLogToConsole: true
     }))
     .on('error', catchError)
     .pipe(sourcemaps.write())

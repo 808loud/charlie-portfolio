@@ -30,8 +30,7 @@ function submitForm(){
 }
 
 function bookingSubmitted(){
-    $('#msgSubmit').removeClass('hidden');
-    $('#booking button[type="submit"]').attr('disabled', 'disabled');
+    $('#booking button[type="submit"]').attr('disabled', 'disabled').html('Submitted');
 }
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
