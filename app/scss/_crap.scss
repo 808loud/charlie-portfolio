@@ -27,7 +27,15 @@ body {
   }
 }
 
+svg {
+  .bg {
+    fill: none;
+  }
 
+  .icon {
+    fill: red;
+  }
+}
 
 
 .parallax {

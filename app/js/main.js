@@ -1,36 +1,36 @@
 /* remove before client review */
-/*$(window).load(function(){
-   $('#buzz').modal('show');
-});*/
+$(window).load(function(){
+  $('#buzz').modal('show');
+});
 
 $("#booking").submit(function(event){
-    // cancels the form submission
-    event.preventDefault();
-    submitForm();
+  // cancels the form submission
+  event.preventDefault();
+  submitForm();
 });
 
 function submitForm(){
-    // initiate variables with form content
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var company = $("#company").val();
-    var message = $("#message").val();
+  // initiate variables with form content
+  var name = $("#name").val();
+  var email = $("#email").val();
+  var company = $("#company").val();
+  var message = $("#message").val();
 
-    // send AJAX request to PHP file for processing
-    $.ajax({
-        type: "POST",
-        url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&company" + company + "&message=" + message,
-        success : function(text){
-            if (text == "success"){
-                bookingSubmitted();
-            }
-        }
-    });
+  // send AJAX request to PHP file for processing
+  $.ajax({
+    type: "POST",
+    url: "php/form-process.php",
+    data: "name=" + name + "&email=" + email + "&company=" + company + "&message=" + message,
+    success : function(text){
+      if (text == "success"){
+        bookingSubmitted();
+      }
+    }
+  });
 }
 
 function bookingSubmitted(){
-    $('#booking button[type="submit"]').attr('disabled', 'disabled').html('Submitted');
+  $('#booking button[type="submit"]').attr('disabled', 'disabled').html('Submitted');
 }
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
