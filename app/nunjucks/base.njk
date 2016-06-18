@@ -15,6 +15,7 @@
 
     {% set media = "./media/" %}
     {% import 'macros/bootstrap.njk' as boot %}
+    {% import 'partials/icons.njk' as icon %}
 
     {% include "partials/navigation.njk" %}
 
@@ -24,8 +25,8 @@
     {% include "partials/footer.njk" %}
 
     {% for project in projects %}
-      {% include "projects/" + project.slug + ".njk" %} 
-    {% endfor %} 
+      {% include "projects/" + project.slug + ".njk" %}
+    {% endfor %}
 
   <script type="text/javascript" src="js/scripts.js"></script>
 
