@@ -1,5 +1,10 @@
 section {
   padding: 70px 0;
+
+  > .row:not(:first-child) {
+    padding-top: 70px;
+  }
+
 }
 
 #hero {
@@ -50,8 +55,8 @@ section {
   }
 }
 
-#location .row:not(:first-of-type) {
-  padding-top: 70px;
+#location {
+
 }
 
 #experience {
@@ -113,7 +118,7 @@ section {
   label {
     display: none;
   }
-  
+
   input {
     height: 34px;
   }
