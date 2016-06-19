@@ -7,12 +7,18 @@
 
           <div class="row">
             <div class="col-xs-12 text-center">
-              <button type="button" class="btn btn-default" data-dismiss="modal">{{ icon.close }}<span class="sr-only">Close</span></button>
+              <button type="button" class="btn" data-dismiss="modal">{{ icon.close }}<span class="sr-only">Close</span></button>
             </div>
           </div><!-- .row -->
 
-          {% block summary %}
-          {% endblock %}
+          <section>
+            <div class="row">
+              <div class="col-xs-12">
+                {% block summary %}
+                {% endblock %}
+              </div>
+            </div>
+          </section>
 
         </div><!-- .container -->
       </div><!-- .row.bg-info -->

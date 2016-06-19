@@ -7,50 +7,54 @@
 		{{ boot.credits(
 			'UI, Design',
 			'BI Worldwide',
-			'Ashby Utting, Ryan Asleson, Court Cromwell-Carl') 
+			'Ashby Utting, Ryan Asleson, Court Cromwell-Carl')
 		}}
 	{%- endcall %}
 {% endblock summary %}
 
 {% block description %}
 
-	{{ boot.row (
-		'',
-		'Mobile App', 
-		"<p>Some of the features include posting stories, taking quizzes or polls, reading announcements, celebrate milestones, and even track happiness at work. The more employees interact with the app, the smarter it gets.</p>" )
-	}}
+	<section>
+		{{ boot.row (
+			'',
+			'Mobile App',
+			"<p>Some of the features include posting stories, taking quizzes or polls, reading announcements, celebrate milestones, and even track happiness at work. The more employees interact with the app, the smarter it gets.</p>" )
+		}}
+	</section>
 
-	{{ boot.img( 
-		"buzz/buzz4@2x.png", 
+	{{ boot.img(
+		"buzz/buzz4@2x.png",
 		"buzz/buzz5@2x.png")
 	}}
 
-	{{ boot.img( 
-		"buzz/buzz2@2x.png", 
+	{{ boot.img(
+		"buzz/buzz2@2x.png",
 		"buzz/buzz6@2x.png")
 	}}
 
-	{{ boot.img( 
-		"buzz/buzz1@2x.png", 
+	{{ boot.img(
+		"buzz/buzz1@2x.png",
 		"buzz/buzz2@2x.png")
 	}}
 
-	{{ boot.row ( 
-		'',
-		'Admin site', 
-		"<p>Managers can keep track of all app activity through the admin site. Access activity details, create/edit programs, monitor statistics, track employee involvement, and more.</p>")
+	<section>
+		{{ boot.row (
+			'',
+			'Admin site',
+			"<p>Managers can keep track of all app activity through the admin site. Access activity details, create/edit programs, monitor statistics, track employee involvement, and more.</p>")
+		}}
+	</section>
+
+	{{ boot.img(
+		'buzz/Buzz_Statistics@2x.png')
 	}}
 
 	{{ boot.img(
-		'buzz/Buzz_Statistics@2x.png') 
+		'buzz/Buzz_create-edit@2x.png')
 	}}
 
 	{{ boot.img(
-		'buzz/Buzz_create-edit@2x.png') 
-	}}
-
-	{{ boot.img(
-		'buzz/Buzz_Activity@2x.png') 
+		'buzz/Buzz_Activity@2x.png')
 	}}
 
 {% endblock description %}

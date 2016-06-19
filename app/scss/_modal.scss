@@ -6,10 +6,48 @@
     border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
+
+    .row {
+      margin-bottom: 30px;
+    }
+
+    button {
+      &:first-of-type {
+        margin-top: 34px;
+      }
+      &:last-of-type {
+        margin-bottom: 34px;
+      }
+    }
+
+    section {
+      padding: 140px 0;
+    }
   }
 
   &.modal-backdrop-fullscreen {
     background: transparent;
+  }
+}
+
+.project-data {
+  margin-top: 54px;
+  @extend .g-bold;
+  font-size: $font_size_small;
+  color: $medium_grey;
+  li {
+    position: relative;
+    padding: 16px 0;
+    &:not(:last-child):after {
+      content:'';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $medium_grey;
+      height: 3px;
+      border-radius: 3px;
+    }
   }
 }
 
