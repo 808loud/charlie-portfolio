@@ -98,14 +98,18 @@ section {
     display: block;
     width: 100%;
     padding: 16px 0;
-    line-height: 1;
+    font-size: $font_size_small;
+    line-height: 1em;
     color: $dark_grey;
-    background-color: none;
+    background-color: transparent;
     background-image: none;
-    border: 0px solid transparent;
+    border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     resize: none;
+    &:focus {
+      outline: none;
+    }
     &:-webkit-autofill {
       -webkit-box-shadow: 0 0 0px 1000px white inset;
     }
@@ -119,7 +123,27 @@ section {
     display: none;
   }
 
-  input {
-    height: 34px;
+  textarea {
+    height: 260px;
   }
+
+  .input-underline {
+    position: relative;
+    margin-bottom: 24px;
+    &:after {
+      content:'';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $dark_grey;
+      height: 3px;
+      border-radius: 3px;
+    }
+  }
+
+  button {
+    margin-top: 10px;
+  }
+
 }

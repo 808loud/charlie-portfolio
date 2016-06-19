@@ -2,6 +2,11 @@ body {
   font-size: $font_size_medium;
 }
 
+body,
+.bg-info {
+  background-color: $light_grey;
+}
+
 .bg-primary {
   background: $red;
   color: $light_grey;
@@ -46,20 +51,4 @@ svg {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-
-.input-underline {
-  padding-bottom: 8px;
-  margin-bottom: 20px;
-  position: relative;
-  &:after {
-    content:'';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: $dark_grey;
-    height: 3px;
-    border-radius: 3px;
-  }
 }
