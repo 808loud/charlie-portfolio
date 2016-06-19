@@ -1,6 +1,6 @@
 /* remove before client review */
 $(window).load(function(){
-  // $('#buzz').modal('show');
+  // $('#dfs').modal('show');
 });
 
 $("#booking").submit(function(event){
