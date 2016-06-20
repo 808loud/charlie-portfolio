@@ -1,42 +1,52 @@
 <div id="{{ project.slug }}" class="modal modal-fullscreen">
   <div class="modal-dialog">
     <div class="modal-content">
+        <div class="container-fluid">
 
-      <div class="row bg-info">
-        <div class="container">
+          <div class="row bg-info">
+            <div class="col-xs-12">
 
-          <div class="row">
-            <div class="col-xs-12 text-center">
-              <button type="button" class="btn" data-dismiss="modal">{{ icon.close }}<span class="sr-only">Close</span></button>
-            </div>
+              <div class="row">
+                <div class="col-xs-12 text-center">
+                  <button type="button" class="btn" data-dismiss="modal">{{ icon.close }}<span class="sr-only">Close</span></button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="section">
+                    {% block summary %}
+                    {% endblock %}
+                    {% if credits %}
+                    {% call boot.row ('','') -%}
+                		<ul class="project-data list-unstyled text-uppercase">
+                			{% for credit in credits %}
+                			<li>{{ credit }}</li>
+                			{% endfor %}
+                		</ul>
+                    {%- endcall %}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- .col-xs-12 -->
           </div><!-- .row -->
 
-          <section>
-            <div class="row">
-              <div class="col-xs-12">
-                {% block summary %}
-                {% endblock %}
-              </div>
+        </div><!-- .container -->
+
+        <div class="container-fluid">
+
+          {% block description %}
+          {% endblock %}
+
+          <div class="row">
+            <div class='col-xs-12 text-center'>
+              <button type="button" class="btn">{{ icon.arrow_up }}<span class='sr-only'>Back to top</span></button>
             </div>
-          </section>
+          </div>
 
         </div><!-- .container -->
-      </div><!-- .row.bg-info -->
-
-      <div class="row">
-          <div class="container">
-
-            {% block description %}
-            {% endblock %}
-
-            <div class="row">
-              <div class='col-xs-12 text-center'>
-                <button type="button" class="btn">{{ icon.arrow_up }}<span class='sr-only'>Back to top</span></button>
-              </div>
-            </div>
-
-          </div><!-- .container -->
-      </div><!-- .row -->
 
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->

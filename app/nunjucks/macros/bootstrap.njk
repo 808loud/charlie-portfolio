@@ -4,14 +4,13 @@
 {% set offsetRight = "col-sm-offset-3" %}
 
 {% macro row( headerLeft, headerRight, contentRight ) %}
-{% if headerLeft or headerRight or contentRight -%}
 <div class="row">
 	{% if headerLeft -%}
 	<div class="{{ colLeft }}">
 		<h3 class="outline-heading">{{ headerLeft }}</h3>
 	</div>
 	{%- endif %}
-	{% if headerRight or contentRight -%}
+	{% if headerRight or contentRight or caller -%}
 	<div class="{{ colRight }}{% if not headerLeft %} {{ offsetRight }}{% endif %}">
 		{% if headerRight -%}
 		<h4>{{ headerRight }}</h4>
@@ -25,10 +24,10 @@
 	</div>
 	{%- endif %}
 </div>
-{%- endif %}
 {% endmacro %}
 
-{% macro img( img1, img2) %}
+
+{% macro img( img1, img2 ) %}
 	<div class="row">
 		{% if img1 and img2 %}
 		<div class="col-sm-4 col-sm-offset-2">
@@ -50,36 +49,40 @@
 {% endmacro %}
 
 {% macro imgMd( img ) %}
-	{% if img %}
-		<div class="row">
-			<div class="col-sm-6 col-sm-offset-3">
-				<img src="{{ media }}{{ img }}" alt="{{ img }}" class="img-responsive">
-			</div>
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<img src="{{ media }}{{ img }}" alt="{{ img }}" class="img-responsive">
 		</div>
-	{% endif %}
+	</div>
 {% endmacro %}
 
 {% macro imgLg( img ) %}
-	{% if img %}
-		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<img src="{{ media }}{{ img }}" alt="{{ img }}" class="img-responsive">
-			</div>
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<img src="{{ media }}{{ img }}" alt="{{ img }}" class="img-responsive">
 		</div>
-	{% endif %}
+	</div>
 {% endmacro %}
+
+
+{% macro imgFull( img, rowParams ) %}
+	<div class="row" {{ rowParams }}>
+			<img src="{{ media }}{{ img }}" alt="{{ img }}" class="img-responsive">
+	</div>
+{% endmacro %}
+
 
 {% macro credits ( scope, client, dev ) %}
 	{% if scope or client or dev -%}
 	<ul class="project-data list-unstyled text-uppercase">
 		{% if scope -%}
-			<li>Scope: {{ scope }}</li>
+			<li>{{ scope }}</li>
 		{%- endif %}
 		{% if scope -%}
-			<li>Client: {{ client }}</li>
+			<li>{{ client }}</li>
 		{%- endif %}
 		{% if scope -%}
-			<li>Dev: {{ dev }}</li>
+			<li>{{ dev }}</li>
 		{%- endif %}
 	</ul>
 	{%- endif %}

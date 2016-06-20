@@ -14,9 +14,8 @@ container
 
 {% block content %}
 
-	{{ boot.row(
-		"Intro", 
-		"Welcome to my portfolio", 
-		"<p>I am an independent consultant/freelancer that works with start ups, agencies, and corporate in-house teams. I have experience in pretty much all sectors, most recently in B2B/C Ecommerce, Engagement Programs, and Entertainment. Below are select examples that best represent my approach &amp; capabilities. Thanks for stopping by!</p>") 
-	}}
+	{% call boot.row('Intro', 'Welcome to my portfolio') %}
+		<p>I am an independent consultant/freelancer that works with start ups, agencies, and corporate in-house teams. I have experience in pretty much all sectors, most recently in B2B/C Ecommerce, Engagement Programs, and Entertainment. Below are select examples that best represent my approach &amp; capabilities. Thanks for stopping by!</p>
+	{% endcall %}
+	
 {% endblock %}

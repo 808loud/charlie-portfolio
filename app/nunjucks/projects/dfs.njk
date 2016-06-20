@@ -3,14 +3,14 @@
 {% block summary %}
 	{% call boot.row ('Work', 'Uber Finder + Product Description Page') -%}
 		<p>Discount Filter Store needed an easy way to help customers find the products they need with an advanced search feature. The process had to be fast and intuitive with the least amount of steps taken. They also wanted to rework their product description page to better reflect inventory, up-sell larger quantities, and cross-sell their own product line when appropriate. I worked mostly off-site advising on best practices in ecommerce and workflow. I also created wireframes, high-fidelity mock ups, presented creative, and produced final layouts.</p>
-		{{ boot.credits(
-			'UI, UX, Strategy, Art Direction',
-			'Discount Filter Store',
-			'Ian Gloude, David Monson')
-		}}
 	{%- endcall %}
 {% endblock summary %}
 
+{% set credits = [
+	'Dev: UI, UX, Strategy, Art Direction',
+	'Client: Discount Filter Store',
+	'Dev: Ian Gloude, David Monson'
+] %}
 
 {% block description %}
 

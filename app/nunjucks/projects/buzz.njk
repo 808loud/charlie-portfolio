@@ -4,23 +4,21 @@
 	{% call boot.row ('Work', 'Buzz App + Website') -%}
 		<p>A social recognition app targeted to Millennials with the idea that by engaging in their workforce you will earn their loyalty&ndash;and keep it for years to come. Employees and managers alike are enabled to show appreciation and emphasize that the work they're doing as a whole really is making a difference.</p>
 		<p>I worked on-site with a team of in-house developers, product managers, and creatives. I advised on strategy/creative, took part in planning meetings, developed user interfaces, developed graphics, and helped prepare files for hand off.</p>
-		{{ boot.credits(
-			'UI, Design',
-			'BI Worldwide',
-			'Ashby Utting, Ryan Asleson, Court Cromwell-Carl')
-		}}
 	{%- endcall %}
 {% endblock summary %}
 
+{% set credits = [
+	'Dev: UI, Design',
+	'Client: BI Worldwide',
+	'Dev: Ashby Utting, Ryan Asleson, Court Cromwell-Carl'
+] %}
 
 {% block description %}
 
 	<div class="section">
-		{{ boot.row (
-			'',
-			'Mobile App',
-			"<p>Some of the features include posting stories, taking quizzes or polls, reading announcements, celebrate milestones, and even track happiness at work. The more employees interact with the app, the smarter it gets.</p>" )
-		}}
+		{% call boot.row ('', 'Mobile App') -%}
+			<p>Some of the features include posting stories, taking quizzes or polls, reading announcements, celebrate milestones, and even track happiness at work. The more employees interact with the app, the smarter it gets.</p>
+		{%- endcall %}
 	</div>
 
 	{{ boot.img(
@@ -39,11 +37,9 @@
 	}}
 
 	<div class="section">
-		{{ boot.row (
-			'',
-			'Admin site',
-			"<p>Managers can keep track of all app activity through the admin site. Access activity details, create/edit programs, monitor statistics, track employee involvement, and more.</p>")
-		}}
+		{% call boot.row ('', 'Admin site') -%}
+			<p>Managers can keep track of all app activity through the admin site. Access activity details, create/edit programs, monitor statistics, track employee involvement, and more.</p>
+		{%- endcall %}
 	</div>
 
 	{{ boot.imgLg(
