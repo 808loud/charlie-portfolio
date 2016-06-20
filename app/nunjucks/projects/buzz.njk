@@ -12,15 +12,16 @@
 	{%- endcall %}
 {% endblock summary %}
 
+
 {% block description %}
 
-	<section>
+	<div class="section">
 		{{ boot.row (
 			'',
 			'Mobile App',
 			"<p>Some of the features include posting stories, taking quizzes or polls, reading announcements, celebrate milestones, and even track happiness at work. The more employees interact with the app, the smarter it gets.</p>" )
 		}}
-	</section>
+	</div>
 
 	{{ boot.img(
 		"buzz/buzz4@2x.png",
@@ -37,23 +38,23 @@
 		"buzz/buzz2@2x.png")
 	}}
 
-	<section>
+	<div class="section">
 		{{ boot.row (
 			'',
 			'Admin site',
 			"<p>Managers can keep track of all app activity through the admin site. Access activity details, create/edit programs, monitor statistics, track employee involvement, and more.</p>")
 		}}
-	</section>
+	</div>
 
-	{{ boot.img(
+	{{ boot.imgLg(
 		'buzz/Buzz_Statistics@2x.png')
 	}}
 
-	{{ boot.img(
+	{{ boot.imgLg(
 		'buzz/Buzz_create-edit@2x.png')
 	}}
 
-	{{ boot.img(
+	{{ boot.imgLg(
 		'buzz/Buzz_Activity@2x.png')
 	}}
 
