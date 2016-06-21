@@ -1,11 +1,12 @@
 {% extends "partials/modal.njk" %}
 
 {% block summary %}
-	{% call boot.row ( 'Work,' 'B2B Ecommerce Website')
+	{% call boot.row ( 'Work', 'B2B Ecommerce Website') -%}
 		<p>Countrywide needed a new strategy + redesign for their B2B Ecommerce site. In addtion to placing orders by pallet customers can now access larger quantities by truck or container. Truck orders are fulfilled by their factory, while container orders allow direct access to factories that they have partnerships with. This feature also calculates the total amount of weight/space that an order would take up and does not allow customers to checkout until an order is filled.</p>
 		<p>I partnered with CWT&amp;R to develop strategy, sitemaps, wireframes, low/high fidelity mockups, and final layouts. I worked with their project manager to source freelance developers for the front and backend. All work was done off site with the exception of a few on-site meetings with the team.</p>
-	{% endcall %}
+	{%- endcall %}
 {% endblock summary %}
+
 
 {% set credits = [
 		'Scope: UI, UX, Art Direction, Design',
@@ -16,25 +17,47 @@
 
 {% block description %}
 
-	{{ boot.row (
-		'',
-		"Website",
-		"The site is meant to primarly work with registered customers. Visitors can explore the company offering without revealing price-sensitive information. Once logged-in there is access to features that allow customers to quickly narrow their search results. Other features include a progress meter that tracks truck and container orders, a quick list function for saving item numbers, and advanced ordering options for repeat customers." )
+	<div class="section">
+		{% call boot.row ('', 'Website') %}
+			<p>The site is meant to primarly work with registered customers. Visitors can explore the company offering without revealing price-sensitive information. Once logged-in there is access to features that allow customers to quickly narrow their search results. Other features include a progress meter that tracks truck and container orders, a quick list function for saving item numbers, and advanced ordering options for repeat customers.</p>
+		{% endcall %}
+	</div>
+
+	{{ boot.img(
+	'cwt/Home@2x.png')
 	}}
 
 	{{ boot.img(
-		"http://placehold.it/300x400",
-		"http://placehold.it/300x400")
-	}}
-
-	{{ boot.row (
-		'',
-		"Mobile Site",
-		"The site was designed to be completely responsive. The ordering process adapts to work in mobile environments by making good use of side scrollers, drop downs, and pop ups.")
+	'cwt/OrderLandingPage@2x.png')
 	}}
 
 	{{ boot.img(
-		"http://placehold.it/800x800")
+	'cwt/ProductDetailContainer@2x.png')
 	}}
+
+	{{ boot.img(
+	'cwt/ProductDetailTruck@2x.png')
+	}}
+
+	{{ boot.img(
+	'cwt/Cart@2x.png')
+	}}
+
+	<div class="section">
+		{% call boot.row ('', 'Mobile Site') %}
+			<p>The site was designed to be completely responsive. The ordering process adapts to work in mobile environments by making good use of side scrollers, drop downs, and pop ups.</p>
+		{% endcall %}
+	</div>
+
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-2">
+				<img src="media/cwt/ShippingType@2x.png" alt="" class="img-responsive">
+				<img src="media/cwt/Menu@2x.png" alt="" class="img-responsive">
+		</div>
+		<div class="col-sm-4">
+				<img src="media/cwt/ExpandedProductView@2x.png" alt="" class="img-responsive">
+				<img src="media/cwt/CartDropDown@2x.png" alt="" class="img-responsive">
+		</div>
+	</div>
 
 {% endblock description %}
