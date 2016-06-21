@@ -6,9 +6,11 @@ section {
 }
 
 #hero {
-  padding: 160px 0 150px;
+  // height: 424px;
+  padding: 169px 0 169px;
   margin-bottom: 70px;
   background-image: url('./../media/charlie-hero-cropped.png');
+  background-position-y: 0;
 
   h2, h3 {
     line-height: 1;
