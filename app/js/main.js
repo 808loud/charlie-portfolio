@@ -3,6 +3,10 @@ $(window).load(function(){
   //$('#print').modal('show');
 });
 
+$('.scroll-top').on('click', function () {
+    $('.modal').animate({ scrollTop: 0 }, 'slow');
+});
+
 $("#booking").submit(function(event){
   // cancels the form submission
   event.preventDefault();
