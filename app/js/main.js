@@ -51,8 +51,8 @@ $('#main_navigation ul li a').not('#main_navigation a.toggle').on('click', funct
   // this needs to explicitly remove and add (rather than toggle)
   // so that a click on .home doesn't change .icon to fa-close
   // $('#main_navigation ul > li > a.toggle > span').removeClass('fa-close').addClass('fa-bars');
-  $('#main_navigation ul > li > a.toggle > span.hamburger').removeClass('hidden');
-  $('#main_navigation ul > li > a.toggle > span.close').addClass('hidden');
+  $('#main_navigation ul > li > a.toggle > span.icon-hamburger').removeClass('hidden');
+  $('#main_navigation ul > li > a.toggle > span.icon-close').addClass('hidden');
 });
 
 
