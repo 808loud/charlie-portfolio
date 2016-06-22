@@ -105,7 +105,7 @@ section {
   input, textarea {
     display: block;
     width: 100%;
-    padding: 16px 0;
+    padding-bottom: 16px;
     font-size: $font_size_small;
     line-height: 1em;
     color: $dark_grey;
@@ -137,7 +137,7 @@ section {
 
   .input-underline {
     position: relative;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     &:after {
       content:'';
       position: absolute;
