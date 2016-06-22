@@ -28,8 +28,8 @@ section {
     position: relative;
     height: 232px; // 200px article + 16 borders (top and bottom)
     background: #ddd;
-    background-size: 100% auto;
     background-size: cover;
+    background-position-x: center;
     border-width: 16px 0 0;
     border-style: solid;
     border-color: $dark_grey;
