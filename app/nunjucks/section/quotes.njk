@@ -21,11 +21,11 @@ container-fluid
   </ol>
   <div class="carousel-inner text-center bg-primary" role="listbox">
     {% for quote in quotes %}
-    <div class="item {{ quote.active }} font-size-xl">
+    <div class="item {{ quote.active }}">
       <blockquote>
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
-            <p>&ldquo;{{ quote.quote }}&rdquo;</p>
+            <p class="font-size-xl g-md">&ldquo;{{ quote.quote }}&rdquo;</p>
             <footer>{{ quote.citation }}, {{ quote.title }}</footer>
           </div>
         </div>

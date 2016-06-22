@@ -86,4 +86,4 @@ $(window).load(
 	}
 )
 
-$('.carousel').carousel({ pause: "false" });
+$('.carousel').carousel({ pause: "hover" });
