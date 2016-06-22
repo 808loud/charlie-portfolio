@@ -6,54 +6,29 @@
 
 	"projects": [
 		{
-			"id": 0,
 			"slug": "buzz",
 			"button": "Recognition App",
-			"logo": {
-				"src": "buzz/logo@2x.png",
-				"width": "66",
-				"height": "67"
-			},
+			"logo_src": "buzz/buzz-logo@2x.png",
 			"preview_img": "buzz/preview.png"
 		}, {
-			"id": 1,
 			"slug": "dfs",
 			"button": "Uber Finder",
-			"logo": {
-				"src": "dfs/logo@2x.png",
-				"width": "120",
-				"height": "56"
-			},
+			"logo_src": "dfs/dfs-logo@2x.png",
 			"preview_img": "dfs/preview.png"
 		}, {
-			"id": 2,
 			"slug": "scout",
 			"button": "Rewards Program",
-			"logo": {
-				"src": "scout/logo@2x.png",
-				"width": "184",
-				"height": "46"
-			},
+			"logo_src": "scout/scout-logo@2x.png",
 			"preview_img": "scout/preview.png"
 		}, {
-			"id": 3,
 			"slug": "cwt",
 			"button": "B2B Ecommerce",
-			"logo": {
-				"src": "cwt/logo@2x.png",
-				"width": "125",
-				"height": "65"
-			},
+			"logo_src": "cwt/cwt-logo@2x.png",
 			"preview_img": "cwt/preview.png"
 		}, {
-			"id": 4,
 			"slug": "print",
 			"button": "Print Projects",
-			"logo": {
-				"src": "print/logo@2x.png",
-				"width": "53",
-				"height": "73"
-			},				
+			"logo_src": "print/print-logo@2x.png",
 			"preview_img": "print/preview.png"
 		}
 	],
@@ -69,14 +44,12 @@
 			"id": 1,
 			"quote": "Charlie's understanding of web development meant that all of his work was easily transferred to the development stage",
 			"citation": "David Monson",
-			"title": "Front-end Developer",
-			"active": ""
+			"title": "Front-end Developer"
 		}, {
 			"id": 2,
 			"quote": "We have happy clients across the Twin Cities because of Charlie's unwavering devotion to his craft.",
 			"citation": "Bryan Peglow",
-			"title": "Business Development Manager",
-			"active": ""
+			"title": "Business Development Manager"
 		}
 	]
 
