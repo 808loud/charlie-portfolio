@@ -11,13 +11,16 @@
       margin-bottom: 30px;
     }
 
-    button {
-      &:first-of-type {
-        margin-top: 34px;
-      }
-      &:last-of-type {
-        margin-bottom: 34px;
-      }
+    .modal-btn-top {
+      margin-top: 34px;
+      position: fixed;
+      transform : none;
+      -webkit-transform: translate(0,0);
+      -ms-transform: translate(0,0);
+      -o-transform: translate(0,0);
+    }
+    .modal-btn-bottom {
+      margin-bottom: 34px;
     }
 
     .section {

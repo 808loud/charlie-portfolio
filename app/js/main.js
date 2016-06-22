@@ -1,6 +1,6 @@
 /* remove before client review */
 $(window).load(function(){
-  //$('#print').modal('show');
+  $('#print').modal('show');
 });
 
 $('.scroll-top').on('click', function () {
