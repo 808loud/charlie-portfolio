@@ -60,9 +60,11 @@ section {
 
 }
 
-#experience {
-  h4 {
-    display: none;
+@media screen and (max-width: 767px) {
+  #experience {
+    img {
+      padding-top: 10px;
+    }
   }
 }
 
