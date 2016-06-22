@@ -18,11 +18,16 @@
       display: inline-block;
       margin-right: 4px;
       margin-bottom: 4px;
+      &.visible-xs-block {
+        margin-bottom: 0;
+      }
       &:last-of-type {
         margin-right: 0;
       }
       >a {
         min-width: 50px;
+        padding-left:  21px; // overrides default .btn padding
+        padding-right: 21px; // overrides default .btn padding
         &:hover {
           background-color: $red;
         }

@@ -99,7 +99,7 @@ section {
 
 #booking {
   .booking-form {
-    max-width: 594px;
+    max-width: 605px;
     margin: 70px auto;
   }
   input, textarea {
@@ -154,4 +154,10 @@ section {
     margin-top: 10px;
   }
 
+}
+
+#footer {
+  .btn {
+    margin-bottom: 4px;
+  }
 }
