@@ -23,14 +23,10 @@ container-fluid
     <div class="carousel-inner" role="listbox">
       {% for quote in quotes %}
       <div class="item {{ quote.active }}">
-        {# <div class="row"> #}
-          {# <div class="col-xs-10 col-xs-offset-1"> #}
-            <blockquote>
-              <p class="font-size-xl g-md">&ldquo;{{ quote.quote }}&rdquo;</p>
-              <footer>{{ quote.citation }}, {{ quote.title }}</footer>
-            </blockquote>
-          {# </div> #}
-        {# </div> #}
+        <blockquote>
+          <p class="font-size-xl g-md">&ldquo;{{ quote.quote }}&rdquo;</p>
+          <footer>{{ quote.citation }}, {{ quote.title }}</footer>
+        </blockquote>
       </div>
       {% endfor %}
     </div><!-- .carousel-inner -->
