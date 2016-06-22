@@ -13,25 +13,27 @@ container-fluid
 {%- endblock %}
 
 {% block content %}
-<div id="quote_carousel" class="carousel slide row" data-ride="carousel">
-  <ol class="carousel-indicators">
-    {% for quote in quotes %}
-    <li data-target="#quote_carousel" data-slide-to="{{ quote.id }}" class="{{ quote.active }}"></li>
-    {% endfor %}
-  </ol>
-  <div class="carousel-inner text-center bg-primary" role="listbox">
-    {% for quote in quotes %}
-    <div class="item {{ quote.active }}">
-      <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-          <blockquote>
-            <p class="font-size-xl g-md">&ldquo;{{ quote.quote }}&rdquo;</p>
-            <footer>{{ quote.citation }}, {{ quote.title }}</footer>
-          </blockquote>
-        </div>
+<div class="row bg-primary">
+  <div id="quote_carousel" class="col-xs-12 text-center carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      {% for quote in quotes %}
+      <li data-target="#quote_carousel" data-slide-to="{{ quote.id }}" class="{{ quote.active }}"></li>
+      {% endfor %}
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      {% for quote in quotes %}
+      <div class="item {{ quote.active }}">
+        {# <div class="row"> #}
+          {# <div class="col-xs-10 col-xs-offset-1"> #}
+            <blockquote>
+              <p class="font-size-xl g-md">&ldquo;{{ quote.quote }}&rdquo;</p>
+              <footer>{{ quote.citation }}, {{ quote.title }}</footer>
+            </blockquote>
+          {# </div> #}
+        {# </div> #}
       </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
+      {% endfor %}
+    </div><!-- .carousel-inner -->
+  </div><!-- #quote_carousel.col-xs-12 -->
+</div><!-- .row -->
 {% endblock %}
