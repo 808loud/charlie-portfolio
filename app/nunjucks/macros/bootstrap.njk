@@ -65,7 +65,9 @@
 
 {% macro imgFull( img, rowParams ) %}
 	<div class="row" {{ rowParams }}>
+		<div class="col-xs-12">
 			<img src="{{ media }}{{ img }}" alt="{{ img }}" class="img-responsive">
+		</div>
 	</div>
 {% endmacro %}
 
