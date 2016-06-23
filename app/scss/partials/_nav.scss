@@ -1,35 +1,37 @@
 #main_navigation {
-  position: fixed;
-  top: 34px;
-  padding: 0;
-  white-space: nowrap;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 30;
-  ul {
-    float: none;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
+  nav {
+    position: fixed;
+    top: 34px;
+    padding: 0;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
     text-align: center;
-    overflow-x: visible;
-    overflow-y: hidden;
-    li {
-      display: inline-block;
-      margin-right: 4px;
-      margin-bottom: 4px;
-      &.visible-xs-block {
-        margin-bottom: 0;
-      }
-      &:last-of-type {
-        margin-right: 0;
-      }
-      >a {
-        min-width: 50px;
-        padding-left:  21px; // overrides default .btn padding
-        padding-right: 21px; // overrides default .btn padding
-        &:hover {
-          background-color: $red;
+    ul {
+      display: inline;
+      float: none;
+      padding-left: 0;
+      margin: 0 auto;
+      list-style: none;
+      overflow-x: visible;
+      overflow-y: hidden;
+      li {
+        display: inline-block;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        &.visible-xs-block {
+          margin-bottom: 0;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+        > a {
+          min-width: 50px;
+          min-height: 50px;
+          &:hover {
+            background-color: $red;
+          }
         }
       }
     }
@@ -42,7 +44,7 @@
       li {
         a {
           position: relative;
-          top: -80px;
+          top: -25px;
           visibility: hidden;
           opacity: 0;
           z-index: 35;
