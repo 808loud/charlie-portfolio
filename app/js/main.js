@@ -1,6 +1,6 @@
 /* remove before client review */
 $(window).load(function(){
-  $('#scout').modal('show');
+  //$('#scout').modal('show');
 });
 
 $('.scroll-top').on('click', function () {
@@ -39,20 +39,18 @@ function bookingSubmitted(){
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 $('#main_navigation a.toggle').on('click', function(e) {
-	$('#main_navigation ul').toggleClass('expanded');
-	$('.nav-blur').toggleClass('blurred');
-	$('#main_navigation ul > li > a.toggle > span').toggleClass('hidden');
+	$('#main_navigation nav').toggleClass('expanded');
+	$('#main_navigation a.toggle > span').toggleClass('hidden');
   e.preventDefault();
 });
 
-$('#main_navigation ul li a').not('#main_navigation a.toggle').on('click', function() {
-	$('#main_navigation ul').removeClass('expanded');
-  $('.nav-blur').removeClass('blurred');
-  // this needs to explicitly remove and add (rather than toggle)
+$('#main_navigation nav a').not('#main_navigation a.toggle').on('click', function() {
+	$('#main_navigation nav').removeClass('expanded');
+  // this needs to explicitly remove and add classes (rather than toggle)
   // so that a click on .home doesn't change .icon to fa-close
   // $('#main_navigation ul > li > a.toggle > span').removeClass('fa-close').addClass('fa-bars');
-  $('#main_navigation ul > li > a.toggle > span.icon-hamburger').removeClass('hidden');
-  $('#main_navigation ul > li > a.toggle > span.icon-close').addClass('hidden');
+  $('#main_navigation a.toggle > span.icon-hamburger').removeClass('hidden');
+  $('#main_navigation a.toggle > span.icon-close').addClass('hidden');
 });
 
 
