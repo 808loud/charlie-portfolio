@@ -1,7 +1,22 @@
 /* remove before client review */
 $(window).load(function(){
-  //$('#print').modal('show');
+  $('#dfs').modal('show');
 });
+
+$(document).ready(function () {
+  $('.modal').on('show.bs.modal', function () {
+    if ($(document).height() > $(window).height()) {
+      // no-scroll
+      $('body').addClass("modal-open-noscroll");
+    }
+    else {
+      $('body').removeClass("modal-open-noscroll");
+    }
+  })
+  $('.modal').on('hide.bs.modal', function () {
+    $('body').removeClass("modal-open-noscroll");
+  })
+})
 
 $('.scroll-top').on('click', function () {
     $('.modal').animate({ scrollTop: 0 }, 'slow');
