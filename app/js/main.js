@@ -1,6 +1,6 @@
 /* remove before client review */
 $(window).load(function(){
-  // $('#scout').modal('show');
+  // $('#buzz').modal('show');
 });
 
 $('.scroll-top').on('click', function () {

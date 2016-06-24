@@ -4,7 +4,7 @@
   .modal-btn-top {
     position: fixed;
     top: 34px;
-    left: 50%;
+    left: 49.5%;
     transform : translate(-50%,0);
     -webkit-transform: translate(-50%,0);
     -ms-transform: translate(-50%,0);
@@ -13,7 +13,14 @@
   }
 
   .modal-btn-bottom {
+    position: absolute;
     margin: 34px 0;
+    left: 50%;
+    transform : translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    z-index: 40;
   }
 
   .modal-content {
