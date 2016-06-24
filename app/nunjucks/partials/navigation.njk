@@ -14,32 +14,34 @@ container
 
 {% block content %}
 <nav class="text-center">
-<!-- ATTN: comments below are inserted to remove unwanted whitespace between inline-block elements. -->
+ {# ATTN: comments below are inserted
+    to remove unwanted whitespace between inline-block elements.
+    Do not remove them. #}
   <ul class="list-inline">
     <li>
       <a href="#" class="btn btn-primary mobile-show" role="button">Charlie</a>
-    </li><!--
- --><li class="visible-xs-inline-block">
+    </li>{#
+  #}<li class="visible-xs-inline-block">
       <a class="btn mobile-show toggle" role="button">
         <span class="icon-hamburger">{{ icon.hamburger }}</span>
         <span class="icon-close hidden">{{ icon.close }}</span>
       </a>
-    </li><!--
- --><li class="clearfix visible-xs-block"></li><!--
- --><li>
+    </li>{#
+  #}<li class="clearfix visible-xs-block"></li>{#
+  #}<li>
       <a href="#work" class="btn" role="button">Work</a>
-    </li><!--
- --><li>
+    </li>{#
+  #}<li>
       <a href="#process" class="btn" role="button">Process</a>
-    </li><!--
- --><li class="clearfix visible-xs-block"></li><!--
- --><li>
+    </li>{#
+  #}<li class="clearfix visible-xs-block"></li>{#
+  #}<li>
       <a href="#booking" class="btn" role="button">Booking</a>
-    </li><!--
- --><li>
+    </li>{#
+  #}<li>
       <a href="#" class="btn" role="button"><i class="fa fa-behance" aria-hidden="true"></i></a>
-    </li><!--
- --><li>
+    </li>{#
+  #}<li>
       <a href="#" class="btn" role="button"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
     </li>
   </ul>
