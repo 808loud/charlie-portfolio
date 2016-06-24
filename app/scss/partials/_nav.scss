@@ -13,7 +13,7 @@
       margin-right: 0;
     }
     > a {
-      min-width: 61px;
+      min-width: 50px;
       min-height: 50px;
       &:hover {
         background-color: $red;
@@ -30,10 +30,22 @@
   padding: 0;
   white-space: nowrap;
   z-index: 30;
-  nav a.btn {
-    padding-left:  20px;
-    padding-right: 20px;
+  a.btn {
+    padding: 17px 20.7px;
   }
+  a.work,
+  a.process {
+    padding-left:  20.9px;
+    padding-right: 20.9px;
+  }
+  a i.fa {
+    width: 16px;
+  }
+}
+
+footer nav > ul > li > a.btn {
+  // padding-left:  15.49px;
+  // padding-right: 15.49px;
 }
 
 @media screen and (max-width:767px) {

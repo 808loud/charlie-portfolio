@@ -1,6 +1,6 @@
 /* remove before client review */
 $(window).load(function(){
-  $('#dfs').modal('show');
+  // $('#dfs').modal('show');
 });
 
 $(document).ready(function () {
