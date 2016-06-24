@@ -1,53 +1,36 @@
 <div id="{{ project.slug }}" class="modal modal-fullscreen" tabindex="-1" role="dialog">
-  <h2 class="sr-only">{{ project.button }}</h2>
+
+  <button type="button" class="btn modal-btn-top" data-dismiss="modal">{{ icon.close }}<span class="sr-only">Close</span></button>
+
   <div class="modal-dialog">
     <div class="modal-content">
-        <div class="container-fluid">
 
-          <div class="row bg-info">
-            <div class="col-xs-12">
-
-              <div class="row">
-                <div class="col-xs-12 text-center">
-                  <button type="button" class="btn modal-btn-top" data-dismiss="modal">{{ icon.close }}<span class="sr-only">Close</span></button>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="section">
-                    {% block summary %}
-                    {% endblock %}
-                    {% if credits %}
-                    {% call boot.row ('','') -%}
-                		<ul class="project-data list-unstyled text-uppercase">
-                			{% for credit in credits %}
-                			<li>{{ credit }}</li>
-                			{% endfor %}
-                		</ul>
-                    {%- endcall %}
-                    {% endif %}
-                  </div>
-                </div>
-              </div>
-
-            </div><!-- .col-xs-12 -->
-          </div><!-- .row -->
-
-        </div><!-- .container -->
-
-        <div class="container-fluid">
-
-          {% block description %}
-          {% endblock %}
-
-          <div class="row">
-            <div class='col-xs-12 text-center'>
-              <button type="button" class="btn modal-btn-bottom scroll-top" title="Click to return on the top page">{{ icon.arrow_up }}</button>
-            </div>
+      <div class="row bg-info">
+        <div class="col-xs-12">
+          <div class="section">
+            {% block summary %}
+            {% endblock %}
+            {% if credits %}
+              {% call boot.row ('','') -%}
+          		<ul class="project-data list-unstyled text-uppercase">
+          			{% for credit in credits %}
+          			<li>{{ credit }}</li>
+          			{% endfor %}
+          		</ul>
+              {%- endcall %}
+            {% endif %}
           </div>
+        </div><!-- .col-xs-12 -->
+      </div><!-- .row -->
 
-        </div><!-- .container -->
+      {% block description %}
+      {% endblock %}
+
+      <div class="row">
+        <div class='col-xs-12 text-center'>
+          <button type="button" class="btn modal-btn-bottom scroll-top" title="Click to return on the top page">{{ icon.arrow_up }}</button>
+        </div>
+      </div>
 
     </div><!-- modal-content -->
   </div><!-- modal-dialog -->

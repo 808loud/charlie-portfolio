@@ -1,6 +1,21 @@
 .modal-fullscreen {
   background-color: #fff;
 
+  .modal-btn-top {
+    position: fixed;
+    top: 34px;
+    left: 50%;
+    transform : translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    z-index: 40;
+  }
+
+  .modal-btn-bottom {
+    margin: 34px 0;
+  }
+
   .modal-content {
     background: transparent;
     border: 0;
@@ -9,30 +24,6 @@
 
     img {
       margin-bottom: 30px;
-    }
-
-    .modal-btn-top {
-      // margin-top: 34px;
-      position: fixed;
-      top: 34px;
-      transform : none;
-      -webkit-transform: translate(0,0);
-      -ms-transform: translate(0,0);
-      -o-transform: translate(0,0);
-      z-index: 1;
-      /*
-      margin-top: 34px;
-      position: fixed;
-      left: 50%;
-      transform : translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      -o-transform: translateX(-50%);
-      z-index: 1;
-      */
-    }
-    .modal-btn-bottom {
-      margin-bottom: 34px;
     }
 
     .section {
