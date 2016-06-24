@@ -45,9 +45,10 @@ svg {
   //height: 600px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  // background-attachment: fixed;
+  background-attachment: fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  // -webkit-backface-visibility: hidden;
 }
