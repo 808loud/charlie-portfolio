@@ -32,13 +32,18 @@ body.modal-open-noscroll {
 
 .modal-fullscreen {
   background-color: #fff;
-  padding-right: 15px;
+  padding-right: 15px; // prevents modal from scrolling right. dunno why.
 
   .modal-content {
     background: transparent;
     border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
+
+    // related to github issue #20
+    .container-modal .row {
+      margin: auto 0;
+    }
 
     img {
       margin-bottom: 30px;
