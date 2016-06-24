@@ -10,6 +10,9 @@ section {
   margin-bottom: 70px;
   background-image: url('./../media/charlie-hero-cropped.png');
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-position: 0 center;
   background-repeat: no-repeat;
 
@@ -29,6 +32,9 @@ section {
     height: 232px; // 200px article + 16 borders (top and bottom)
     background: #ddd;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-position-x: center;
     border-width: 16px 0 0;
     border-style: solid;
