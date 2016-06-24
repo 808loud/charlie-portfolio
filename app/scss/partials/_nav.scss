@@ -1,3 +1,27 @@
+.list-inline {
+  display: inline; // so I can easily determine the element's width using DevTools
+  padding: 0;
+  margin: 0;
+  > li {
+    display: inline-block;
+    padding: 0; // bootstrap override
+    margin: 0 4px 4px 0; // custom style
+    &.visible-xs-block {
+      margin-bottom: 0;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    > a {
+      min-width: 50px;
+      min-height: 50px;
+      &:hover {
+        background-color: $red;
+      }
+    }
+  }
+}
+
 #main_navigation {
   position: fixed;
   transform: translateX(-50%);
@@ -6,72 +30,51 @@
   padding: 0;
   white-space: nowrap;
   z-index: 30;
-  nav {
-    text-align: center;
-    ul {
-      display: inline;
-      float: none;
-      padding: 0;
-      margin: 0 auto;
-      list-style: none;
-      overflow-x: visible;
-      overflow-y: hidden;
-      li {
-        display: inline-block;
-        margin-right: 4px;
-        margin-bottom: 4px;
-        &.visible-xs-block {
-          margin-bottom: 0;
-        }
-        &:last-of-type {
-          margin-right: 0;
-        }
-        > a {
-          min-width: 50px;
-          min-height: 50px;
-          &:hover {
-            background-color: $red;
-          }
-        }
-      }
-    }
-  }
 }
 
 @media screen and (max-width:767px) {
   #main_navigation {
     nav {
-      ul {
-        li {
-          a {
-            /* animate movement */
-            position: relative;
-            top: -17px;
-            visibility: hidden;
-            opacity: 0;
-            z-index: 35;
-            &.mobile-show {
-              top: 0;
-              visibility: visible;
-              opacity: 1;
-              z-index: 50;
-            }
-          }
-        }
-        /* The "expanded" class is added to
-           the nav element with jQuery on click */
-        &.expanded li a {
+      ul li a {
+        /* animate movement */
+        position: relative;
+        top: -17px;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 35;
+        &.mobile-show {
           top: 0;
           visibility: visible;
           opacity: 1;
-          -webkit-transition:
-            visibility 0.4s ease-in-out,
-            opacity 0.4s ease-in-out;
-          transition:
-            visibility 0.4s ease-in-out,
-            opacity 0.4s ease-in-out;
+          z-index: 50;
         }
+      }
+      /* The "expanded" class is added to
+         the nav element with jQuery on click */
+      &.expanded li a {
+        top: 0;
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition:
+          visibility 0.4s ease,
+          opacity 0.4s ease;
+        transition:
+          visibility 0.4s ease,
+          opacity 0.4s ease;
       }
     }
   }
+  .nav-blur.blurred {
+     position: fixed; /* keeps the lightbox window in the current viewport */
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: $light_grey;
+     opacity: 0.9;
+     filter:alpha(opacity=90);
+     z-index: 25;
+     -webkit-transition: background 0.8s ease-out;
+     transition: background 0.8s ease-out;
+   }
 }
