@@ -13,8 +13,8 @@
       margin-right: 0;
     }
     > a {
-      min-width: 50px;
-      min-height: 50px;
+      min-width: $button-height;
+      min-height: $button-height;
       &:hover {
         background-color: $red;
       }
@@ -25,7 +25,7 @@
 #main_navigation {
   position: fixed;
   transform: translateX(-50%);
-  top: 34px;
+  top: $w-sm;
   left: 50%;
   padding: 0;
   white-space: nowrap;

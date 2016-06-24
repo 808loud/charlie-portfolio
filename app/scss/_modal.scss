@@ -8,7 +8,7 @@ body.modal-open-noscroll {
 
 .modal-btn-top {
   position: fixed;
-  top: 34px;
+  top: $w-sm;
   left: 50%;
   // translate left half of button width (25px) + half of scrollbar width (8px)
   // hacky solution that I'm not proud of
@@ -21,7 +21,7 @@ body.modal-open-noscroll {
 
 .modal-btn-bottom {
   position: absolute;
-  margin: 34px 0;
+  margin: $w-sm 0;
   left: 50%;
   transform : translate(-50%,0);
   -webkit-transform: translate(-50%,0);
@@ -50,7 +50,7 @@ body.modal-open-noscroll {
     }
 
     .section {
-      padding: 140px 0;
+      padding: $w-lg 0;
     }
   }
 
@@ -66,7 +66,7 @@ body.modal-open-noscroll {
   color: $medium_grey;
   li {
     position: relative;
-    padding: 16px 0;
+    padding: $w-xs 0;
     &:not(:last-child):after {
       content:'';
       position: absolute;

@@ -1,13 +1,12 @@
 section {
-  padding: 70px 0;
+padding-top: $w-lg;
   > .row:not(:first-of-type) {
-    padding-top: 70px;
+    padding-top: $w-md;
   }
 }
 
 #hero {
-  padding: 168px 0;
-  margin-bottom: 70px;
+  padding: 177px 0;
   background-image: url('./../media/charlie-hero-cropped.png');
   background-size: cover;
   -webkit-background-size: cover;
@@ -19,7 +18,7 @@ section {
   h2, h3 {
     line-height: 1;
     margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
     color: $light_grey;
     text-shadow: 1px 1px 1px $medium_grey;
   }
@@ -27,30 +26,41 @@ section {
 
 #work {
 
+  border-bottom: $project-border solid $dark_grey;
+
   .project {
     position: relative;
-    height: 232px; // 200px article + 16 borders (top and bottom)
+    // doesn't seem right that border needs to be in there twice, but :shippit:
+    height: calc(#{ $project-border
+                 + $project-spacer
+                 + $project-image
+                 + $project-spacer
+                 + $button-height
+                 + $project-spacer
+                 + $project-border });
     background: #ddd;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-position: center;
-    border-width: 16px 0 0;
+    border-width: $project-border 0 0;
     border-style: solid;
     border-color: $dark_grey;
     vertical-align: text-bottom;
     &:last-of-type {
-      border-bottom-width: 16px;
+      // after refactoring calc on height of project-inner,
+      // moving this to #work itself... because deadlines
+      // border-bottom-width: $project-border;
     }
 
     .project-inner {
       position: absolute;
-      bottom: 34px;
+      bottom: $w-sm;
       width: 100%;
 
       img {
-        margin-bottom: 18px;
+        margin: $project-spacer 0;
       }
     }
   }
@@ -58,7 +68,7 @@ section {
 
 #location-banner {
   .message {
-    padding: 34px 0;
+    padding: $w-sm 0;
   }
 }
 
@@ -83,7 +93,7 @@ section {
       border-left: none;
       text-transform: uppercase;
       margin: 0;
-      padding: 140px 0;
+      padding: $w-lg 0;
       p {
         line-height: 1.6;
       }
@@ -100,19 +110,19 @@ section {
 
 #break_time {
   height: 420px;
-  margin: 70px 0;
+  margin-top: $w-lg;
   background-image: url('./../media/charlie-2nd-hero.jpg');
 }
 
 #booking {
   .booking-form {
     max-width: 602.7px; // width of #main_navigation nav ul
-    margin: 70px auto;
+    margin: $w-md auto 0;
   }
   input, textarea {
     display: block;
     width: 100%;
-    padding-bottom: 16px;
+    padding-bottom: $w-xs;
     font-size: $font_size_small;
     line-height: 1;
     color: $dark_grey;

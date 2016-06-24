@@ -1,4 +1,13 @@
+$w-lg: 140px;
+$w-md:  70px;
+$w-sm:  34px;
+$w-xs:  16px;
 
+$project-border:  16px;
+$project-spacer:  18px;
+$project-image:   79px;
+
+$button-height: 50px; // this should ideally be calc'd from padding and font-size
 
 $dark_grey:   rgba(64,  64,  62,  1);
 $light_grey:  rgba(246, 244, 240, 1);
