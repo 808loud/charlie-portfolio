@@ -12,21 +12,6 @@ body,
   color: $light_grey;
 }
 
-.outline-heading {
-  font-size: $font_size_medium;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: $red;
-  margin: 0 auto 14px;
-
-  &::after {
-    content: "\A \2014";
-    white-space: pre;
-    position: relative;
-    top: 6px;
-  }
-}
-
 svg {
 
   display: block;
@@ -43,8 +28,8 @@ svg {
 
 .parallax {
   //height: 600px;
-  background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
   -webkit-background-size: cover;

@@ -33,6 +33,12 @@ body {
 	@extend .g-md;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.5;
+	margin: 0;
+	margin-bottom: 0.5em;
+}
+
 h4 {
   margin-top: 0;
   @extend .g-bold;
@@ -42,9 +48,24 @@ h4 {
 
 p {
 	@extend .g-book;
-  line-height: 2em;
+  line-height: 2;
 	margin-bottom: 0.5em;
   &:last-of-type {
     margin-bottom: 0;
+  }
+}
+
+.outline-heading {
+  font-size: $font_size_medium;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $red;
+  margin-bottom: 1em;
+
+  &::after {
+    content: "\A \2014";
+    white-space: pre;
+    position: relative;
+    top: 6px;
   }
 }
