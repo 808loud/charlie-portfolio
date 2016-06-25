@@ -21,7 +21,7 @@ body.modal-open-noscroll {
 
 .modal-btn-bottom {
   position: absolute;
-  margin: $w-sm 0;
+  bottom: $w-sm;
   left: 50%;
   transform : translate(-50%,0);
   -webkit-transform: translate(-50%,0);
