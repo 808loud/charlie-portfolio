@@ -109,8 +109,13 @@ padding-top: $w-lg;
 }
 
 #break_time {
-  background: blue;
-  height: 30px;
+  height: 420px;
+  margin-top: $w-lg;
+  background: url('./../media/charlie-2nd-hero.jpg') no-repeat scroll center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 // iOS Blocker - only shows on:
@@ -118,18 +123,7 @@ padding-top: $w-lg;
 // http://browserstrangeness.bitbucket.org/css_hacks.html#webkit
 _:-webkit-full-screen-ancestor,
 :root #break_time {
-  height: 420px;
-  margin-top: $w-lg;
-  background-image: url('./../media/charlie-2nd-hero.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
   background-attachment: fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  height: 25px;
-  background: red;
 }
 
 

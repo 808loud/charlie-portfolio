@@ -210,23 +210,17 @@ section {
     color: #f6f4f0; }
 
 #break_time {
-  background: blue;
-  height: 30px; }
-
-_:-webkit-full-screen-ancestor,
-:root #break_time {
   height: 420px;
   margin-top: 140px;
-  background-image: url("./../media/charlie-2nd-hero.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background: url("./../media/charlie-2nd-hero.jpg") no-repeat scroll center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
-  height: 25px;
-  background: red; }
+  -o-background-size: cover; }
+
+_:-webkit-full-screen-ancestor,
+:root #break_time {
+  background-attachment: fixed; }
 
 #booking .booking-form {
   max-width: 602.7px;
