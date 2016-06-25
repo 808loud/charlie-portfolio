@@ -109,22 +109,29 @@ padding-top: $w-lg;
 }
 
 #break_time {
-  margin-top: $w-lg;
-
-  .parallax {
-    height: 600px;
-    // height: 420px;
-    background-image: url('./../media/charlie-2nd-hero.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    // background-attachment: scroll;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  }
+  background: blue;
+  height: 30px;
 }
+
+// iOS Blocker - only shows on:
+// Safari 5.1+, Chrome 11, 15+ (and Opera 14+), Android Browser 4+, Android OS 4.0+
+// http://browserstrangeness.bitbucket.org/css_hacks.html#webkit
+_:-webkit-full-screen-ancestor,
+:root #break_time {
+  height: 420px;
+  margin-top: $w-lg;
+  background-image: url('./../media/charlie-2nd-hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+
+
 
 #booking {
   .booking-form {
