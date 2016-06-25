@@ -1,11 +1,15 @@
 'use strict';
 
 var gulp =         require('gulp');
+var del =          require('del');
 var gutil =        require('gulp-util');
 var data =         require('gulp-data');
 var concat =       require('gulp-concat');
+var rename =       require('gulp-rename');
 var nunjucks =     require('gulp-nunjucks-html');
 var sass =         require('gulp-sass');
+var cleanCSS =     require('gulp-clean-css');
+var minify =       require('gulp-minify');
 var sourcemaps =   require('gulp-sourcemaps');
 var notify =       require('gulp-notify');
 var browserSync =  require('browser-sync').create();
@@ -37,7 +41,7 @@ function catchError (error) {
     this.emit('end');
 }
 
-gulp.task('serve', ['move', 'nunjucks', 'sass', 'scripts'], function() {
+gulp.task('serve', ['nunjucks', 'sass', 'scripts'], function() {
     browserSync.init({
         server: {
             baseDir: "./public"
@@ -45,27 +49,40 @@ gulp.task('serve', ['move', 'nunjucks', 'sass', 'scripts'], function() {
         },
         port: 5555
     });
-
-    gulp.watch('./app/assets/**/*', ['move']);
-    gulp.watch(['./app/nunjucks/**/*.+(html|nunjucks|njk)',
-                './app/nunjucks/data.json'],
-                ['nunjucks']);
-    gulp.watch('./app/scss/**/*.scss', ['sass']);
-    gulp.watch('./app/js/**/*.js', ['scripts']);
-    gulp.watch('./public/**/*').on('change', reload);
+    gulp.watch(['app/nunjucks/**/*.+(html|nunjucks|njk)',
+                'app/nunjucks/data.json'],
+              ['nunjucks']);
+    gulp.watch('app/scss/**/*.scss',
+              ['sass']);
+    gulp.watch('app/js/**/*.js',
+              ['scripts']);
+    gulp.watch('app/assets/**/*',
+              ['move']);
+      // ^ refactor to async so it doesn't reload as every file moves
+      // as it stands, i'm pretty sure my computer hates me
+    gulp.watch('public/**/*')
+          .on('change',
+              reload);
 });
 
 // tasks
-gulp.task('move', function() {
+gulp.task('move', ['clean:assets'], function() {
   // grab contents of app/assets
-  return gulp.src('./app/assets/**/*')
+  return gulp.src('app/assets/**/*')
     // output files to the public folder
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('public'));
+});
+
+gulp.task('clean:assets', function() {
+  // wipe the public/assets directory
+  return del([
+    'public/assets/**/*'
+  ]);
 });
 
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
-  return gulp.src('./app/nunjucks/pages/**/*.+(html|nunjucks|njk)')
+  return gulp.src('app/nunjucks/pages/**/*.+(html|nunjucks|njk)')
     // Adding data to Nunjucks
     .pipe(data(function(file) {
       var json = './app/nunjucks/data.json';
@@ -74,32 +91,44 @@ gulp.task('nunjucks', function() {
     }))
     // Renders template with nunjucks
     .pipe(nunjucks({
-        searchPaths: ['./app/nunjucks'],
+        searchPaths: ['app/nunjucks'],
         autoescape: false,
         ext: ['.html']
       }))
     .on('error', catchError)
     // output files in public folder
-    .pipe(gulp.dest('./public'))
+    .pipe(gulp.dest('public'))
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./app/scss/**/*.+(sass|scss)')
+  return gulp.src('app/scss/**/*.+(sass|scss)')
     .pipe(sourcemaps.init())
     .pipe(sass({
         errLogToConsole: true
     }))
     .on('error', catchError)
+    .pipe(rename({
+      dirname: 'css',
+      basename: 'styles'
+    }))
+    .pipe(gulp.dest('public'))
+    .pipe(cleanCSS())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/css'));
+    .pipe(rename({
+      dirname: 'css',
+      basename: 'styles',
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest('public'));
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('./app/js/**/*.js')
+  return gulp.src(['app/js/**/*.js', '!app/js/**/*.min.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('scripts.js'))
+    .pipe(minify())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/js/'))
+    .pipe(gulp.dest('public/js/'))
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['clean:assets', 'serve']);
