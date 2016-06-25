@@ -126,7 +126,12 @@ gulp.task('scripts', function() {
   return gulp.src(['app/js/**/*.js', '!app/js/**/*.min.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('scripts.js'))
-    .pipe(minify())
+    .pipe(minify({
+      ext: {
+        src: '.js',
+        min: '.min.js'
+      }
+    }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/js/'))
 });

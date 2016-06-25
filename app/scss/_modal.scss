@@ -39,6 +39,7 @@ body.modal-open-noscroll {
     border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
+    padding-bottom: $w-md;
 
     // tangentially related to github issue #20
     .container-modal .row {
