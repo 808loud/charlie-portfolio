@@ -304,15 +304,15 @@ body.modal-open-noscroll {
   position: fixed;
   top: 34px;
   left: 50%;
-  transform: translate(-33px, 0);
-  -webkit-transform: translate(-33px, 0);
-  -ms-transform: translate(-33px, 0);
-  -o-transform: translate(-33px, 0);
+  transform: translate(-33.5px, 0);
+  -webkit-transform: translate(-33.5px, 0);
+  -ms-transform: translate(-33.5px, 0);
+  -o-transform: translate(-33.5px, 0);
   z-index: 1055; }
 
 .modal-btn-bottom {
   position: absolute;
-  bottom: 34px;
+  bottom: 70px;
   left: 50%;
   transform: translate(-50%, 0);
   -webkit-transform: translate(-50%, 0);
@@ -328,7 +328,7 @@ body.modal-open-noscroll {
     border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    padding-bottom: 70px; }
+    padding-bottom: 140px; }
     .modal-fullscreen .modal-content .container-modal .row {
       margin: auto 0; }
     .modal-fullscreen .modal-content img {

@@ -10,18 +10,18 @@ body.modal-open-noscroll {
   position: fixed;
   top: $w-sm;
   left: 50%;
-  // translate left half of button width (25px) + half of scrollbar width (8px)
-  // hacky solution that I'm not proud of
-  transform : translate(-33px,0);
-  -webkit-transform: translate(-33px,0);
-  -ms-transform: translate(-33px,0);
-  -o-transform: translate(-33px,0);
+  // translate left half of button width (25px) + half of scrollbar width (8.5px)
+  // hacky solution that I'm not proud of, and it's not cross-browser compatible
+  transform : translate(-33.5px,0);
+  -webkit-transform: translate(-33.5px,0);
+  -ms-transform: translate(-33.5px,0);
+  -o-transform: translate(-33.5px,0);
   z-index: 1055;
 }
 
 .modal-btn-bottom {
   position: absolute;
-  bottom: $w-sm;
+  bottom: $w-md;
   left: 50%;
   transform : translate(-50%,0);
   -webkit-transform: translate(-50%,0);
@@ -39,7 +39,7 @@ body.modal-open-noscroll {
     border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    padding-bottom: $w-md;
+    padding-bottom: $w-lg;
 
     // tangentially related to github issue #20
     .container-modal .row {
