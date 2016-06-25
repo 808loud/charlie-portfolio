@@ -109,9 +109,21 @@ padding-top: $w-lg;
 }
 
 #break_time {
-  height: 420px;
   margin-top: $w-lg;
-  background-image: url('./../media/charlie-2nd-hero.jpg');
+
+  .parallax {
+    height: 600px;
+    // height: 420px;
+    background-image: url('./../media/charlie-2nd-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    // background-attachment: scroll;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
 }
 
 #booking {
