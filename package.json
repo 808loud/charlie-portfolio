@@ -11,27 +11,20 @@
     "gulp-minify": "0.0.12",
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-html": "^2.0.0",
-    "gulp-nunjucks-render": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.0",
-    "gulp-server-livereload": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-util": "^3.0.7",
-    "gulp-webserver": "^0.9.1",
-    "run-sequence": "^1.1.5"
+    "gulp-util": "^3.0.7"
   },
   "homepage": "",
   "license": {
     "type": "MIT"
   },
-  "name": "sass_js_html",
+  "name": "charlie-portfolio",
   "private": true,
   "scripts": {
-    "build": "gulp build",
+    "build": "gulp",
     "test": "gulp build --reporter spec --timeout 5000"
   },
-  "version": "1.1.0",
-  "dependencies": {
-    "handlebars": "^4.0.5"
-  }
+  "version": "1.1.0"
 }
