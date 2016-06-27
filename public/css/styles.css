@@ -342,7 +342,7 @@ body.modal-open-noscroll {
     -webkit-box-shadow: none;
     box-shadow: none;
     padding-bottom: 140px; }
-    .modal-fullscreen .modal-content .container_modal .row {
+    .modal-fullscreen .modal-content .modal-wrapper .row {
       margin: auto 0; }
     .modal-fullscreen .modal-content img {
       margin-bottom: 30px; }

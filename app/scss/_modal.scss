@@ -58,7 +58,7 @@ body.modal-open-noscroll {
     padding-bottom: $w-lg;
 
     // tangentially related to github issue #20
-    .container_modal .row {
+    .modal-wrapper .row {
       margin: auto 0;
     }
 
