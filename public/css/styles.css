@@ -308,16 +308,14 @@ body.modal-open-noscroll {
   -ms-transform: translate(-50%, 0);
   -o-transform: translate(-50%, 0);
   /*
-// translate left half of button width (25px) + half of scrollbar width (8.5px)
+// translate left half of button width + half of scrollbar width (maybe?)
 // hacky solution that I'm not proud of, and it's not cross-browser compatible
-//
-// client wants the padding-right removed, so I'm removing this.
-
-  transform : translate(-33.5px,0);
-  -webkit-transform: translate(-33.5px,0);
-  -ms-transform: translate(-33.5px,0);
-  -o-transform: translate(-33.5px,0);
+// partially thanks to OS X auto-hide sidebar
 */
+  transform: translate(-33px, 0);
+  -webkit-transform: translate(-33px, 0);
+  -ms-transform: translate(-33px, 0);
+  -o-transform: translate(-33px, 0);
   z-index: 1055; }
 
 .modal-btn-bottom {
@@ -332,7 +330,12 @@ body.modal-open-noscroll {
 
 .modal-fullscreen {
   background-color: #fff;
-  padding-right: 0; }
+  padding: 0 !important; }
+  .modal-fullscreen .modal-dialog {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%; }
   .modal-fullscreen .modal-content {
     background: transparent;
     border: 0;
@@ -364,18 +367,3 @@ body.modal-open-noscroll {
       background: #9b9998;
       height: 3px;
       border-radius: 3px; }
-
-.modal-fullscreen .modal-dialog {
-  margin: 0;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%; }
-
-/* overrides for bootstrap default styles  */
-@media (min-width: 768px) {
-  .modal-fullscreen .modal-dialog {
-    width: inherit; } }
-
-@media (min-width: 992px) {
-  .modal-fullscreen .modal-dialog {
-    width: inherit; } }
