@@ -303,10 +303,21 @@ body.modal-open-noscroll {
   position: fixed;
   top: 34px;
   left: 50%;
-  transform: translate(-33.5px, 0);
-  -webkit-transform: translate(-33.5px, 0);
-  -ms-transform: translate(-33.5px, 0);
-  -o-transform: translate(-33.5px, 0);
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  /*
+// translate left half of button width (25px) + half of scrollbar width (8.5px)
+// hacky solution that I'm not proud of, and it's not cross-browser compatible
+//
+// client wants the padding-right removed, so I'm removing this.
+
+  transform : translate(-33.5px,0);
+  -webkit-transform: translate(-33.5px,0);
+  -ms-transform: translate(-33.5px,0);
+  -o-transform: translate(-33.5px,0);
+*/
   z-index: 1055; }
 
 .modal-btn-bottom {
@@ -321,7 +332,7 @@ body.modal-open-noscroll {
 
 .modal-fullscreen {
   background-color: #fff;
-  padding-right: 15px; }
+  padding-right: 0; }
   .modal-fullscreen .modal-content {
     background: transparent;
     border: 0;
