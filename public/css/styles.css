@@ -96,7 +96,7 @@ p {
 #main_navigation {
   position: fixed;
   transform: translateX(-50%);
-  top: 34px;
+  top: 35px;
   left: 50%;
   padding: 0;
   white-space: nowrap;
@@ -184,13 +184,13 @@ section {
     vertical-align: text-bottom; }
     #work .project .project-inner {
       position: absolute;
-      bottom: 34px;
+      bottom: 35px;
       width: 100%; }
       #work .project .project-inner img {
         margin: 18px 0; }
 
 #location-banner .message {
-  padding: 34px 0; }
+  padding: 35px 0; }
 
 @media screen and (max-width: 767px) {
   #experience img {
@@ -272,7 +272,7 @@ _:-webkit-full-screen-ancestor,
   margin-top: 10px; }
 
 #footer {
-  margin-bottom: 70px; }
+  margin-bottom: 35px; }
 
 body {
   font-size: 16px; }
@@ -301,7 +301,7 @@ body.modal-open-noscroll {
 
 .modal-btn-top {
   position: fixed;
-  top: 34px;
+  top: 35px;
   left: 50%;
   transform: translate(-50%, 0);
   -webkit-transform: translate(-50%, 0);
@@ -329,8 +329,7 @@ body.modal-open-noscroll {
   z-index: 40; }
 
 .modal-fullscreen {
-  background-color: #fff;
-  padding: 0 !important; }
+  background-color: #fff; }
   .modal-fullscreen .modal-dialog {
     margin: 0;
     margin-right: auto;
