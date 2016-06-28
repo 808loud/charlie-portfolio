@@ -25,8 +25,8 @@
   font-style: normal;
   font-weight: 700; }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.5;
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 2;
   margin: 0;
   margin-bottom: 0.5em; }
 
@@ -34,23 +34,23 @@ h4 {
   font-size: 16px;
   text-transform: uppercase; }
 
-p {
-  line-height: 2;
-  margin-bottom: 0.5em; }
-  p:last-of-type {
-    margin-bottom: 0; }
+p:last-of-type {
+  margin-bottom: 0; }
 
 .outline-heading {
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   color: #a54d40;
-  margin-bottom: 1em; }
+  margin-bottom: 0; }
   .outline-heading::after {
     content: "\A \2014";
-    white-space: pre;
+    white-space: pre; }
+
+@media screen and (min-width: 767px) {
+  .outline-heading::after {
     position: relative;
-    top: 6px; }
+    top: -8px; } }
 
 .btn {
   padding: 17px;
