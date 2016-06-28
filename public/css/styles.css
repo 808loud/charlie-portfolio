@@ -154,7 +154,7 @@ section {
     padding-top: 70px; }
 
 #hero {
-  padding: 170px 0;
+  padding: 167px 0 168px;
   background-image: url("./../media/charlie-hero-cropped.png");
   background-size: cover;
   -webkit-background-size: cover;
