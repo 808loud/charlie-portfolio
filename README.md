@@ -1,2 +1,6 @@
-# Portfolio site for Charlie
-Utilizes Gulp to generate a web server, and also for live-reload, watching for Sass changes and building CSS to Sass sourcemaps
+
+##### Dependencies:
+- gulp
+
+
+To build and the project, just type `gulp` from within the base directory. See the gulpfile for more features.
