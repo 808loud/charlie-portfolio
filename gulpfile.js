@@ -137,4 +137,4 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('public/js/'))
 });
 
-gulp.task('default', ['clean:assets', 'serve']);
+gulp.task('default', ['move', 'serve']);
