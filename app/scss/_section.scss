@@ -122,7 +122,9 @@ padding-top: $w-lg;
 // Firefox 10+,
 // Edge 12+
 // http://browserstrangeness.bitbucket.org/css_hacks.html#webkit
+_:-webkit-full-screen,
 _:-webkit-full-screen-ancestor,
+_:-moz-full-screen,
 _:-moz-full-screen-ancestor,
 _:-ms-fullscreen,
 _:-ms-lang(x),

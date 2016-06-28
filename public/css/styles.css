@@ -216,7 +216,9 @@ section {
   -moz-background-size: cover;
   -o-background-size: cover; }
 
+_:-webkit-full-screen,
 _:-webkit-full-screen-ancestor,
+_:-moz-full-screen,
 _:-moz-full-screen-ancestor,
 _:-ms-fullscreen,
 _:-ms-lang(x),
