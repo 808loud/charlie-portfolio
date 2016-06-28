@@ -164,6 +164,7 @@ section {
   background-repeat: no-repeat; }
   #hero h2, #hero h3 {
     margin: 0;
+    margin-bottom: 10px;
     line-height: 1.4;
     color: #f6f4f0; }
 
