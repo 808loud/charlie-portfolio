@@ -47,11 +47,14 @@ p:last-of-type {
     content: "\A \2014";
     white-space: pre; }
 
+/*
 @media screen and (min-width: 767px) {
-  .outline-heading::after {
-    position: relative;
-    top: -0.75em; } }
-
+	.outline-heading::after {
+		position: relative;
+		top: -0.75em;
+	}
+}
+*/
 .btn {
   padding: 17px;
   background: #40403e;
