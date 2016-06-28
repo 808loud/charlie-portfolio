@@ -217,6 +217,9 @@ section {
   -o-background-size: cover; }
 
 _:-webkit-full-screen-ancestor,
+_:-moz-full-screen-ancestor,
+_:-ms-fullscreen,
+_:-ms-lang(x),
 :root #break_time {
   background-attachment: fixed; }
 
