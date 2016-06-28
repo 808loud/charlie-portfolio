@@ -123,7 +123,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('app/js/**/*.js')
+  return gulp.src('app/js/**/*.js', '!app/js/**/*.min.js')
     .pipe(sourcemaps.init())
     .pipe(concat('scripts.js'))
     .pipe(minify({
