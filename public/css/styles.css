@@ -151,7 +151,7 @@ section {
     padding-top: 70px; }
 
 #hero {
-  padding: 177px 0;
+  padding: 170px 0;
   background-image: url("./../media/charlie-hero-cropped.png");
   background-size: cover;
   -webkit-background-size: cover;
@@ -161,10 +161,9 @@ section {
   background-repeat: no-repeat; }
   #hero h2, #hero h3 {
     line-height: 1;
-    margin: 0;
+    margin: 0.4em;
     margin-bottom: 10px;
-    color: #f6f4f0;
-    text-shadow: 1px 1px 1px #9b9998; }
+    color: #f6f4f0; }
 
 #work {
   border-bottom: 16px solid #40403e; }

@@ -6,7 +6,7 @@ padding-top: $w-lg;
 }
 
 #hero {
-  padding: 177px 0;
+  padding: 170px 0;
   background-image: url('./../media/charlie-hero-cropped.png');
   background-size: cover;
   -webkit-background-size: cover;
@@ -17,10 +17,9 @@ padding-top: $w-lg;
 
   h2, h3 {
     line-height: 1;
-    margin: 0;
+    margin: 0.4em;
     margin-bottom: 10px;
     color: $light_grey;
-    text-shadow: 1px 1px 1px $medium_grey;
   }
 }
 
