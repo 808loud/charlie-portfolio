@@ -221,14 +221,14 @@ _:-webkit-full-screen-ancestor,
 :root #break_time {
   background-attachment: fixed; }
 
-
 _:-moz-full-screen,
 _:-moz-full-screen-ancestor,
 :root #break_time {
   background-attachment: fixed; }
 
-_:-ms-fullscreen, :root #break_time,
-_:-ms-lang(x), :root #break_time {
+_:-ms-fullscreen,
+_:-ms-lang(x),
+:root #break_time {
   background-attachment: fixed; }
 
 #booking .booking-form {

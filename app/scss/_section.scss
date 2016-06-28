@@ -117,25 +117,27 @@ padding-top: $w-lg;
   -o-background-size: cover;
 }
 
-// iOS Blocker - only shows parallax effect on:
+// iOS Blocker
+// http://browserstrangeness.bitbucket.org/css_hacks.html
+// Only shows parallax effect on the following browsers:
+//
 // Safari 5.1+, Chrome 11, 15+ (and Opera 14+), Android Browser 4+, Android OS 4.0+
-// Firefox 10+,
-// Edge 12+
-// http://browserstrangeness.bitbucket.org/css_hacks.html#webkit
+
 _:-webkit-full-screen,
 _:-webkit-full-screen-ancestor,
 :root #break_time {
   background-attachment: fixed;
 }
-,
+// Firefox 10+,
 _:-moz-full-screen,
 _:-moz-full-screen-ancestor,
 :root #break_time {
   background-attachment: fixed;
 }
-_:-ms-fullscreen, :root #break_time,
-_:-ms-lang(x), :root #break_time
-{
+// Edge 12+
+_:-ms-fullscreen,
+_:-ms-lang(x),
+:root #break_time {
   background-attachment: fixed;
 }
 
