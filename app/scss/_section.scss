@@ -122,15 +122,15 @@ padding-top: $w-lg;
 // Firefox 10+,
 // Edge 12+
 // http://browserstrangeness.bitbucket.org/css_hacks.html#webkit
-_:-webkit-full-screen, :root #break_time,
-_:-webkit-full-screen-ancestor, :root #break_time
-{
+_:-webkit-full-screen,
+_:-webkit-full-screen-ancestor,
+:root #break_time {
   background-attachment: fixed;
 }
 ,
-_:-moz-full-screen, :root #break_time,
-_:-moz-full-screen-ancestor, :root #break_time
-{
+_:-moz-full-screen,
+_:-moz-full-screen-ancestor,
+:root #break_time {
   background-attachment: fixed;
 }
 _:-ms-fullscreen, :root #break_time,
