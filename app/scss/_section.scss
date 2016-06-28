@@ -16,9 +16,8 @@ padding-top: $w-lg;
   background-repeat: no-repeat;
 
   h2, h3 {
-    line-height: 1;
-    margin: 0.4em;
-    margin-bottom: 10px;
+    line-height: 1.4;
+    margin: 0;
     color: $light_grey;
   }
 }
@@ -117,30 +116,14 @@ padding-top: $w-lg;
   -o-background-size: cover;
 }
 
-// iOS Blocker
-// http://browserstrangeness.bitbucket.org/css_hacks.html
-// Only shows parallax effect on the following browsers:
-//
+// iOS Blocker - only shows on:
 // Safari 5.1+, Chrome 11, 15+ (and Opera 14+), Android Browser 4+, Android OS 4.0+
-
-_:-webkit-full-screen,
+// http://browserstrangeness.bitbucket.org/css_hacks.html#webkit
 _:-webkit-full-screen-ancestor,
 :root #break_time {
   background-attachment: fixed;
 }
-// Firefox 10+,
-_:-moz-full-screen,
-_:-moz-full-screen-ancestor,
-:root #break_time {
-  background-attachment: fixed;
-}
-// IE 11
-// Edge 12+
-_:-ms-fullscreen,
-_:-ms-lang(x),
-:root #break_time {
-  background-attachment: fixed;
-}
+
 
 
 
