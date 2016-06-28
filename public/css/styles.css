@@ -50,7 +50,7 @@ p:last-of-type {
 @media screen and (min-width: 767px) {
   .outline-heading::after {
     position: relative;
-    top: -8px; } }
+    top: -0.75em; } }
 
 .btn {
   padding: 17px;
