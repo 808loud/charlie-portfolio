@@ -309,14 +309,19 @@ body.modal-open-noscroll {
   -ms-transform: translate(-50%, 0);
   -o-transform: translate(-50%, 0);
   /*
-// translate left half of button width + half of scrollbar width (maybe?)
-// hacky solution that I'm not proud of, and it's not cross-browser compatible
-// partially thanks to OS X auto-hide sidebar
-*/
+  // translate left half of button width + half of scrollbar width (maybe?)
+  // hacky solution that I'm not proud of, and it's not cross-browser compatible
+  // partially thanks to OS X auto-hide sidebar
+  */
   transform: translate(-33px, 0);
   -webkit-transform: translate(-33px, 0);
   -ms-transform: translate(-33px, 0);
   -o-transform: translate(-33px, 0);
+  /*
+  // Client solution. Unsure of the logic of how/why it works.
+  // But the client is happy ;-)
+  */
+  left: 50.6%;
   z-index: 1055; }
 
 .modal-btn-bottom {
@@ -330,8 +335,7 @@ body.modal-open-noscroll {
   z-index: 40; }
 
 .modal-fullscreen {
-  background-color: #fff;
-  padding: 0 !important; }
+  background-color: #fff; }
   .modal-fullscreen .modal-dialog {
     margin: 0;
     margin-right: auto;
