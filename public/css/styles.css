@@ -338,7 +338,8 @@ body.modal-open-noscroll {
   z-index: 40; }
 
 .modal-fullscreen {
-  background-color: #fff; }
+  background-color: #fff;
+  padding: 0 !important; }
   .modal-fullscreen .modal-dialog {
     margin: 0;
     margin-right: auto;
